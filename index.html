@@ -3,10 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 231 Web Frontend Development I - Chanda Frey">
+    <meta name="author" content="Chanda Frey">
+    <title>WDD 231 Web Frontend Development I - Chanda Frey</title>
+
+    <!-- Google Font Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JS Links -->
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/head-side-thinking2.svg" alt="site logo" width="24" height="24">
+        <span>Chanda Frey</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+    </header>
+
+    <!-- add an "id" and "class" so we can connect this section to JavaScript -->
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <!-- put the class="current" on the link specific to the 
+             current page...in this case Home -->
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <div class="intro-section">
+            <section class="profile">
+                <h2>About Me</h2>
+                <div>
+                    <p>Hi!  My name is Chanda Frey and I grew up in Arizona, and now currently live in Utah.
+                        My favorite people are my husband and our 7 children, daughter-in-law and 2 grandbaby boys.  I tutor kids in reading and teach piano lessons.
+                        Some of my favorite treats are vanilla ice cream, cinnamon rolls, and dark chocolate. I like to get my mileage in by wandering the stores.
+                        Costco, Target, Home Depot, Lowes and Home Goods are my top choices. I will take a sunny day
+                        any day over a cold and blowy, snowy one.  Too bad Utah doesn't have more sunny days.
+                        So as much as I identify as a flip-flop gal, you will find me in Uggs and wool socks as I try to 
+                        weather through the majority of our seasons known as "cold".  
+                    </p> 
+                </div>
+            </section>
+            <section class="photo">
+                <h2>Student Photo</h2>
+                <div>
+                    <img src="images/profile-picture-2025.jpg" alt="Hello, my name is Chanda Frey" width="200" height="267">
+                </div>
+            </section>
+        </div>
+
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <div class="course-filters">
+                <ul class="course-filter-nav"> 
+                    <li><a href="#" id="all-courses">All Courses</a></li>
+                    <li><a href="#" id="cse-courses">CSE</a></li>
+                    <li><a href="#" id="wdd-courses">WDD</a></li>
+                </ul>
+            </div>
+            <div class="coursesContainer">
+            <!-- This is what should be created from JavaScript -->
+            <!-- repeat sections for each course card -->
+            <!-- <section> 
+                    <h3>CSE</h3>
+                    <p>110</p>
+                </section>-->
+            </div> 
+            <p id="total-credits"></p>
+   
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <!-- target="_blank" will open this link in a new TAB -->
+            <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+            <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/chanda-f-653186323/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+            <a href="https://github.com/chandafrey" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+        </div>
+        <div class="copywrite">
+            <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+    </footer>
 </body>
-<p>hello world</p>
 </html>
