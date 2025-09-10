@@ -29,7 +29,8 @@ main p {
 #cards {
     background-color: rgb(134, 136, 134);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px 1fr));
+    /* You have to have the comma after px for it to wrap */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5rem;
     padding: 1rem;
     place-items: center;

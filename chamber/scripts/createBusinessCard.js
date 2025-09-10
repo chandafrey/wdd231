@@ -1,112 +1,51 @@
-//COURSES--------------------------------------------
+// This file is to fetch the business members information from the 
+// members.json file and create business cards for each
 
-const courses = [
-    {
-        subject: 'CSE',
-        number: 110,
-        title: 'Introduction to Programming',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
-        technology: [
-            'Python'
-        ],
-        completed: true
-    },
-    {
-        subject: 'WDD',
-        number: 130,
-        title: 'Web Fundamentals',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
-        technology: [
-            'HTML',
-            'CSS'
-        ],
-        completed: true
-    },
-    {
-        subject: 'CSE',
-        number: 111,
-        title: 'Programming with Functions',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
-        technology: [
-            'Python'
-        ],
-        completed: true
-    },
-    {
-        subject: 'CSE',
-        number: 210,
-        title: 'Programming with Classes',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
-        technology: [
-            'C#'
-        ],
-        completed: true
-    },
-    {
-        subject: 'WDD',
-        number: 131,
-        title: 'Dynamic Web Fundamentals',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        completed: true
-    },
-    {
-        subject: 'WDD',
-        number: 231,
-        title: 'Frontend Web Development I',
-        credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
-        technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
-        ],
-        completed: false
-    }
-]
 
-    // This line Calls the function to createCourseCard
-    createBusinessCard();
 
-    // Write the function for createCourseCard
-    function createBusinessCard() {
-    // use a 'forEach' loop to loop thru each course
-    // in the 'courses' array above
-    businesses.forEach(business => {
-        // Define the element for the entire 'card' package
-        // and for each item that goes in it
-        let card = document.createElement("section");
-        let subject = document.createElement("h3");
-        let number = document.createElement("p");
+// Declare a const variable named "url" that 
+// contains the URL string of the JSON resource
+// ***for this course we link to the github file url, not at the local file 
+const url = 'https://chandafrey.github.io/wdd231/chamber/data/members.json';
 
-        // Get the content and assign it to the item variable
-        subject.textContent = business.subject;
-        number.textContent = business.number;
+// Declare a const variable name "cards" 
+// that selects the HTML div element from the 
+// document with an id value of "cards".
+const cards = document.querySelector('#cards');
 
-        // Append or add the item variable's content 
-        // to the entire 'card' package variable
-        card.appendChild(subject);
-        card.appendChild(number);
+// Create an async defined function named 
+// "getMemberData" to fetch data from the 
+// JSON source url using the await fetch() method.
+async function getMemberData() {
+    // Store the response from the fetch() method 
+    // in a const variable named "response".
+    const response = await fetch(url);
+    
+    // Convert the response to a JSON object using the
+    //  .json method and store the results in a 
+    // const variable named "data".  
+    const data = await response.json();
+        // Add a console.table() expression method to check 
+    // the data response at this point in the console window.
 
-        // Select from the HTML document where the 
-        // 'card' package should go ("".coursesContainer")
-        // and Append or add the card...(because we did a 
-        // 'forEach' loop, it will add all the cards)
-        document.querySelector(".businesses-container").appendChild(card);
-    });
+    // ***THIS DISPLAYS ON THE "CONSOLE" TAB WHEN YOU ARE 
+    // IN THE "INSPECT" option - NOT ACTUALLY ON YOUR 
+    // WEB PAGE ITSELF
+    // The console.table() method is a great way to view the 
+    // data in a table format. You can also use the console.log() 
+    // method to view the data in a more traditional format. 
+    // large amounts of data in a more organized way. 
+    // ***THIS TESTS IN CONSOLE TO SEE IF THE FETCH WORKED
+    console.log(data.members);
+
+    // If it all checks out, note that the data returns a single property, 
+    // an array of objects named "prophets".
+
+    // Comment out the console line and call a function named 
+    // "displayProphets" and include the "data.prophets" argument. 
+    // Why do you send data.prophets versus just the data variable? 
+    // The displayProphets() function expects an array parameter.
+    // ***THIS FUNCTION IS FOR BUILDING THE CARDS...
+    // It won't work until the displayProphets function is created BELOW
+    displayMembers(data.members);
 }
