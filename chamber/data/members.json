@@ -1,0 +1,105 @@
+{
+    "name": "Burt Brothers",
+    "address": {
+    "street": "4078 Pony Express Parkway",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-901-3100",
+    "websiteUrl": "https://burtbrothers.com/locations/eagle-mountain/",
+    "image": "https://burtbrothers.com/wp-content/uploads/2023/11/BBT_EAGLE_MTN_MAIN-scaled.jpg?_t=1754321644",
+    "membership": 2,
+     "isRestaurant": false
+}
+{
+    "name": "Los Aribertos Mexican Food",
+    "address": {
+    "street": "1352 Eagle Mountain Blvd Suite A",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-502-1234",
+    "websiteUrl": "something here",
+    "image": "something here too",
+    "membership": 2,
+     "isRestaurant": true
+}
+{
+    "name": "Business 3",
+    "address": {
+    "street": "123 Bedford Road",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-502-1234",
+    "websiteUrl": "something here",
+    "image": "something here too",
+    "membership": 2,
+     "isRestaurant": true
+}
+{
+    "name": "Business 4",
+    "address": {
+    "street": "123 Bedford Road",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-502-1234",
+    "websiteUrl": "something here",
+    "image": "something here too",
+    "membership": 2,
+     "isRestaurant": true
+}
+{
+    "name": "Business 5",
+    "address": {
+    "street": "123 Bedford Road",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-502-1234",
+    "websiteUrl": "something here",
+    "image": "something here too",
+    "membership": 2,
+     "isRestaurant": true
+}
+{
+    "name": "Business 6",
+    "address": {
+    "street": "123 Bedford Road",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-502-1234",
+    "websiteUrl": "something here",
+    "image": "something here too",
+    "membership": 2,
+     "isRestaurant": true
+}
+{
+    "name": "Business 7",
+    "address": {
+    "street": "123 Bedford Road",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-502-1234",
+    "websiteUrl": "something here",
+    "image": "something here too",
+    "membership": 2,
+     "isRestaurant": true
+}

@@ -10,14 +10,13 @@
     <!-- FACEBOOK META -->
     <meta property="og:title" content="Eagle Mountain Chamber of Commerce Directory">
     <meta property="og:description" content="Welcome to Eagle Mountain Commerce.  Our goal is to support new growth and development in our community.">
-    <!-- THIS LINE NEEDS ATTENTION -->
     <meta property="og:url" content="https://chandafrey.github.io/wdd231/chamber/directory.html">
     <meta property="og:locale" content="en_US">
-    <!-- THESE LINES NEEDS ATTENTION -->
     <meta property="og:image" content="https://chandafrey.github.io/wdd231/chamber/images/hot-air-balloon.jpg">
     <meta property="og:image:alt" content="Preview of Chamber Directory Page - Hot air balloons in the sky">    
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Eagle Mountain Chamber of Commerce | City of Eagle Mountain, Utah">
+    <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
     
     <!-- Google Font Here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +26,7 @@
     <!-- Style Sheets Here -->
     <!-- put them in this order -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- JS Links -->
@@ -53,71 +52,59 @@
     <nav id="nav-bar" class="navigation">
         <ul>
             <!-- put the class="current" on the link specific to the 
-             current page...in this case Home -->
+             current page...in this case Directory -->
             <li><a href="#">Home</a></li>
             <li class="current"><a href="#">Directory</a></li>
             <li><a href="#">Join</a></li>
             <li><a href="#">Discover</a></li>
-
         </ul>
     </nav>
 
     <main>
-        <h1>Home</h1>
-        <div class="intro-section">
-            <section class="profile">
-                <h2>About Me</h2>
-                <div>
-                    <p>Hi!  My name is Chanda Frey and I grew up in Arizona, and now currently live in Utah.
-                        My favorite people are my husband and our 7 children, daughter-in-law and 2 grandbaby boys.  I tutor kids in reading and teach piano lessons.
-                        Some of my favorite treats are vanilla ice cream, cinnamon rolls, and dark chocolate. I like to get my mileage in by wandering the stores.
-                        Costco, Target, Home Depot, Lowes and Home Goods are my top choices. I will take a sunny day
-                        any day over a cold and blowy, snowy one.  Too bad Utah doesn't have more sunny days.
-                        So as much as I identify as a flip-flop gal, you will find me in Uggs and wool socks as I try to 
-                        weather through the majority of our seasons known as "cold".  
-                    </p> 
-                </div>
-            </section>
-            <section class="photo">
-                <h2>Student Photo</h2>
-                <div>
-                    <img src="images/mountainsGreen.svg" alt="Picture of green mountains" width="200" height="267">
-                </div>
-            </section>
-        </div>
-
         <section>
-            <h2>Web Certificate Courses</h2>
-            <div class="course-filters">
-                <ul class="course-filter-nav"> 
-                    <li><a href="#" id="all-courses">All Courses</a></li>
-                    <li><a href="#" id="cse-courses">CSE</a></li>
-                    <li><a href="#" id="wdd-courses">WDD</a></li>
+            <h1>Eagle Mountain Chamber of Commerce Member Directory</h1>
+             <div class="hero">
+                <img src="images/hot-air-balloon.jpg" alt="Hero image - Picture of hot air balloons" width="600" height="400">
+            </div>
+        </section>
+        <section>
+            <h2>Business Directory</h2>
+            <div class="directory-filters">
+                <ul class="directory-filter-nav"> 
+                    <li><a href="#" id="all-courses">All Businesses</a></li>
+                    <li><a href="#" id="cse-courses">Restaurants</a></li>
+                    <li><a href="#" id="wdd-courses">General Business</a></li>
                 </ul>
             </div>
-            <div class="coursesContainer">
+            <div class="businesses-container">
             <!-- This is what should be created from JavaScript -->
-            <!-- repeat sections for each course card -->
+            <!-- repeat sections for each business card -->
             <!-- <section> 
                     <h3>CSE</h3>
                     <p>110</p>
                 </section>-->
             </div> 
-            <p id="total-credits"></p>
-   
         </section>
     </main>
 
     <footer>
+        <div class="contact-info">
+            <p>Eagle Mountain Chamber of Commerce</p>
+            <p>100 East Center Street</p>
+            <p>Eagle Mountain, Utah 84005</p>
+            <p>info@emcc.org</p>
+            <p>(801) 555-1234</p>
+        </div>
         <div class="social">
             <!-- target="_blank" will open this link in a new TAB -->
             <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
             <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
             <a href="https://www.linkedin.com/in/chanda-f-653186323/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
-            <a href="https://github.com/chandafrey" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
         </div>
         <div class="copywrite">
-            <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+            <p>WDD231 Class Project</p>
+            <p>Chanda Frey</p>
+            <p>&copy;<span id=" currentYear"></span> Eagle Mountain Chamber of Commerce</p>
             <p><span id="lastModified"></span></p>
         </div>
     </footer>

@@ -1,0 +1,217 @@
+/* --------------------- COLOR SCHEME ------------------- */
+/* green #3b543d */
+/* white */
+
+
+
+/* --------------------- SITE WIDE ------------------- */
+*{
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+/* --------------------- HEADER ------------------- */
+/* Remember the hamburger button needs to be a minimun 
+of 44px or 48px */
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    /* this will align items at the bottom */
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+    /* this gives breathing room between the logo and site name */
+    column-gap: 8px;
+}
+
+/* Do this every time for a header image:   
+    display: block;
+    width: 100%;
+    height: auto;*/
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* some bottom padding is needed to align everything a bit better I think */
+    padding-bottom: 5px;
+}
+
+/* this is for the span tag for the site name */
+header span {
+    /* make the font size a little bigger */
+    font-size: 1.2rem;
+    /* Change the text color if you want */
+    color: #3b543d;
+    /* some bottom padding is needed to align everything a bit better I think */
+    padding-bottom: 5px;
+}
+
+/* --------------------- HAMBURGER ------------------- */
+.hamburger {
+    /* delete the gray background and black border by setting to "none" */
+    background: none;
+    border: none;
+    /* Change the hamburger lines color if you want */
+    color: #3b543d;
+    /* add a cursor so that when a person hovers over the icon the mouse 
+    will change to a pointer */
+    /* you can see if this works by toggling off device toolbar in your "inspect devtools page" */
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* 👉 Developers often choose ::after for “decoration” (like icons) 
+and ::before for “labels” or “markers,” but it’s mostly a convention — not a rule. */
+.hamburger::after {
+    /* "\2630" will create a hamburger icon for the content value */
+    content: "\2630";
+}
+
+.hamburger.show::after {
+    /* "\00D7" will create an X icon for the content value */
+    content: "\00D7";
+}
+
+/* --------------------- NAVIGATION ------------------- */
+/* turn off - when we don't want to display the navigation, display: none; */
+.navigation {
+    display: none;
+}
+
+/* turn on the navigation links with .show and display: block; */
+.navigation.show {
+    display: block;
+}
+
+.navigation ul, .directory-filter-nav {
+    /* Remove bullets with list-style-type: none; */
+    list-style-type: none;
+    /* Unordered lists come with margin and padding, so we need to 
+    fix that by setting those to 0 */
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a, .directory-filter-nav a {
+    /* change these anchors from inline to block */
+    display: block;
+    /* Next we need at least 44px tall of padding:
+    -the first number will be top and bottom
+    -you can start with .5rem and then INSPECT
+    and hover on the link line and see the measurements
+    at .5rem with this Josefin Sans font, the size is
+    454 x 34.4 (which means it needs to be bigger)
+    at .8rem the size is 
+    454 x 43.98 (which is good enough and meets minimun
+    standard of 44px tall)
+
+    Now we want the links to line up on the Left with the logo
+    So use the same LEFT & RIGHT padding as the logo image above
+    Go to the Header to see the left and right padding (its set to 10px) */
+    padding: .8rem 10px;
+
+    /* Change the color from the default blue to your color scheme */
+    color: #3b543d;
+    /* Remove the underline  */
+    text-decoration: none;
+    /* give a visual separation between the links with a light gray line
+    using the same standard used in the header */
+    border-bottom: solid 1px #ddd;
+}
+.directory-filter-nav a, .businesses-container section {
+    border: solid 2px #ddd;
+    border-radius: 6px;
+    background-color: #b6b6b629;
+    text-align: center;
+}
+
+.businesses-container section {
+    display: flex;
+    column-gap: 4px;
+}
+
+.directory-filter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    padding-bottom: 16px;
+    font-weight: 700;
+}
+
+.directory-filter-nav li {
+    flex: 1;
+}
+
+/* WAYFINDING   
+    - HTML Remember to put the class="current" on the link specific to the 
+    current page...in this case Dedicated Temples 
+    
+    - CSS:  we want to make the current page highlighted with 
+    a light gray #eee color so the user knows which page they're on*/
+    .navigation li.current {
+        background-color: #eee;
+    }
+    /* We also want to change color when a user hovers over a link to 
+    see which link they can click on (use color in color scheme)*/
+    .navigation a:hover, .directory-filter-nav a:hover {
+        background-color: #E07A5F;
+    }
+
+
+    /* --------------------- FOOTER ------------------- */
+    footer {
+        /* add padding top and bottom(1rem) 
+        and gutter padding left and right to match the header(10px) */
+        padding: 1rem 10px;
+        text-align: center;
+    }
+
+    footer .copywrite {
+        background-color: #eee;
+        padding: 2px;
+
+    }
+
+    .social {
+        /* display all the child items - a hrefs - flex left to right */
+        display: flex;
+        /* Once you have centered .social a(centering the image inside its box,
+         THEN come back here and 
+        justify-content: center; all the children as a package on the page */
+        justify-content: center;
+        /* with the red dashes you can see the boxes touching...give them gap padding */
+        column-gap: 8px;
+        padding: 10px;
+    }
+
+    .social a {
+        /* start with this display block and then turn off */
+        /* display: block; */
+        /* now change it to display: flex;  so we can center images in the border box*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* icons need to be bigger - a minimun 44px for touchscreen(apple standard) */
+        width: 44px;
+        height: 44px;
+        /* Start with border red and dashed to help visualize where everything sits
+        THEN when everything is done for this section TURN OFF and change to light gray */
+        /* border: red dashed 1px; */
+        border: #ccc solid 1px;
+        /* you can leave boxes as is or give them some curve */
+        border-radius: 4px;
+    }
+
+    .social img {
+        /* Make the actual icon images in the boxes a little larger */
+        width: 22px;
+        height: 22px;
+    }
+
+    .social a:hover {
+        /* change the color on the links when user hovers mouse over */
+        background-color: #ddd;
+    }
+
+
