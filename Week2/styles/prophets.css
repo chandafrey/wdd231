@@ -1,0 +1,72 @@
+    /* --------------------- COLOR SCHEME ------------------- */
+/* green #3b543d */
+/* white */
+
+
+
+/* --------------------- SITE WIDE ------------------- */
+*{
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+/* --------------------- HEADER ------------------- */
+h1 {
+    text-align: center;
+    color: #3b543d;
+ }
+
+/* --------------------- MAIN ------------------- */
+
+
+
+
+main p {
+    font-size: xx-large;
+    
+}
+
+#cards {
+    background-color: rgb(134, 136, 134);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px 1fr));
+    gap: 5rem;
+    padding: 1rem;
+    place-items: center;
+}
+
+#cards section {
+    background-color: #eee;
+    display: block;
+    padding: 2rem;
+    text-align: center;
+    align-content: center;
+    /* width: 600px; */
+    /* height: 800px; */
+}
+
+section img {
+    /* display: block; */
+    margin: 0 auto;
+    box-shadow: 4px 4px 20px #303030;
+    /* border-radius: 10px; */
+    /* border-style: double; */
+}
+
+section h2 {
+    color: #303030;
+}
+
+ /* --------------------- FOOTER ------------------- */
+    footer {
+        /* add padding top and bottom(1rem) 
+        and gutter padding left and right to match the header(10px) */
+        padding: 1rem 10px;
+        text-align: center;
+    }
+
+    footer .copywrite {
+        background-color: #eee;
+        padding: 2px;
+
+    }
