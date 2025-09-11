@@ -13,6 +13,13 @@
 /* Remember the hamburger button needs to be a minimun 
 of 44px or 48px */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
@@ -21,6 +28,7 @@ header {
     border-bottom: solid 1px #ddd;
     /* this gives breathing room between the logo and site name */
     column-gap: 8px;
+   
 }
 
 /* Do this every time for a header image:   
@@ -158,6 +166,43 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         background-color: #E07A5F;
     }
 
+    /* --------------------- MAIN ------------------- */
+    body {
+        margin: 0;
+        padding-top: 50px;
+    }
+    
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        /* background-image: url("imagees/hot-air-balloon.jpg"); */
+        /* background-size: cover; */
+        /* background-position: center; */
+        /* background-attachment: fixed; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* overflow: hidden; */
+
+    }
+    .hero img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .hero h1 {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        color: #eee;
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        text-align: center;
+        /* padding: 0 1rem; */
+    }
 
     /* --------------------- FOOTER ------------------- */
     footer {
