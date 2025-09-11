@@ -1,4 +1,6 @@
-[
+
+{
+    "members" [
     {
     "name": "Burt Brothers",
     "address": {
@@ -105,3 +107,4 @@
      "isRestaurant": true
     }
 ]
+}

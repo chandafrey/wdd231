@@ -1,6 +1,14 @@
 // This file is to fetch the business members information from the 
 // members.json file and create business cards for each
 
+// const year = document.getElementById("currentYear");
+// console.log(year);
+// // use the date object
+// const today = new Date();
+// year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
+
+// let lastModified = document.lastModified;
+// document.getElementById('lastModified').textContent = `Last modified: ${lastModified}`;
 
 
 // Declare a const variable named "url" that 
@@ -19,7 +27,13 @@ const cards = document.querySelector('#cards');
 async function getMemberData() {
     // Store the response from the fetch() method 
     // in a const variable named "response".
-    const response = await fetch(url);
+    try {
+        const response = await fetch(url);
+    
+
+    if (!response.ok) {
+        throw new Error(`HTTP error!  status: ${response.status}`);
+    }
     
     // Convert the response to a JSON object using the
     //  .json method and store the results in a 
@@ -36,7 +50,7 @@ async function getMemberData() {
     // method to view the data in a more traditional format. 
     // large amounts of data in a more organized way. 
     // ***THIS TESTS IN CONSOLE TO SEE IF THE FETCH WORKED
-    console.log(data.members);
+    console.table(data.members);
 
     // If it all checks out, note that the data returns a single property, 
     // an array of objects named "prophets".
@@ -48,4 +62,72 @@ async function getMemberData() {
     // ***THIS FUNCTION IS FOR BUILDING THE CARDS...
     // It won't work until the displayProphets function is created BELOW
     displayMembers(data.members);
+    } catch (error) {
+        console.error("Error fetching member data:", error);
+        cards.textContent = "Unable to load member directory.";
+  }
 }
+
+
+// CREATE displayMembers FUNCTION to create member cards
+// Define a function expression named "displayMembers" that handles a 
+// single parameter named "members" somewhere in your js file. 
+// Use an arrow expression to contain statements that will process 
+// the parameter value and build a card for each member.
+function displayMembers(members) {
+    // ***OR YOU CAN WRITE THE SAME FUNCTION AS AN ARROW FUNCTION THIS WAY
+    // const displayProphets = (prophets) => {
+
+    // Inside the function, use a forEach loop with the 
+    // array parameter to process each "prophet" record one at a time, 
+    // creating a new card each time.
+    members.forEach((member) => {
+    // create a section element and store it in a variable named card using createElement(),
+    let card = document.createElement('section');
+    // create an h2 element and store it in a variable named "name",
+    let name = document.createElement('h2');
+    // create an img element and store it in a variable named "image",
+    let image = document.createElement('img');
+    // create a <p> for phone
+    let phone = document.createElement('p');
+    // create a <p> for date of websiteUrl 
+    let websiteLink = document.createElement('a');
+
+    // populate the heading element with the member's name 
+    // using a template string to build the full name,
+    name.textContent = member.name;
+   
+    // build the image element by setting the 
+    // src, alt, loading, width, and height attributes using setAttribute().
+    image.setAttribute('src', member.image);
+    image.setAttribute('alt', `Image of ${member.name}`);
+    image.setAttribute('loading', 'lazy');
+    image.setAttribute('width', '340');
+    image.setAttribute('height', '440');
+
+     // populate the phone
+    phone.textContent = `Phone: ${member.phone}`;
+
+    // populate the websiteUrl
+    websiteLink.textContent = "Visit Website";
+    websiteLink.setAttribute('href', member.websiteUrl);
+    websiteLink.setAttribute('target', '_blank');
+
+    // Using appendChild() on the section element named "card", 
+    // add the heading and image elements one at a time.
+    card.appendChild(name);
+    card.appendChild(image);
+    card.appendChild(phone);
+    card.appendChild(websiteLink);
+
+    // Finally, add the section card to the "cards" div 
+    // that was selected at the beginning of the script file.
+    cards.appendChild(card);
+    });
+}
+
+
+
+// Call the function getProphetData() in the main line of 
+// your .js code to test the fetch and response.
+getMemberData();
