@@ -9,6 +9,13 @@
     font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
 }
+
+  header, main, nav, footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 1rem;
+    }
 /* --------------------- HEADER ------------------- */
 /* Remember the hamburger button needs to be a minimun 
 of 44px or 48px */
@@ -209,13 +216,23 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         /* add padding top and bottom(1rem) 
         and gutter padding left and right to match the header(10px) */
         padding: 1rem 10px;
-        text-align: center;
+        /* background-color: #eee; */
+        background-color: #f9f9f9;
     }
 
-    footer .copywrite {
-        background-color: #eee;
-        padding: 2px;
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
+    .contact-info a, 
+    .copywrite a {
+        text-decoration: none;
+        color: inherit;
     }
 
     .social {
@@ -250,8 +267,8 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
 
     .social img {
         /* Make the actual icon images in the boxes a little larger */
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
     }
 
     .social a:hover {

@@ -1,0 +1,60 @@
+
+/* 38rem x 16 = 608px....these rules begin at 608px */
+@media only screen and (min-width: 38rem) {
+
+    /* The teacher says this is kinda standard... 
+    setting the header, main, nav and footer to a max width 900px
+    and margin 0, auto*/
+    /* header, main, nav, footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 1rem;
+    } */
+    /* Because we are going to not have the hamburger button
+    We should change the grid-template-columns: to only 2 colums; */
+    header {
+        grid-template-columns: 24px auto;
+    }
+    /* on the larger view, we Do NOT want the Hamburger to show */
+    .hamburger {
+        display: none;
+    }
+
+    /* On the larger screen we need the navigation to stay turned on
+    so set the display to block */
+    .navigation {
+        position: sticky;
+        z-index: 999;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: block;
+        border-bottom: solid 1px #eee;
+    }
+    /* on larger view, we want the navigation to display left to right
+    and we will set that on the parent element .navigation ul and display to 
+    flex because that defaults as left to right */
+    .navigation ul {
+        display: flex;
+    }
+
+    /* remove the border on the navigation links - the easiest fix 
+    so there isn't a short line below the links while there is a long
+    line above */
+
+    /* OR if you want the line, keep this the same and go back up to the
+    .navigation and set border-bottom: solid 1px #eee; */
+    .navigation a {
+        border: none;
+    }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    /* text-align: left; */
+  }
+
+}

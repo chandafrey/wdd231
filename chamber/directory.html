@@ -27,7 +27,7 @@
     <!-- put them in this order -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory-small.css">
-    <!-- <link rel="stylesheet" href="styles/larger.css"> -->
+    <link rel="stylesheet" href="styles/larger.css">
 
     <!-- JS Links -->
     <!-- <script src="scripts/course.js" defer></script> -->
@@ -56,20 +56,16 @@
             <!-- put the class="current" on the link specific to the 
              current page...in this case Directory -->
             <li><a href="#">Home</a></li>
-            <li class="current"><a href="#">Directory</a></li>
+            <li class="current"><a href="directory.html" aria-current="page">Directory</a></li>
             <li><a href="#">Join</a></li>
             <li><a href="#">Discover</a></li>
         </ul>
     </nav>
 
     <main>
-        <section>
-            <!-- <h1>Eagle Mountain Chamber of Commerce Member Directory</h1> -->
-            <div class="hero">
-                <h1>Eagle Mountain Chamber of Commerce Member Directory</h1>
-                <img src="images/hot-air-balloon.jpg" alt="Hero image - Picture of hot air balloons">
-
-            </di>
+        <section class="hero">
+            <h1>Eagle Mountain Chamber of Commerce Member Directory</h1>
+            <img src="images/hot-air-balloon.jpg" alt="Hero image - Picture of hot air balloons">
         </section>
         <section>
             <h2>Business Directory</h2>
@@ -94,24 +90,26 @@
     </main>
 
     <footer>
-        <div class="contact-info">
-            <p>Eagle Mountain Chamber of Commerce</p>
-            <p>100 East Center Street</p>
-            <p>Eagle Mountain, Utah 84005</p>
-            <p>info@emcc.org</p>
-            <p>(801) 555-1234</p>
-        </div>
-        <div class="social">
-            <!-- target="_blank" will open this link in a new TAB -->
-            <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
-            <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/chanda-f-653186323/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
-        </div>
-        <div class="copywrite">
-            <p>WDD231 Class Project</p>
-            <p>Chanda Frey</p>
-            <p>&copy; <span id="currentYear"></span> Eagle Mountain Chamber of Commerce</p>
-            <p><span id="lastModified"></span></p>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Eagle Mountain Chamber of Commerce</p>
+                <p>100 East Center Street</p>
+                <p>Eagle Mountain, Utah 84005</p>
+                <p><a href="mailto:info@emcc.org">info@emcc.org</a></p>
+                <p><a href="tel:+8015551234">(801) 555-1234</a></p>
+            </div>
+            <div class="social">
+                <!-- target="_blank" will open this link in a new TAB -->
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/chanda-f-653186323/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+            <div class="copywrite">
+                <p>WDD231 Class Project</p>
+                <p>Chanda Frey</p>
+                <p>&copy; <span id="currentYear"></span> Eagle Mountain Chamber of Commerce</p>
+                <p><span id="lastModified"></span></p>
+            </div>
         </div>
     </footer>
 </body>
