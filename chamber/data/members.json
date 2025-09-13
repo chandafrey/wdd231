@@ -26,40 +26,40 @@
     "zip": "84005"
     },
     "phone": "801-502-1234",
-    "websiteUrl": "something here",
+    "websiteUrl": "https://losalbertosid.com/",
     "image": "something here too",
     "membership": 2,
      "isRestaurant": true
     },
     {
-    "name": "Business 3",
+    "name": "chick-fil-a",
     "address": {
-    "street": "123 Bedford Road",
-    "city": "Eagle Mountain",
+    "street": "931 N Redwood Rd",
+    "city": "Saratoga Springs",
     "state": "Utah",
     "country": "USA",
-    "zip": "84005"
+    "zip": "84045"
     },
     "phone": "801-502-1234",
-    "websiteUrl": "something here",
-    "image": "something here too",
+    "websiteUrl": "https://www.chick-fil-a.com/locations/ut/the-crossing-in-saratoga-springs?utm_source=yext&utm_medium=link",
+    "image": "https://static.cfacdn.com/photos/restaurants/04616/large.jpg",
     "membership": 2,
      "isRestaurant": true
     },
     {
-    "name": "Business 4",
+    "name": "Nord Orthodontics",
     "address": {
-    "street": "123 Bedford Road",
+    "street": "3688 E Campus Dr",
     "city": "Eagle Mountain",
     "state": "Utah",
     "country": "USA",
     "zip": "84005"
     },
-    "phone": "801-502-1234",
-    "websiteUrl": "something here",
-    "image": "something here too",
+    "phone": "801-789-5444",
+    "websiteUrl": "https://utahvalleybraces.com/",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/braces.webp",
     "membership": 2,
-     "isRestaurant": true
+     "isRestaurant": false
     },
     {
     "name": "Business 5",

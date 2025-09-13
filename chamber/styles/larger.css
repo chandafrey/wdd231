@@ -50,6 +50,20 @@
         border: none;
     }
 
+    /* --------------------------------------------*/
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .list section {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .list section img {
+        height: 100px;
+    }
+
+    /* ------------------------------------------- */
   .footer-content {
     flex-direction: row;
     justify-content: space-between;

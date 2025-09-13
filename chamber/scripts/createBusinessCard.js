@@ -85,13 +85,15 @@ function displayMembers(members) {
     // create a section element and store it in a variable named card using createElement(),
     let card = document.createElement('section');
     // create an h2 element and store it in a variable named "name",
-    let name = document.createElement('h2');
+    let name = document.createElement('h3');
     // create an img element and store it in a variable named "image",
     let image = document.createElement('img');
     // create a <p> for phone
     let phone = document.createElement('p');
     // create a <p> for date of websiteUrl 
     let websiteLink = document.createElement('a');
+    // create a <p> for the address
+    let address = document.createElement('p');
 
     // populate the heading element with the member's name 
     // using a template string to build the full name,
@@ -113,12 +115,16 @@ function displayMembers(members) {
     websiteLink.setAttribute('href', member.websiteUrl);
     websiteLink.setAttribute('target', '_blank');
 
+    // populate the address
+    address.textContent = `${member.address.street}, ${member.address.city}, ${member.state} ${member.address.zip}`;
+
     // Using appendChild() on the section element named "card", 
     // add the heading and image elements one at a time.
-    card.appendChild(name);
     card.appendChild(image);
+    card.appendChild(name);
     card.appendChild(phone);
     card.appendChild(websiteLink);
+    card.appendChild(address);
 
     // Finally, add the section card to the "cards" div 
     // that was selected at the beginning of the script file.
