@@ -1,3 +1,7 @@
+// ADD link to HTML file
+//<script src="scripts/navigation.js" defer></script>
+
+
 // 🔹 General rule of thumb
 // Start with const.
 // If you get an error because you need to reassign, switch it to let.

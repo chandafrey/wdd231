@@ -34,6 +34,8 @@
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/createBusinessCard.js" defer></script>
+    <script src="scripts/grid-list.js" defer></script>
+
 
 
 
@@ -77,11 +79,14 @@
                 </ul>
             </div>
             <!-- GRID/LIST -->
+             <!-- This div is for my BUTTONS to toggle GRID/LIST -->
             <div class="menu">
 		        <button id="grid">Grid</button>
 		        <button id="list">List</button>
 	        </div>
-            <article class="grid">
+            <!-- This grouping is the entire directory to be toggled -->
+            <article id="directory" class="grid">
+               <!-- This div is the array of individual cards -->
                 <div id="cards"></div>
 
                 <!-- This is what should be created from JavaScript -->
@@ -93,7 +98,6 @@
                         <a>card.appendChild(websiteLink);
                         <p>card.appendChild(address);
                     </section>-->
-                </div> 
             </article>             
         </section>
     </main>

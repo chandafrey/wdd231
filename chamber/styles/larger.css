@@ -63,6 +63,12 @@
         height: 100px;
     }
 
+    article.list #cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     /* ------------------------------------------- */
   .footer-content {
     flex-direction: row;

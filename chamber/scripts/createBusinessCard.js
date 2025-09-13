@@ -1,3 +1,7 @@
+// ADD link to HTML file
+//<script src="scripts/createBusinessCard.js" defer></script>
+
+
 // This file is to fetch the business members information from the 
 // members.json file and create business cards for each
 
@@ -116,7 +120,7 @@ function displayMembers(members) {
     websiteLink.setAttribute('target', '_blank');
 
     // populate the address
-    address.textContent = `${member.address.street}, ${member.address.city}, ${member.state} ${member.address.zip}`;
+    address.textContent = `${member.address.street}, ${member.address.city}, ${member.address.state} ${member.address.zip}`;
 
     // Using appendChild() on the section element named "card", 
     // add the heading and image elements one at a time.
