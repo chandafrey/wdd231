@@ -27,7 +27,7 @@
     },
     "phone": "801-502-1234",
     "websiteUrl": "https://losalbertosid.com/",
-    "image": "something here too",
+    "image": "https://img.cdn4dd.com/p/fit=contain,width=200,height=200,format=auto,quality=95/media/restaurant/cover_square/c0297033-95ea-4fd7-ac78-63d677bdb2b1.38",
     "membership": 2,
      "isRestaurant": true
     },
@@ -72,6 +72,7 @@
     },
     "phone": "385-406-2108",
     "websiteUrl": "https://www.berlin-homes.com/",
+    
     "image": "https://images.squarespace-cdn.com/content/v1/64ed0b7367e7ca4f8476ec0d/aa7583cc-dcd8-4522-a0e1-06e11c402720/Long+Berlin+Homes+Logo+PNG+%28White%29.png?format=1500w",
     "membership": 2,
      "isRestaurant": false

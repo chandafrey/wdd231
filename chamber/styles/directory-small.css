@@ -295,11 +295,12 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     }
         
     
-/* 
+
     img {
         width: auto;
         height: 75px;
-    } */
+        background-color: #333;
+    } 
 
 /* ------------------------------- */
         
