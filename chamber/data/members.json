@@ -62,7 +62,7 @@
      "isRestaurant": false
     },
     {
-    "name": "Business 5",
+    "name": "Berlin Homes Basement Finishing",
     "address": {
     "street": "123 Bedford Road",
     "city": "Eagle Mountain",
@@ -70,41 +70,41 @@
     "country": "USA",
     "zip": "84005"
     },
-    "phone": "801-502-1234",
-    "websiteUrl": "something here",
-    "image": "something here too",
+    "phone": "385-406-2108",
+    "websiteUrl": "https://www.berlin-homes.com/",
+    "image": "https://images.squarespace-cdn.com/content/v1/64ed0b7367e7ca4f8476ec0d/aa7583cc-dcd8-4522-a0e1-06e11c402720/Long+Berlin+Homes+Logo+PNG+%28White%29.png?format=1500w",
+    "membership": 2,
+     "isRestaurant": false
+    },
+    {
+    "name": "No. 1 Asian Cuisine",
+    "address": {
+    "street": "4211 Pony Express Parkway",
+    "city": "Eagle Mountain",
+    "state": "Utah",
+    "country": "USA",
+    "zip": "84005"
+    },
+    "phone": "801-789-3010",
+    "websiteUrl": "https://www.no1cuisineut.com/",
+    "image": "https://ik.imagekit.io/awwybhhmo/assets/favicons/Chinese/007-lantern-1.svg?tr=",
     "membership": 2,
      "isRestaurant": true
     },
     {
-    "name": "Business 6",
+    "name": "Tyson Foods, Inc.",
     "address": {
-    "street": "123 Bedford Road",
+    "street": "3817 N Tyson Pkwy",
     "city": "Eagle Mountain",
     "state": "Utah",
     "country": "USA",
     "zip": "84005"
     },
-    "phone": "801-502-1234",
-    "websiteUrl": "something here",
-    "image": "something here too",
+    "phone": "801-789-9200",
+    "websiteUrl": "https://www.tysonfoods.com/",
+    "image": "https://www.tyson.com/content/dam/tyson-retail/tyson-retail/brand-assets/retail-logos/logo.png",
     "membership": 2,
-     "isRestaurant": true
-    },
-    {
-    "name": "Business 7",
-    "address": {
-    "street": "123 Bedford Road",
-    "city": "Eagle Mountain",
-    "state": "Utah",
-    "country": "USA",
-    "zip": "84005"
-    },
-    "phone": "801-502-1234",
-    "websiteUrl": "something here",
-    "image": "something here too",
-    "membership": 2,
-     "isRestaurant": true
+     "isRestaurant": false
     }
 ]
 }
