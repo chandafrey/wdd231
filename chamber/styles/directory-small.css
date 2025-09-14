@@ -273,6 +273,9 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         border: 1px solid #fff;
         box-shadow: 4px 4px 20px #303030;
         border-radius: 5px;
+        /* Added background color because the berlinhomes picture was transparent
+        and needed some dark background */
+        background-color: #303030;
     }
     
 
