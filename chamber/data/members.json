@@ -57,9 +57,8 @@
     },
     "phone": "801-789-5444",
     "websiteUrl": "https://utahvalleybraces.com/",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/braces1.webp",
-    "membership": 2,
-     "isRestaurant": false
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/bracesmodel.webp",
+    "isRestaurant": false
     },
     {
     "name": "Berlin Homes Basement Finishing",
