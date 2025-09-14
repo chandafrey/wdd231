@@ -12,7 +12,7 @@
     },
     "phone": "801-901-3100",
     "websiteUrl": "https://burtbrothers.com/locations/eagle-mountain/",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/rsz_burtbros.jpeg",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/burtbrossquare.jpeg",
     "membership": 2,
      "isRestaurant": false
     },
@@ -42,7 +42,7 @@
     },
     "phone": "801-502-1234",
     "websiteUrl": "https://www.chick-fil-a.com/locations/ut/the-crossing-in-saratoga-springs?utm_source=yext&utm_medium=link",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/rsz_chick-fil-a.jpeg",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/rsz_chickfila.jpeg",
     "membership": 2,
      "isRestaurant": true
     },
