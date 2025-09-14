@@ -211,30 +211,15 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         /* padding: 0 1rem; */
     }
 
-    /* ------------GRID/LIST----------------------- */
-    /* This .menu targets the style of the grid/list toggle button bar */
-    .menu {
-        margin: 1rem auto;
-        padding: 0.5rem;
-        background-color: #333;
-        text-align: center;
+    h2 {
+        font-size: 2rem;
     }
-    
-    .menu button {
-        padding: 0.5rem 1rem;
-        font-weight: 700;
-    }
+   /*menu GRID/LIST is display none for mobile view...but turned on in LARGER SCREEN  */
+   .menu {
+    display: none;
+   }
     /* ---------------------------------------------- */
     
-  
-    
-    /* .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 5px;
-        align-items: center;
-    } */
-
     /* Grid view */
     /* This means select an element with id="cards
     But only when it is inside an <article> that has the class grid 
@@ -244,72 +229,57 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     /* GRID VIEW */
     article.grid #cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
+        grid-gap: 10px;
+        align-items: stretch;
+        place-items: stretch;
+        padding-bottom: 3rem;
+        /* background-color: rgb(134, 136, 134); */
+
+
     }
 
-    /* LIST VIEW */
-    article.list #cards {
+   /* EACH CARD */
+   /* This is for all the elements in the Section Card */
+    article.grid #cards section {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    /* Applies to sections inside .grid */
-    .grid section {
+        /* add some space between the text elements  */
+        justify-content: space-between;
         text-align: center;
-    }
+        padding: 1rem;
+        border: 1px solid #333;
+        background-color: #eee;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    } 
+    /* ------------------------------------------ */
+
+  
     /* Applies to all direct children of section inside .grid */
-    .grid section > * {
-        margin: 0.1rem;
+    article.grid #cards section > * {
+        /* margin: 0.1rem; */
+        margin: .3rem 0;
     }
     
 
-    .grid img {
+    article.grid #cards section img {
+        /* display: block; */
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto;
         border: 1px solid #fff;
-        box-shadow: 0 0 1rem #555;
-        background-color: #333;
-
+        box-shadow: 4px 4px 20px #303030;
+        border-radius: 5px;
     }
     
 
-    h3 {
-        font-size: 1.2rem;
+    article.grid #cards section h3 {
+        font-size: 1.5rem;
     }
-
-
-    /* .list section {
-        display: grid; */
-        /* grid-template-columns: 2fr 1fr 1fr; */
-        /* margin: 0;
-        padding: 0.25rem;
-    } */
-    /* Applies to all direct children of section inside .list */
-    /* .list section > * {
-        margin: 0 1rem;
-    } */
-    /* Hides images inside section */
-    /* .list section img {
-        display: none;
-    }
-
-    .list h3 {
-        font-size: 1rem;
-    }
-
-    .list section:nth-child(even) {
-        background-color: #bbb;
-    }
-        
-    
-
-    .list img {
-        width: auto;
-        height: 75px;
-        background-color: #333;
-    }  */
-
-/* ------------------------------- */
+   /* ------------------------------- */
         
 
 

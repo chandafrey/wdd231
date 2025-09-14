@@ -50,26 +50,66 @@
         border: none;
     }
 
-    /* --------------------------------------------*/
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .list section {
-        grid-template-columns: 2fr 1fr 1fr;
+/* ---------------------GRID/LIST Menu buttons bar---------------- */
+    /* This .menu targets the style of the grid/list toggle button bar */
+    .menu {
+        display: block;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        background-color: #333;
+        text-align: center;
     }
     
-    .list section img {
-        height: 100px;
+    .menu button {
+        padding: 0.5rem 1rem;
+        font-weight: 700;
+    }
+    /* --------------------------------------------*/
+    article.grid #cards section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
     }
 
-    article.list #cards {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+   
 
     /* ------------------------------------------- */
+    /* LIST VIEW ON LARGER SCREENS */
+    /* to change the list view so that the image is NOT displayed
+    target the .list (because this option is for list view), 
+    target section (because we are targeting the section inside the cards
+    target img (because we are telling img to display: none */
+
+    article.list #cards section {
+        display: grid;
+        grid-template-columns: 300px 1fr 1fr 1fr;
+        align-items: center;
+        text-align: left;
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    article.list #cards section h3,
+    article.list #cards section p,
+    article.list #cards section a {
+        justify-self: start; /* left-align each column's content */
+    }
+
+    /* Hides images inside section */
+    .list section img {
+        display: none;
+    }
+
+    .list section h3 {
+        font-size: 1rem;
+    } 
+
+    .list section:nth-child(even) {
+        background-color: #eee;
+    }
+
+
+    /* --------------------------------------------------- */
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
