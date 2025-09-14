@@ -12,7 +12,7 @@
     },
     "phone": "801-901-3100",
     "websiteUrl": "https://burtbrothers.com/locations/eagle-mountain/",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/burtbrossquare.jpg",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/burtbros680x880.webp",
     "membership": 2,
      "isRestaurant": false
     },
@@ -27,7 +27,7 @@
     },
     "phone": "801-502-1234",
     "websiteUrl": "https://losalbertosid.com/",
-    "image": "https://img.cdn4dd.com/p/fit=contain,width=200,height=200,format=auto,quality=95/media/restaurant/cover_square/c0297033-95ea-4fd7-ac78-63d677bdb2b1.38",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/mexicanfood.webp",
     "membership": 2,
      "isRestaurant": true
     },
@@ -42,7 +42,7 @@
     },
     "phone": "801-502-1234",
     "websiteUrl": "https://www.chick-fil-a.com/locations/ut/the-crossing-in-saratoga-springs?utm_source=yext&utm_medium=link",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/chickfila.jpg",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/chick-fil-a-sign500x645.webp",
     "membership": 2,
      "isRestaurant": true
     },
@@ -57,7 +57,7 @@
     },
     "phone": "801-789-5444",
     "websiteUrl": "https://utahvalleybraces.com/",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/bracesmodel.webp",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/braces680x880.webp",
     "isRestaurant": false
     },
     {
@@ -86,7 +86,7 @@
     },
     "phone": "801-789-3010",
     "websiteUrl": "https://www.no1cuisineut.com/",
-    "image": "https://ik.imagekit.io/awwybhhmo/assets/favicons/Chinese/007-lantern-1.svg?tr=",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/asian-cuisine340x440.jpg",
     "membership": 2,
      "isRestaurant": true
     },
@@ -101,7 +101,7 @@
     },
     "phone": "801-789-9200",
     "websiteUrl": "https://www.tysonfoods.com/",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/tyson-logo.png",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/tyson-blue680x880.webp",
     "membership": 2,
      "isRestaurant": false
     }
