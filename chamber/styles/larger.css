@@ -65,7 +65,8 @@
         font-weight: 700;
     }
     /* --------------------------------------------*/
-    article.grid #cards section {
+    /* #cards is the container so this is where we put the grid column sizing*/
+    article.grid #cards {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
     }
@@ -89,9 +90,12 @@
         border: 1px solid #ccc;
     }
 
-    article.list #cards section h3,
+    article.list #cards section > * {
+    /*This means the same as the 3 lines below  */
+    /* article.list #cards section h3,
     article.list #cards section p,
-    article.list #cards section a {
+    article.list #cards section a */
+    
         justify-self: start; /* left-align each column's content */
     }
 
