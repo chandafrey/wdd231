@@ -19,8 +19,12 @@
     <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
     
     <!-- Google Font Here -->
+    <!-- Preconnect (fast network handshake) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preload (fetch early) -->
+    <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" as="style"> -->
+    <!-- Actual stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <!-- Style Sheets Here -->
@@ -67,7 +71,19 @@
     <main>
         <section class="hero">
             <h1>Eagle Mountain Chamber of Commerce Member Directory</h1>
-            <img src="images/hot-air-balloon.jpg" alt="Picture of hot air balloons">
+<img 
+  src="images/hot-air-balloon1200x801.webp"
+  srcset="
+    images/hot-air-balloon600x400.webp 600w,
+    images/hot-air-balloon900x601.webp 900w,
+    images/hot-air-balloon1200x801.webp 1200w"
+  sizes="(max-width: 600px) 100vw, 
+        (max-width: 900px) 90vw, 
+        1200px"
+  alt="Picture of hot air balloons"
+  width="1200"
+  height="800"
+  loading="lazy">
         </section>
         <section>
             <h2>Business Directory</h2>
@@ -113,9 +129,16 @@
             </div>
             <div class="social">
                 <!-- target="_blank" will open this link in a new TAB -->
-                <a href="https://www.facebook.com/chanda.frey/" target="_blank" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.instagram.com/chandafrey/" target="_blank" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/chanda-f-653186323/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook.svg" alt="Facebook" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/chanda-f-653186323/" target="_blank" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24" loading="lazy">
+                </a>
+
             </div>
             <div class="copywrite">
                 <p>WDD231 Class Project</p>

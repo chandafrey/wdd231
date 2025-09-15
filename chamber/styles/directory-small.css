@@ -182,22 +182,24 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     .hero {
         position: relative;
         width: 100%;
-        height: 300px;
-        /* background-image: url("imagees/hot-air-balloon.jpg"); */
-        /* background-size: cover; */
-        /* background-position: center; */
-        /* background-attachment: fixed; */
-        /* display: flex; */
-        /* justify-content: center; */
-        /* overflow: hidden; */
+        /*Padding-top on .hero reserves the exact aspect ratio space 
+        before the image loads, which prevents CLS. */
+        padding-top: calc(801 / 1200 * 100%);
+        overflow: hidden;
+
 
     }
     .hero img {
-        display: block;
+        /* Absolute positioning for <img> ensures 
+        it fills the container exactly without affecting layout. */
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1;
+        /* place img behind h1 */
+        z-index: 0;
     }
 
     .hero h1 {
@@ -208,7 +210,8 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         color: #eee;
         font-size: clamp(1.5rem, 4vw, 2.5rem);
         text-align: center;
-        /* padding: 0 1rem; */
+        /* place h1 on top of image */
+        z-index: 1;
     }
 
     h2 {
@@ -289,6 +292,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         padding: 1rem 10px;
         /* background-color: #eee; */
         background-color: #f9f9f9;
+        min-height: 200px;
     }
 
     .footer-content {
