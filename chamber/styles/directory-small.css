@@ -6,7 +6,7 @@
 
 /* --------------------- SITE WIDE ------------------- */
 *{
-    font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", "Helvetica Neue", Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -177,6 +177,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     body {
         margin: 0;
         padding-top: 50px;
+        /* font-family: "Josefin Sans", "Helvetica Neue", Arial, sans-serif; */
     }
     
     .hero {
