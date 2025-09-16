@@ -14,7 +14,17 @@
     /* Because we are going to not have the hamburger button
     We should change the grid-template-columns: to only 2 colums; */
     header {
-        grid-template-columns: 24px auto;
+        display: grid;
+        grid-template-columns: 24px 1fr auto;
+        justify-content: center;
+        /* max-width: 1200px; */
+        margin: 0 auto;
+    }
+    header span {
+        font-size: 1.5rem;
+    }
+    header img {
+        padding-bottom: 10px;
     }
     /* on the larger view, we Do NOT want the Hamburger to show */
     .hamburger {
@@ -24,20 +34,19 @@
     /* On the larger screen we need the navigation to stay turned on
     so set the display to block */
     .navigation {
-        position: sticky;
-        z-index: 999;
-        top: 40px;
-        left: 0;
-        width: 100%;
-        background: white;
         display: block;
-        border-bottom: solid 1px #eee;
+        /* You have to change the position to get it with the header
+        and not below it */
+        position:static;
+        justify-self: end;
+        align-items: end;
     }
     /* on larger view, we want the navigation to display left to right
     and we will set that on the parent element .navigation ul and display to 
     flex because that defaults as left to right */
     .navigation ul {
         display: flex;
+        
     }
 
     /* remove the border on the navigation links - the easiest fix 
@@ -48,6 +57,9 @@
     .navigation and set border-bottom: solid 1px #eee; */
     .navigation a {
         border: none;
+        padding-left: 20px;
+        font-weight: 600;
+        font-size: 1.1rem;
     }
 
 /* ---------------------GRID/LIST Menu buttons bar---------------- */

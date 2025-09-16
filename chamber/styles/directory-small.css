@@ -10,7 +10,13 @@
     box-sizing: border-box;
 }
 
-  header, main, nav, footer {
+  /* header, main, nav, footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 1rem;
+    } */
+    main {
         max-width: 1200px;
         margin: 0 auto;
         width: 100%;
@@ -19,7 +25,7 @@
 /* --------------------- HEADER ------------------- */
 /* Remember the hamburger button needs to be a minimun 
 of 44px or 48px */
-header {
+/* header {
     position: fixed;
     top: 0;
     left: 0;
@@ -31,12 +37,24 @@ header {
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
     /* this will align items at the bottom */
-    align-items: end;
-    border-bottom: solid 1px #ddd;
+    /* align-items: end; */
+    /* border-bottom: solid 1px #ddd; */
     /* this gives breathing room between the logo and site name */
-    column-gap: 8px;
-   
-}
+    /* column-gap: 8px; */
+/* }  */
+    header {
+        display: grid;
+        grid-template-columns: 24px auto 44px;
+        column-gap: 8px;
+        align-items: end;
+        position: fixed; 
+        top: 0;
+        z-index: 1000;   
+        background-color: #f9f9f9;
+        width: 100%;
+        padding: 5px 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
 
 /* Do this every time for a header image:   
     display: block;
@@ -54,6 +72,7 @@ header img {
 header span {
     /* make the font size a little bigger */
     font-size: 1.2rem;
+    font-weight: 700;
     /* Change the text color if you want */
     color: #3b543d;
     /* some bottom padding is needed to align everything a bit better I think */
@@ -89,9 +108,26 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
 }
 
 /* --------------------- NAVIGATION ------------------- */
-/* turn off - when we don't want to display the navigation, display: none; */
 .navigation {
+    /* turn off - when we don't want to display the navigation, display: none; */
     display: none;
+    /* Take nav out of grid so it can span full width */
+    position: absolute;
+    /* Sit the nav right under the header */
+    top: 100%;
+    left: 0;
+    /* make full width same as header */
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.navigation ul {
+    display: block
+    padding 0;
+    width: 100%;
+}
+.navigation li {
+    width: 100%;
 }
 
 /* turn on the navigation links with .show and display: block; */
@@ -111,6 +147,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
 .navigation a, .directory-filter-nav a {
     /* change these anchors from inline to block */
     display: block;
+    width: 100%;
     /* Next we need at least 44px tall of padding:
     -the first number will be top and bottom
     -you can start with .5rem and then INSPECT
@@ -124,7 +161,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     Now we want the links to line up on the Left with the logo
     So use the same LEFT & RIGHT padding as the logo image above
     Go to the Header to see the left and right padding (its set to 10px) */
-    padding: .8rem 10px;
+    padding: .8rem 16px;
 
     /* Change the color from the default blue to your color scheme */
     color: #3b543d;
