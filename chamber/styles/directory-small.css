@@ -122,8 +122,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 .navigation ul {
-    display: block
-    padding 0;
+    display: block;
     width: 100%;
 }
 .navigation li {

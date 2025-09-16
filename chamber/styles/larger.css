@@ -45,8 +45,7 @@
     and we will set that on the parent element .navigation ul and display to 
     flex because that defaults as left to right */
     .navigation ul {
-        display: flex;
-        
+        display: flex;        
     }
 
     /* remove the border on the navigation links - the easiest fix 
