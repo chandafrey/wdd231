@@ -254,8 +254,84 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     h2 {
         font-size: 2rem;
     }
+    /* -------------------- HOME PAGE - WEATHER SECTION -------------------------------- */
+    .weather {
+        display: block;
+        /* change to flex on larger.css */
+    }
+   /* Current Weather Card */
+ 
+   
+   
+   .current-weather img {
+    width: 150px;
+    height: 150px;
+   }
 
-    /* -------------------- GRID / LIST -------------------------------- */
+
+    .temp-current {
+        font-size: 5rem;
+   }  
+
+    .temp-range {
+        display: flex;
+        gap: 1rem;
+    }
+     
+    #description,
+    #temperatureMax, 
+    #temperatureMin {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    } 
+ 
+
+
+/* Forecast Weather Card */
+    .current-weather,
+    .forecast-weather {
+        width: 400px;
+        height: 400px;
+        border: solid 1px #3b543d;
+        border-radius: 4px;
+
+    }
+    .current-weather h3,
+    .forecast-weather h3 {
+        background-color: #3b543d;
+        color: #eee;
+        padding: 8px;
+        margin: 0 auto;
+    }
+ 
+    
+    
+
+    .forecast-container {
+        /* In larger.css...flex-direction: row ; so the children(forecast-day) 
+        cards will flex across the page */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        gap: 6px;
+        background-color: #eee;
+        padding-bottom: 1rem;
+    }
+    .forecast-day {
+        /* give equal width per day */
+        flex: 1;
+        background-color: white;
+        padding: 8px;
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        margin-bottom: .1rem;
+
+    }
+
+
+    /* -------------------- DIRECTORY PAGE - GRID / LIST -------------------------------- */
    /*menu GRID/LIST is display none for mobile view...but turned on in LARGER SCREEN  */
    .menu {
     display: none;

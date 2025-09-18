@@ -61,6 +61,18 @@
         font-size: 1.1rem;
     }
 
+
+      /* -------------------- HOME PAGE - WEATHER SECTION -------------------------------- */
+    .weather {
+        display: flex;
+        /* change to flex on larger.css */
+    }
+    .forecast-container {
+        /* In larger.css..flex-direction: row ; so the children(forecast-day) 
+        cards will flex across the page */
+        flex-direction: row;
+    }
+
 /* ---------------------GRID/LIST Menu buttons bar---------------- */
     /* This .menu targets the style of the grid/list toggle button bar */
     .menu {

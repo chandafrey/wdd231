@@ -1,0 +1,30 @@
+.card {
+    border: solid 1px black;
+    /* background-color: #ccc; */
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    align-content: center;
+    max-width: max-content;
+    
+}
+
+.card img {
+    /* background-color: none; */
+    /* background-color: #3b543d; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.card p {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+/* remember the 'e' in forecast */
+#forecast {
+    display: flex;
+    gap: 1rem;
+}
+
+footer {
+    padding: 2rem;
+}

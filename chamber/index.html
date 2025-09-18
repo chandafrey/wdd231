@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Eagle Mountain Commerce.  Our goal is to support new growth and development in our community.">
     <meta name="author" content="Chanda Frey">
-    <title>Eagle Mountain Chamber of Commerce Directory</title>
+    <title>Eagle Mountain Chamber of Commerce</title>
 
     <!-- FACEBOOK META -->
-    <meta property="og:title" content="Eagle Mountain Chamber of Commerce Directory">
-    <meta property="og:description" content="Welcome to Eagle Mountain Chamber of Commerce.  Our goal is to support new growth and development in our community.">
-    <meta property="og:url" content="https://chandafrey.github.io/wdd231/chamber/directory.html">
+    <meta property="og:title" content="Eagle Mountain Chamber of Commerce">
+    <meta property="og:description" content="Welcome to Eagle Mountain chamber of Commerce.  Our goal is to support new growth and development in our community.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/chamber/index.html">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://chandafrey.github.io/wdd231/chamber/images/balloon1200x801.webp">
-    <meta property="og:image:alt" content="Preview of Chamber Directory Page - Hot air balloons in the sky">    
+    <meta property="og:image:alt" content="Preview of Chamber Home Page - Hot air balloons in the sky">    
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Eagle Mountain Chamber of Commerce | City of Eagle Mountain, Utah">
     <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
@@ -24,31 +24,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     
-    
-    
     <!-- Style Sheets Here -->
     <!-- put them in this order -->
-    <!-- <link rel="preload" href="styles/normalize.css" as="style">
-    <link rel="preload" href="styles/directory-small.css" as="style">
-    <link rel="preload" href="styles/larger.css" as="style"> -->
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css"> 
   
     <!-- JS Links -->
-    <!-- <script src="scripts/course.js" defer></script> -->
     <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/create-cards.js" defer></script>
-    <script src="scripts/grid-list.js" defer></script>
-
-
-
+    <!-- <script src="scripts/create-cards.js" defer></script> -->
+    <!-- <script src="scripts/grid-list.js" defer></script> -->
+    <script src="scripts/weather.js" defer></script>
 
     <!-- Favicon link -->
     <link rel="icon" href="favicon.ico">
-     <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
      
 </head>
 
@@ -63,8 +53,8 @@
             <ul>
                 <!-- put the class="current" on the link specific to the 
                 current page...in this case Directory -->
-                <li><a href="index.html">Home</a></li>
-                <li class="current"><a href="directory.html" aria-current="page">Directory</a></li>
+                <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
@@ -88,28 +78,59 @@
             width="1200"
             height="800"
             fetchpriority="high">
-
-            
         </section>
         <section>
-            <h2>Business Directory</h2>
-            <div class="directory-filters">
-                <ul class="directory-filter-nav"> 
-                    <li><a href="#" id="all-businesses">All Businesses</a></li>
-                    <li><a href="#" id="restaurants">Restaurants</a></li>
-                    <li><a href="#" id="general-business">General Business</a></li>
-                </ul>
+            <h2>Home</h2>
+            <div class="events">
+                <h3>Events</h3>
+                 
             </div>
-            <!-- GRID/LIST -->
-             <!-- This div is for my BUTTONS to toggle GRID/LIST -->
-            <div class="menu">
-		        <button id="grid">Grid</button>
-		        <button id="list">List</button>
-	        </div>
-            <!-- This grouping is the entire directory to be toggled -->
-            <article id="directory" class="grid">
-               <!-- This div is the array of individual cards -->
-                <div id="cards"></div>
+            <!-- WEATHER - CURRENT / FORECAST --------------------------------------->
+            <!-- This class "weather will be the parent for children: "current-weather", "forecast-weather" -->
+            <div class="weather">
+                <!-- Current Weather Card -->
+                <div class="current-weather">
+                    <h3>Current Weather</h3>
+                    
+                    <!-- <h2 id="town"></h2> -->
+                    <div class="weather-details">
+                        <img id="graphic" alt="">
+                        <!-- img id="graphic" alt="clear sky" src"openwwathermap.org link -->
+                        <p id="description"></p>
+                        <p id="temperature"></p> 
+                        <!-- <p id="temperature"><span class="temp-current> </p>-->
+
+                    </div>
+                    
+                
+                    
+
+                    <!-- High/Low container -->
+                    <div class="temp-range">
+                        <p id="temperatureMax"></p>
+                        <!-- <p id="temperatureMax">High:  <span class="temp-number></span></p> -->
+                        <p id="temperatureMin"></p>
+                        <!-- <p id="temperatureMax">Low:  <span class="temp-number></span></p> -->
+                    </div>
+                </div>
+             
+
+                <!-- Forcast Weather Card -->
+                <div class="forecast-weather">
+                    <h3>3-Day Forcast</h3>
+
+                    <div id="forecast" class="forecast-container">
+                        <!-- JS will inject forecast days here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUSINESS--------------------------------------->
+            <div class="business-cards">
+                <p>Business Card 1</p>
+                <p>Business Card 2</p>
+                <p>Business Card 3</p>
+            </div>
 
                 <!-- This is what should be created from JavaScript -->
                 <!-- repeat sections for each business card -->
@@ -120,7 +141,7 @@
                         <a>card.appendChild(websiteLink);
                         <p>card.appendChild(address);
                     </section>-->
-            </article>             
+                       
         </section>
     </main>
 
