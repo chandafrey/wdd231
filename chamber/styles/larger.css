@@ -62,16 +62,27 @@
     }
 
 
-      /* -------------------- HOME PAGE - WEATHER SECTION -------------------------------- */
-    .weather {
-        display: flex;
-        /* change to flex on larger.css */
+      /* -------------------- HOME PAGE - EVENT & WEATHER SECTION -------------------------------- */
+    .content-boxes, 
+    .business-cards 
+    {
+        display: grid;
+        /* flex-direction: row; */
+        /* LARGER SCREENS -this line will make all the children the same height */
+        align-items: stretch;
     }
-    .forecast-container {
-        /* In larger.css..flex-direction: row ; so the children(forecast-day) 
-        cards will flex across the page */
-        flex-direction: row;
+
+    .content-boxes {
+        grid-template-columns: 2fr 1fr 1fr;
+
     }
+    .business-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    
+  
+  
 
 /* ---------------------GRID/LIST Menu buttons bar---------------- */
     /* This .menu targets the style of the grid/list toggle button bar */

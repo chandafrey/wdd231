@@ -92,7 +92,7 @@ function displayForecast(data) {
     const dailyForecasts = data.list.filter(item => item.dt_txt.includes("12:00:00"));
 
     // Take just the next 3 days
-    const threeDayForecast = dailyForecasts.slice(0, 3);
+    const threeDayForecast = dailyForecasts.slice(0, 5);
     threeDayForecast.forEach(day => {
         const date = new Date(day.dt_txt);
 
@@ -103,7 +103,7 @@ function displayForecast(data) {
   
     dayDiv.innerHTML = `
         <strong>${date.toLocaleDateString("en-US", { weekday: "short" })}</strong>
-        <span class="temp-main">${Math.round(day.main.temp)}°F</span>
+        <span class="temp-main">${Math.round(day.main.temp_max)}°F</span>
         <span class="description">${day.weather[0].description}</span>
     `   ;
 

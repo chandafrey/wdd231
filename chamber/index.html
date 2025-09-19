@@ -62,9 +62,8 @@
     </header>
     <!-- *** Call to Action *** -->
 
-    <main>
+ <main>
         <section class="hero">
-            <h1>Eagle Mountain Chamber of Commerce Member Directory</h1>
             <img 
             src="images/balloon1200x801.webp"
             srcset="
@@ -77,35 +76,40 @@
             alt="Picture of hot air balloons"
             width="1200"
             height="800"
-            fetchpriority="high">
+            fetchpriority="high">  
+            <div class="hero-text">
+                <h1>Be a part of something great!</br>Join our Chamber of Commerce</h1>
+                <a href="join.html" class="cta-button">Join Now</a>
+            </div>
         </section>
         <section>
             <h2>Home</h2>
-            <div class="events">
-                <h3>Events</h3>
-                 
-            </div>
-            <!-- WEATHER - CURRENT / FORECAST --------------------------------------->
-            <!-- This class "weather will be the parent for children: "current-weather", "forecast-weather" -->
-            <div class="weather">
+            <section class="content-boxes">
+
+                <!-- EVENTS  --------------------------------------->
+                <div class="events">
+                    <h3>Events</h3>
+                    <p>Chamber Meetings: 3rd Tuesday of every month at 6pm</p>
+                    <p>Farmer's Market at Cory Wride Park: Saturdays 9am -12pm</p>
+                    <p>Food Truck Night: Thursdays 5pm - 9pm</p>
+                    <p>Family Fun Movie Night: 1st Monday of every month at 7pm</p>
+                    
+                </div>
+
+                <!-- WEATHER - CURRENT / FORECAST --------------------------------------->
+                                   
                 <!-- Current Weather Card -->
                 <div class="current-weather">
-                    <h3>Current Weather</h3>
-                    
-                    <!-- <h2 id="town"></h2> -->
-                    <div class="weather-details">
+                    <h3>Current Weather Today</h3>
+                    <div class="image">
                         <img id="graphic" alt="">
                         <!-- img id="graphic" alt="clear sky" src"openwwathermap.org link -->
-                        <p id="description"></p>
-                        <p id="temperature"></p> 
-                        <!-- <p id="temperature"><span class="temp-current> </p>-->
-
                     </div>
-                    
-                
-                    
-
-                    <!-- High/Low container -->
+                    <div class="details">
+                        <p id="description"></p>
+                        <p id="temperature"></p>
+                        <!-- <p id="temperature"><span class="temp-current> </p>-->
+                    </div>
                     <div class="temp-range">
                         <p id="temperatureMax"></p>
                         <!-- <p id="temperatureMax">High:  <span class="temp-number></span></p> -->
@@ -113,23 +117,51 @@
                         <!-- <p id="temperatureMax">Low:  <span class="temp-number></span></p> -->
                     </div>
                 </div>
-             
-
+            
                 <!-- Forcast Weather Card -->
                 <div class="forecast-weather">
-                    <h3>3-Day Forcast</h3>
-
+                    <h3>5-Day Forcast</h3>
                     <div id="forecast" class="forecast-container">
                         <!-- JS will inject forecast days here -->
                     </div>
                 </div>
-            </div>
+            
+
+            </section> <!--END CONTENT BOXES (events, current-weather, forecast-weather))-->
 
             <!-- BUSINESS--------------------------------------->
             <div class="business-cards">
-                <p>Business Card 1</p>
-                <p>Business Card 2</p>
-                <p>Business Card 3</p>
+                <div class="bc">
+                    <div class="name-tag">
+                        <h4>Business Card 1</h4>
+                        <h5>Tag Line</h5>    
+                    </div>
+                    
+                    <img src="images/asian-cuisine340x440.jpg" alt="red sign asian">
+                    <p>EMAIL: me@gmail.com</p>
+                    <p>PHONE: 800-555-1234</p>
+                    <p>URL: mywebsite.com</p>
+                </div>
+                <div class="bc">
+                      <div class="name-tag">
+                        <h4>Business Card 2</h4>
+                        <h5>Tag Line</h5>    
+                    </div>
+                    <img src="images/asian-cuisine340x440.jpg" alt="red sign asian">
+                    <p>EMAIL:  me@gmail.com</p>
+                    <p>PHONe: 800-555-1234</p>
+                    <p>URL: mywebsite.com</p>
+                </div>
+                <div class="bc">
+                     <div class="name-tag">
+                        <h4>Business Card 3</h4>
+                        <h5>Tag Line</h5>    
+                    </div>
+                    <img src="images/asian-cuisine340x440.jpg" alt="red sign asian">
+                    <p>EMAIL:  me@gmail.com</p>
+                    <p>PHONe: 800-555-1234</p>
+                    <p>URL: mywebsite.com</p>
+                </div>
             </div>
 
                 <!-- This is what should be created from JavaScript -->
