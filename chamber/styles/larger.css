@@ -62,9 +62,9 @@
     }
 
 
-      /* -------------------- HOME PAGE - EVENT & WEATHER SECTION -------------------------------- */
+     /* -------------------- HOME PAGE - EVENT & WEATHER SECTION -------------------------------- */
     .content-boxes, 
-    .business-cards 
+    #cards 
     {
         display: grid;
         /* flex-direction: row; */
@@ -76,7 +76,7 @@
         grid-template-columns: 2fr 1fr 1fr;
 
     }
-    .business-cards {
+    #cards {
         grid-template-columns: 1fr 1fr 1fr;
     }
 

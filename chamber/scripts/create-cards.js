@@ -19,6 +19,7 @@
 // contains the URL string of the JSON resource
 // ***for this course we link to the github file url, not at the local file 
 const url = 'https://chandafrey.github.io/wdd231/chamber/data/members.json';
+// const url = "data/members.json";
 
 // Declare a const variable name "cards" 
 // that selects the HTML div element from the 
@@ -86,53 +87,53 @@ function displayMembers(members) {
     // array parameter to process each "prophet" record one at a time, 
     // creating a new card each time.
     members.forEach((member) => {
-    // create a section element and store it in a variable named card using createElement(),
-    let card = document.createElement('section');
-    // create an h2 element and store it in a variable named "name",
-    let name = document.createElement('h3');
-    // create an img element and store it in a variable named "image",
-    let image = document.createElement('img');
-    // create a <p> for phone
-    let phone = document.createElement('p');
-    // create a <p> for date of websiteUrl 
-    let websiteLink = document.createElement('a');
-    // create a <p> for the address
-    let address = document.createElement('p');
+        // create a section element and store it in a variable named card using createElement(),
+        let card = document.createElement('section');
+        // create an h2 element and store it in a variable named "name"
+        let name = document.createElement('h3');
+        // create an img element and store it in a variable named "image"
+        let image = document.createElement('img');
+        // create a <p> for phone
+        let phone = document.createElement('p');
+        // create a <p> for date of websiteUrl 
+        let websiteLink = document.createElement('a');
+        // create a <p> for the address
+        let address = document.createElement('p');
 
-    // populate the heading element with the member's name 
-    // using a template string to build the full name,
-    name.textContent = member.name;
-   
-    // build the image element by setting the 
-    // src, alt, loading, width, and height attributes using setAttribute().
-    image.setAttribute('src', member.image);
-    image.setAttribute('alt', `Image of ${member.name}`);
-    image.setAttribute('loading', 'lazy');
-    image.setAttribute('width', '340');
-    image.setAttribute('height', '440');
+        // populate the heading element with the member's name 
+        // using a template string to build the full name,
+        name.textContent = member.name;
 
-     // populate the phone
-    phone.textContent = `Phone: ${member.phone}`;
+        // build the image element by setting the 
+        // src, alt, loading, width, and height attributes using setAttribute().
+        image.setAttribute('src', member.image);
+        image.setAttribute('alt', `Image of ${member.name}`);
+        image.setAttribute('loading', 'lazy');
+        image.setAttribute('width', '340');
+        image.setAttribute('height', '440');
 
-    // populate the websiteUrl
-    websiteLink.textContent = "Visit Website";
-    websiteLink.setAttribute('href', member.websiteUrl);
-    websiteLink.setAttribute('target', '_blank');
+        // populate the phone
+        phone.textContent = `Phone: ${member.phone}`;
 
-    // populate the address
-    address.textContent = `${member.address.street}, ${member.address.city}, ${member.address.state} ${member.address.zip}`;
+        // populate the websiteUrl
+        websiteLink.textContent = "Visit Website";
+        websiteLink.setAttribute('href', member.websiteUrl);
+        websiteLink.setAttribute('target', '_blank');
 
-    // Using appendChild() on the section element named "card", 
-    // add the heading and image elements one at a time.
-    card.appendChild(image);
-    card.appendChild(name);
-    card.appendChild(phone);
-    card.appendChild(websiteLink);
-    card.appendChild(address);
+        // populate the address
+        address.textContent = `${member.address.street}, ${member.address.city}, ${member.address.state} ${member.address.zip}`;
 
-    // Finally, add the section card to the "cards" div 
-    // that was selected at the beginning of the script file.
-    cards.appendChild(card);
+        // Using appendChild() on the section element named "card", 
+        // add the heading and image elements one at a time.
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(phone);
+        card.appendChild(websiteLink);
+        card.appendChild(address);
+
+        // Finally, add the section card to the "cards" div 
+        // that was selected at the beginning of the script file.
+        cards.appendChild(card);
     });
 }
 

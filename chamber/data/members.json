@@ -10,6 +10,7 @@
     "country": "USA",
     "zip": "84005"
     },
+    "email":  "burtbros@gmail.com",
     "phone": "801-901-3100",
     "websiteUrl": "https://burtbrothers.com/locations/eagle-mountain/",
     "image": "https://chandafrey.github.io/wdd231/chamber/images/burtbros680x880.webp",
@@ -17,7 +18,7 @@
      "isRestaurant": false
     },
     {
-    "name": "Los Aribertos Mexican Food",
+    "name": "Los Aribertos",
     "address": {
     "street": "1352 Eagle Mountain Blvd Suite A",
     "city": "Eagle Mountain",
@@ -25,6 +26,7 @@
     "country": "USA",
     "zip": "84005"
     },
+    "email":  "losalbertos@gmail.com",
     "phone": "801-502-1234",
     "websiteUrl": "https://losalbertosid.com/",
     "image": "https://chandafrey.github.io/wdd231/chamber/images/mexicanfood.webp",
@@ -40,6 +42,7 @@
     "country": "USA",
     "zip": "84045"
     },
+    "email":  "chickfila@gmail.com",
     "phone": "801-502-1234",
     "websiteUrl": "https://www.chick-fil-a.com/locations/ut/the-crossing-in-saratoga-springs?utm_source=yext&utm_medium=link",
     "image": "https://chandafrey.github.io/wdd231/chamber/images/chick-fil-a-sign500x645.webp",
@@ -55,13 +58,15 @@
     "country": "USA",
     "zip": "84005"
     },
+    "email": "nordorthodontics@gmail.com",
     "phone": "801-789-5444",
     "websiteUrl": "https://utahvalleybraces.com/",
     "image": "https://chandafrey.github.io/wdd231/chamber/images/braces680x880.webp",
+    "membership": 2,
     "isRestaurant": false
     },
     {
-    "name": "Berlin Homes Basement Finishing",
+    "name": "Berlin Homes",
     "address": {
     "street": "123 Bedford Road",
     "city": "Eagle Mountain",
@@ -69,9 +74,10 @@
     "country": "USA",
     "zip": "84005"
     },
+    "email":  "berlinhomes@gmail.com",
     "phone": "385-406-2108",
     "websiteUrl": "https://www.berlin-homes.com/",
-    "image": "https://chandafrey.github.io/wdd231/chamber/images/berlinhomes.webp",
+    "image": "https://chandafrey.github.io/wdd231/chamber/images/berlintruck680x880.webp",
     "membership": 2,
      "isRestaurant": false
     },
@@ -84,6 +90,7 @@
     "country": "USA",
     "zip": "84005"
     },
+    "email":  "no1asiancuisine@gmail.com",
     "phone": "801-789-3010",
     "websiteUrl": "https://www.no1cuisineut.com/",
     "image": "https://chandafrey.github.io/wdd231/chamber/images/asian-cuisine340x440.jpg",
@@ -91,7 +98,7 @@
      "isRestaurant": true
     },
     {
-    "name": "Tyson Foods, Inc.",
+    "name": "Tyson Foods",
     "address": {
     "street": "3817 N Tyson Pkwy",
     "city": "Eagle Mountain",
@@ -99,6 +106,7 @@
     "country": "USA",
     "zip": "84005"
     },
+    "email":  "tysonfoods@gmail.com",
     "phone": "801-789-9200",
     "websiteUrl": "https://www.tysonfoods.com/",
     "image": "https://chandafrey.github.io/wdd231/chamber/images/tyson-blue680x880.webp",
