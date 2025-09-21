@@ -18,8 +18,8 @@ const myLong = "-112.02095562570254"
 // CONSTRUCT A FULL PATH USING TEMPLATE LITERALS
 // Create a const for current and one for forcast
 // const myURL = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
-const currentURL = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
-const forecastURL = `//api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
+const currentURL = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`
 
 // TRY TO GRAB THE CURRENT WEATHER DATA 
 async function apiFetch() {

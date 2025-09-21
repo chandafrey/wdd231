@@ -401,7 +401,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     #cards section {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        padding: 0 8px;    
+        padding: 0 8px;   
     }
     #cards .name-tag {
         color: #3b543d;
@@ -431,7 +431,11 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     #cards p {
         grid-column: 2 / 3;
         margin: 20px auto;
-    /*THIS NEEDS HELP */
+        /*THIS NEEDS HELP */
+    }
+    #cards .contact-details {
+        text-align:  left;
+        align-items: center;
     }
     #cards a {
         text-decoration: none;

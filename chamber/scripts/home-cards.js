@@ -16,10 +16,10 @@
 
 // 1.  Start with assigning the members.json file to a URL variable
 // ***for this course we link to the github file url, not at the local file 
-// const url = 'https://chandafrey.github.io/wdd231/chamber/data/members.json';
+const url = 'https://chandafrey.github.io/wdd231/chamber/data/members.json';
 // **only using this local file to see most of my data when offline...
 // when ready to be online - COMMENT OUT!!!
-const url = "data/members.json";
+// const url = "data/members.json";
 
 // 2.  Declare a const variable name "cards" 
 // that selects the HTML div element from the 
@@ -151,5 +151,13 @@ function displayMembers(members) {
 }
 getData();
 
+// Function to Randomly display cards ------------------------------------
+const randomCards = document.querySelector("#random");
+randomCards.addEventListener("click, () => {
+        document.querySelector("#cards").innerHTML = "";
+        createRandomCard(cards.filter.random(card => card.membership === "1" || "2"));
 
 
+
+// Call function when page loads
+displaySpotlights();
