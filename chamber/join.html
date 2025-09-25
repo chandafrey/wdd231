@@ -63,7 +63,26 @@
         </nav>
     </header>
 
-        <main>
+    <main>
+        <section class="hero">
+            <img 
+            src="images/balloon1200x801.webp"
+            srcset="
+                images/balloon600x400.webp 600w,
+                images/balloon900x601.webp 900w,
+                images/balloon1200x801.webp 1200w"
+            sizes="(max-width: 600px) 100vw, 
+                    (max-width: 900px) 90vw, 
+                    1200px"
+            alt="Picture of hot air balloons"
+            width="1200"
+            height="800"
+            fetchpriority="high">  
+            <div class="hero-text">
+                <h1>Be a part of something great!<br>Join our Chamber of Commerce</h1>
+                <a href="join.html" class="cta-button">Join Now</a>
+            </div>
+        </section>
         <section class="membership-form">
             <h2>Membership Form</h2>
             <p>We would love for you to join our Eagle Mountain Chamber of Commerce.</p>
@@ -80,7 +99,7 @@
                 <!-- applicant's organizational title within their organization, text type, name, title, autocomplete value of "organization-title", 
                 and pattern to only accept alpha characters, hyphens, and spaces with a minimum of seven (7) characters using a regular expression -->
 
-                <!-----------PATTERN------------------------ 
+                <!-- PATTERN -->
                 [...] → Character Set
 
                     The square brackets mean:
@@ -166,6 +185,7 @@
                 <!-- A form submission button using input of type submit that is properly labeled in the text node of the button. -->
                 <input type="submit" value="Join Now"> 
             </form>
+        </section>
 
     </main>
     <footer>

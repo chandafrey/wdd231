@@ -87,7 +87,6 @@ form input[type=email]
 }
 
 .description textarea {
-    margin: 0 1rem;
     width: 80%;
     font-size: 1.2rem;
     line-height: 1.5;
