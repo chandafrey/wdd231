@@ -1,0 +1,33 @@
+*{box-sizing: border-box;}
+
+#mydialog div {
+    display: grid;
+    /* column 1 for the title, column 2 for the x...it needs to be min 44px */
+    grid-template-columns: auto 44px;
+    background-color: #ddd;
+    padding: 5px;
+    border-bottom: solid 1px #aaa;
+}
+
+#mydialog h2 {
+    /* set margin to 0 so there is not so much padding */
+    margin: 0;
+    color: #275690;
+}
+
+#mydialog button {
+    margin: 0;
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px #aaa;
+}
+
+#mydialog p {
+    padding: 10px;
+    color: #375170;
+}
+
+/* Set the temple image to a lighter transparency when the 
+dialog box is open....this is the last number percentage.... ".75" */
+::backdrop {
+    background-color: rgba(255, 255, 255, 0.75);
+}

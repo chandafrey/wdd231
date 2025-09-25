@@ -1,0 +1,125 @@
+.membership-form h2 {
+    color: #3b543d;
+}
+/* -------FORM---------- */
+.membership-form {
+    margin: 3rem;
+    width: 100%;
+    max-width: 1024px;
+    justify-self: center;
+    align-self: center;
+}
+
+
+form label {
+    /* Stack the labels with display: block; */
+    display: block;
+    /* give each line some space */
+    padding-top: .2rem;
+    font-weight: 600;
+}
+
+
+
+form input[type=text],
+form input[type=tel],
+form input[type=email]
+{
+    /* Stack the form labels on top of the field boxes */
+    display: block;
+    /* Use margin to give each field section some breathing room */
+    margin: .1rem 0 1rem 0;
+    /* Give the boxes inside a little breathing room */
+    /* padding: 1rem; */
+    height: 3em;
+    /* make the border box line color be a little lighter */
+    border: solid 1px #999;
+    border-radius: 4px;
+    /* Set thickness on left with some color */
+    border-left-width: 5px;
+    border-left-color: #555;
+    /* Make the font-size: a little bigger for the user inputs; */
+    font-size: 1rem;
+    /* Set the color of the curser */
+    color: #3b543d;
+    /* Set the width of the box to at least 250px so there is room for user to input */
+    min-width: 250px;
+    max-width: 1024px;
+}
+
+
+.membership-levels {
+    font-size: 1.1rem;
+    /* make sure there is 0 padding for the left/right 
+    so the Membership Levels title lines up with the rest of the form*/
+    padding: 1rem 0;
+}
+.membership-levels label {
+    display: block;
+    /* give radio buttons a little more breathing room for clicking on mobile */
+    margin-bottom: .5rem;
+}
+.membership-form h3,
+.description label
+/* .membership-levels h3 */
+{
+    margin: 0 0 .5rem  0;
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    /* color: #E07A5F; */
+    color: #3b543d;
+    /* add a very light line below Membership Levels h3 label */
+    /* border-bottom: 1px solid #eee; */
+}
+.non-profit-option {
+    margin-bottom: .5rem;
+}
+.non-profit-option p {
+    margin-top: 0;
+    /* Indent the p so it lines up niceley under the title */
+    margin-left: 1.5rem;
+    font-size: .95rem;
+    color: #555;
+}
+.membership-levels input[type=radio] {
+    /* add space between radio button and text */
+    margin-right: .5rem;
+}
+
+.description textarea {
+    margin: 0 1rem;
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+
+
+/* Change the color of left border to indicate a required field */
+form input:required {border-left-color: #E07A5F;}
+/* Change color of left border to black when user clicks(focuses) on specific box */
+form input:focus {border-left-color: black; outline: none;}
+/* change color of left border to green when required field is correctly filled in */
+form input:required:valid{border-left-color: #629866;}
+
+form input[type=submit] {
+    border: none;
+    text-align: center;
+    background-color: #3b543d;
+    color: white;
+    border-radius: 4px;
+    padding: .75rem 1.5rem;
+    font-size: 1.2rem;
+    /* not sure what this margin will do */
+    margin: 2rem 0;
+
+}
+
+/* --------THANKS PAGE------------ */
+#results {
+    background-color: #eee;
+    padding: 0 1rem;
+    border: solid 1px #E07A5F;
+    border-radius: 6px;
+}

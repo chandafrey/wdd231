@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Eagle Mountain Commerce.  Our goal is to support new growth and development in our community.">
+    <meta name="author" content="Chanda Frey">
+    <title>Eagle Mountain Chamber of Commerce Join</title>
+
+    <!-- FACEBOOK META -->
+    <meta property="og:title" content="Eagle Mountain Chamber of Commerce Join Page">
+    <meta property="og:description" content="Welcome to Eagle Mountain chamber of Commerce.  Our goal is to support new growth and development in our community.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/chamber/join.html">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://chandafrey.github.io/wdd231/chamber/images/balloon1200x801.webp">
+    <meta property="og:image:alt" content="Preview of Chamber Join Page - Hot air balloons in the sky">    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Eagle Mountain Chamber of Commerce | City of Eagle Mountain, Utah">
+    <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
+    
+    <!-- Google Font Here -->
+    <!-- Preconnect (fast network handshake) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css"> 
+    <link rel="stylesheet" href="styles/form.css">
+  
+    <!-- JS Links -->
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <!-- <script src="scripts/create-cards.js" defer></script> -->
+    <!-- <script src="scripts/home-cards.js" defer></script> -->
+    <!-- <script src="scripts/spotlights.js" defer></script> -->
+    <!-- <script src="scripts/grid-list.js" defer></script> -->
+    <!-- <script src="scripts/weather.js" defer></script> -->
+
+    <!-- Favicon link -->
+    <link rel="icon" href="favicon.ico">
+     
+</head>
+<body>
+    <header>
+        <img src="images/mountains-green.svg" alt="site logo" width="24" height="24">
+        <span>Eagle Mountain Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+
+        <!-- add an "id" and "class" so we can connect this section to JavaScript -->
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <!-- put the class="current" on the link specific to the 
+                current page...in this case Directory -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current"><a href="join.html" aria-current="page">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <main>
+        <section class="membership-form">
+            <h2>Membership Form</h2>
+            <p>We would love for you to join our Eagle Mountain Chamber of Commerce.</p>
+            <p>Please fill out the form below and submit.  </p>
+            <form action="thanks.html" method="get" class="designOne">
+                <h3>Contact Information</h3>
+
+                <!-- applicant's first name, text type, required, name, title, and correct autocomplete value so this field autofills with the first name -->
+                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                
+                <!-- applicant's last name, text type, required, name, title, and correct autocomplete value so this field autofills with the last name -->
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                
+                <!-- applicant's organizational title within their organization, text type, name, title, autocomplete value of "organization-title", 
+                and pattern to only accept alpha characters, hyphens, and spaces with a minimum of seven (7) characters using a regular expression -->
+
+                <!-----------PATTERN------------------------ 
+                [...] → Character Set
+
+                    The square brackets mean:
+                    “Match one character that is inside this list.”
+
+                    Inside your brackets:
+
+                    A-Za-z → matches uppercase A–Z and lowercase a–z
+
+                    \- → matches a literal hyphen (-)
+                    (the backslash \ escapes the hyphen so it’s not seen as a range)
+
+                    ' ' (space) → matches a literal space
+
+                    ✅ So [A-Za-z\- ] means:
+
+                    “Allow letters, hyphens, and spaces.”
+
+                    {7,} → Quantifier
+
+                    Curly braces mean “how many times should the previous thing repeat?”
+
+                    7, means “seven or more times.”
+
+                    ✅ So {7,} means:
+
+                    “There must be at least 7 characters total (but no maximum).”
+
+                    🧠 Putting It Together
+
+                    [A-Za-z\- ]{7,} means:
+
+                    “Accept only letters, spaces, or hyphens, and there must be at least 7 characters total.”
+
+                    ✅ Example Matches
+
+                    ✔️ "Manager" ✅ (7 letters, only letters allowed)
+                    ✔️ "Assistant Director" ✅ (letters + space, more than 7 characters)
+                    ✔️ "Co-Founder" ✅ (letters + hyphen, more than 7 characters)
+
+                    ❌ Example Non-Matches
+
+                    ❌ "CEO" ❌ (only 3 characters, fails minimum length)
+                    ❌ "VP-1" ❌ (contains a number, which is not allowed)
+                    ❌ "Boss!" ❌ (contains !, not allowed) -->
+                    <!-- -------------------------------------------------------------- -->
+
+                <label>Your Title <input type="text" name="org-title" required autocomplete="organization-title" title="Enter your title within the organization (letters, spaces, hyphens only, minimum 7 characters)" pattern="[A-Za-z\- ]{7,}"></label>
+                
+                <!-- an email address, email type, required, name, title, correct autocomplete value, and placeholder which contains an example email input. -->
+                <label>Email <input type="email" name="email" required placeholder="business@gmail.com" title="Your Email"></label>
+                
+                <!-- a mobile phone number, telephone type, required, name, title, and correct autocomplete value -->
+                <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with Dashes" placeholder="801-555-1234"></label>
+                
+                <!-- the business/organization's name, text type, required, name, title, and correct autocomplete value of "organization". -->
+                <label>Business/Organization's Name <input type="text" name="business name" required autocomplete="organization" title="Enter your businesss or organization's name"></label>
+                
+                <!-- a membership level selection using an appropriate form field of your choosing to allow the user to select a membership level. There are four membership levels.
+                NP Membership is for non profit organizations and there is no fee.
+                Bronze Membership
+                Silver Membership
+                Gold Membership -->
+                <div class="membership-levels">
+                    <h3>Membership Levels</h3>
+                    <div class="non-profit-option">
+                        <label><input type="radio" name="membership-level" value="non-profit" checked>NP Membership</label>
+                        <p class="non-profit-note">NP Member is for non profit organizations and there is no fee</p>
+                    </div>
+                    <label><input type="radio" name="membership-level" value="bronze">Bronze Membership</label>
+                    <label><input type="radio" name="membership-level" value="silver">Silver Membership</label>
+                    <label><input type="radio" name="membership-level" value="gold">Gold Membership</label>
+                </div>
+                
+                <!-- a business/organization's description, text area, title, and name -->
+                <div class="description">
+                    <label>Organization Description</label><textarea id="org-description" name="org-description" title="Briefly describe your business or organization" rows="4" maxlength="500"></textarea>
+                </div>
+                
+                <!-- the timestamp, hidden type, name, and id. This field contains the current date and time that the form was loaded by the user.  -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <!-- A form submission button using input of type submit that is properly labeled in the text node of the button. -->
+                <input type="submit" value="Join Now"> 
+            </form>
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Eagle Mountain Chamber of Commerce</p>
+                <p>100 East Center Street</p>
+                <p>Eagle Mountain, Utah 84005</p>
+                <p><a href="mailto:info@emcc.org">info@emcc.org</a></p>
+                <p><a href="tel:+8015551234">(801) 555-1234</a></p>
+            </div>
+            <div class="social">
+                <!-- target="_blank" will open this link in a new TAB -->
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank" aria-label="Facebook">
+                    <img src="images/facebook.svg" alt="Facebook" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/chanda-f-653186323/" target="_blank"  rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24" loading="lazy">
+                </a>
+
+            </div>
+            <div class="copywrite">
+                <p>WDD231 Class Project</p>
+                <p>Chanda Frey</p>
+                <p>&copy; <span id="currentYear"></span> Eagle Mountain Chamber of Commerce</p>
+                <p><span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
