@@ -5,6 +5,7 @@
 .membership-form
 {
     margin: 3rem;
+    /* margin-bottom: 0; */
     width: 100%;
     max-width: 1024px;
     justify-self: center;
@@ -44,7 +45,7 @@ form input[type=email]
     /* Set the color of the curser */
     color: #3b543d;
     /* Set the width of the box to at least 250px so there is room for user to input */
-    min-width: 250px;
+    min-width: 300px;
     max-width: 1024px;
 }
 
@@ -62,7 +63,6 @@ form input[type=email]
 }
 .membership-form h3,
 .description label
-/* .membership-levels h3 */
 {
     margin: 0 0 .5rem  0;
     margin-bottom: .5rem;
@@ -88,7 +88,7 @@ form input[type=email]
 }
 
 .description textarea {
-    width: 80%;
+    width: 100%;
     font-size: 1.2rem;
     line-height: 1.5;
     padding: 1rem;
@@ -112,7 +112,7 @@ form input[type=submit] {
     padding: .75rem 1.5rem;
     font-size: 1.2rem;
     /* not sure what this margin will do */
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
 
 }
 

@@ -517,7 +517,15 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
    /* ---------JOIN PAGE MEMBERSHIP LEVEL MODAL CARDS--------------- */
    /* on Larger Screen  have Main display flex with form on left and levels on right */
     /*Container holding all the cards  */
-   #modals {
+    .wrapper {
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* margin: 0 auto; */
+        padding: 1rem;
+        max-width: 600px;
+        /* text-justify: center; */
+    }
+    #modals {
         /* Flex layout and column */
         display: flex;
         flex-direction: column;

@@ -148,17 +148,20 @@
         background-color: #eee;
     }
    /* ---------JOIN PAGE MEMBERSHIP LEVEL MODAL CARDS--------------- */
-    main .wrapper{
+    .wrapper{
         display: flex;
+        flex-direction: row;
         align-items: flex-start;
+        gap: 4rem;
     }
     form {
         flex: 1;
+        max-width: 350px;
     }
     #modals {
-        flex: 1;
+        flex: 2;
         min-width: 450px;
-        gap: 1.5rem;
+        gap: 2rem;
         margin-top: 3rem;
         margin-right: 1.5rem;
     }
