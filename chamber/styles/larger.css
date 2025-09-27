@@ -147,7 +147,21 @@
     .list section:nth-child(even) {
         background-color: #eee;
     }
-
+   /* ---------JOIN PAGE MEMBERSHIP LEVEL MODAL CARDS--------------- */
+    main .wrapper{
+        display: flex;
+        align-items: flex-start;
+    }
+    form {
+        flex: 1;
+    }
+    #modals {
+        flex: 1;
+        min-width: 450px;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        margin-right: 1.5rem;
+    }
 
     /* --------------------------------------------------- */
   .footer-content {

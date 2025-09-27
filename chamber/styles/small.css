@@ -339,10 +339,10 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         color: #3b543d;
    }  
 
-   #description,
-   #temperature,
-   #temperatureMax,
-   #temperatureMin {
+    #description,
+    #temperature,
+    #temperatureMax,
+    #temperatureMin {
         margin: 0;
         border: none;
         padding: 8px;
@@ -384,7 +384,8 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     }
 
     /* .forecast-day is a parent with children - date?, temp-main, description */
-    .forecast-day {
+    .forecast-day
+     {
         /* give equal width per day */
         /* flex: 1; */
         background-color: white;
@@ -394,7 +395,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         align-items: center;
         padding: 1rem;
     }
-    /* ----------------- SPOTLIGHT BUSINESS CARDS --------------------------------------- */
+    /* -----------------DIRECTORY PAGE - SPOTLIGHT BUSINESS CARDS --------------------------------------- */
     #cards {
         margin-top: 2rem;
     }
@@ -446,7 +447,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         text-decoration: underline;
     }
 
-   /* ----------------------------------------------------------------------- */
+   /* -END DIRECTORY PAGE - SPOTLIGHT CARDS ------------------------------ */
 
     /* -------------------- DIRECTORY PAGE - GRID / LIST -------------------------------- */
    /*menu GRID/LIST is display none for mobile view...but turned on in LARGER SCREEN  */
@@ -472,10 +473,11 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
 
    /* EACH CARD */
    /* This is for all the elements in the Section Card */
-    article.grid #cards section {
+    article.grid #cards section
+    {
         display: flex;
         flex-direction: column;
-        /* add some space between the text elements  */
+        /* add some spac between the text elements  */
         justify-content: space-between;
         text-align: center;
         padding: 1rem;
@@ -511,8 +513,87 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         font-size: 1.5rem;
     }
    /* ------------------------------- */
-        
+     
+   /* ---------JOIN PAGE MEMBERSHIP LEVEL MODAL CARDS--------------- */
+   /* on Larger Screen  have Main display flex with form on left and levels on right */
+    /*Container holding all the cards  */
+   #modals {
+        /* Flex layout and column */
+        display: flex;
+        flex-direction: column;
+        /* give space between cards */
+        gap: 1rem;
+        padding-bottom: 3rem;
+        justify-content: center;
+    }
 
+    #modals h2 {
+        color: #3b543d;
+        margin-bottom: 0;
+    }
+  
+    /* Individual .membership-level-card */
+    .membership-level-card {
+        display: flex;
+        flex-direction: column;
+        /* text-align: center; */
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #eee;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        /* this line for some reason reduces the left/right padding on the learn more button */
+        align-items: center;
+    }  
+
+    /* Card Heading (membership level Title) */
+    .membership-level-card h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    /* Learn More Button */
+    .membership-level-card .learn-more {
+        background-color: white;
+        margin: 0 auto;
+        padding: 8px;
+        border: 1px solid #333;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    /* Hover effect for button */
+    .membership-level-card .learn-more:hover {
+        background-color: #E07A5F;
+        color: white;
+    }
+
+    /* Flex across h4 and button top row when modal pops up */
+    .dialog-header {
+        display: flex;
+        justify-content: space-between;
+        /* this line helps the X box not be so tall */
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    /* Modal Dialog Header h4 */
+    .dialog-header h4 {
+        /* shrink the space for the h4 */
+        margin: 0;
+        font-size: 1.2rem;
+        color: #3b543d;
+    }
+
+    /* Modal Dialog Button */
+    .dialog-header button {
+        border: none;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+        padding: 4px;
+        margin: 0 0 .5rem 0;
+    }
 
 
     /* --------------------- FOOTER ------------------- */

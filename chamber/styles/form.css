@@ -2,7 +2,8 @@
     color: #3b543d;
 }
 /* -------FORM---------- */
-.membership-form {
+.membership-form
+{
     margin: 3rem;
     width: 100%;
     max-width: 1024px;
