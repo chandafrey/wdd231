@@ -45,8 +45,9 @@ form input[type=email]
     /* Set the color of the curser */
     color: #3b543d;
     /* Set the width of the box to at least 250px so there is room for user to input */
-    min-width: 300px;
-    max-width: 1024px;
+    /* min-width: 300px; */
+    width: 100%;
+    /* max-width: 450px; */
 }
 
 

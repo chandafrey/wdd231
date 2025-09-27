@@ -430,7 +430,7 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         padding: 8px;
     }
     #cards p {
-        grid-column: 2 / 3;
+        /* grid-column: 2 / 3; */
         margin: 20px auto;
         /*THIS NEEDS HELP */
     }
@@ -602,6 +602,29 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
         padding: 4px;
         margin: 0 0 .5rem 0;
     }
+
+    /* MODAL ANIMATION */
+.membership-level-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 0.8s ease-out forwards;
+}
+
+/* Stagger each card so they animate one after another */
+/* ***BECAUSE THE FIRST 2 CHILDREN IN .MEMBERSHIP-LEVEL-CARD ARE: 
+<H4> AND <DIALOG>, WE ARE STARTING WITH #3 FOR NTH-CHILD(3) */
+.membership-level-card:nth-child(3) { animation-delay: 0.1s; }
+.membership-level-card:nth-child(4) { animation-delay: 0.3s; }
+.membership-level-card:nth-child(5) { animation-delay: 0.5s; }
+.membership-level-card:nth-child(6) { animation-delay: 0.7s; }
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
     /* --------------------- FOOTER ------------------- */

@@ -63,8 +63,8 @@
 
 
      /* -------------------- HOME PAGE - EVENT & WEATHER SECTION -------------------------------- */
-    .content-boxes, 
-    #cards 
+    .content-boxes 
+    /* #cards  */
     {
         display: grid;
         /* flex-direction: row; */
@@ -77,8 +77,9 @@
 
     }
     #cards {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* display: flex; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
         gap: 1rem;
     }
 
@@ -118,11 +119,12 @@
 
     article.list #cards section {
         display: grid;
-        grid-template-columns: 300px 1fr 1fr 1fr;
+        /* flex-direction: row; */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         align-items: center;
         text-align: left;
-        gap: 1rem;
-        padding: 1rem;
+        /* gap: 1rem; */
+        /* padding: 1rem; */
         border: 1px solid #ccc;
     }
 
@@ -156,10 +158,10 @@
     }
     form {
         flex: 1;
-        max-width: 350px;
+        min-width: 450px;
     }
     #modals {
-        flex: 2;
+        flex: 1;
         min-width: 450px;
         gap: 2rem;
         margin-top: 3rem;
