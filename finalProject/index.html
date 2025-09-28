@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my Profile Porfolio page on my skills in Web Development">
+    <meta name="author" content="Chanda Frey">
+    <title>WDD 231 Final Project | Profile Portfolio</title>
+    
+  <!-- FACEBOOK META -->
+    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio">
+    <meta property="og:description" content="This is my Profile Porfolio page on my skills in Web Development.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/finalProject/index.html">
+    <meta property="og:locale" content="en_US">
+    <!-- These 2 lines need updated -->
+    <meta property="og:image" content="https://chandafrey.github.io/wdd231/chamber/images/balloon1200x801.webp">
+    <meta property="og:image:alt" content="Preview of Chamber Home Page - Hot air balloons in the sky">    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Profile Portfolio | Chanda Frey">
+    <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
+    
+    <!-- Google Fonts Here -->
+    <!-- Serif(Lora-Body Text) SanSerif(Montserrat - Headings/Navigation)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles-large.css"> 
+
+    <!-- Favicon link -->
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/head-side-thinking2.svg" alt="site logo" width="24" height="24">
+            <span>Chanda Frey</span>
+            <button id="ham-btn" class="hamburger" aria-label="navigation"></button>
+        </div>
+
+        <!-- add an "id" and "class" so we can connect this section to JavaScript -->
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <!-- put the class="current" on the link specific to the 
+                current page...in this case Home -->
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="finalproject/about.html">About Me</a></li>
+                <li><a href="finalProject/form.html">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>This is my home Page</h1>
+        <p>this is some color</p>
+        <h2>more color</h2>
+        <p>here we go</p>
+    </main>
+    
+    <footer>
+        <div class="social">
+            <!-- target="_blank" will open this link in a new TAB -->
+            <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+            <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/chanda-frey/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+            <a href="https://github.com/chandafrey/wdd231/finalProject/" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+        </div>
+        <div class="copywrite">
+            <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+            <p><span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

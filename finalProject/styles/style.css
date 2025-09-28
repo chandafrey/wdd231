@@ -1,0 +1,62 @@
+/* ========================== 
+   Root Variables - Colors
+   ========================== */
+
+/* CSS Peach and Green Color Vibe */
+:root {
+    --almond: #f1e3d3;
+    --desert-sand: #ddbea9;
+    --persuan-orange: #c58c6d;
+    --ash-gray: #b7b7a4;
+    --reseda: #6b705c;
+    --reseda-copy: #c3c6ba;
+
+    --dark-gray:  #222;
+/* } */
+/* secondary color pallete if I change my mind*/ 
+/* CSS Blues Color Vibe */
+
+
+--background-eggshell: #f0ebd8ff; 
+--headingsherotxt-rich-black: #0d1321ff;
+--navtitlesborders-prussian-blue: #1d2d44ff;
+--buttonslinks-paynes-gray: #3e5c76ff;
+--hoveraccents-silver-lake-blue: #748cabff;
+}
+
+/* ========================== 
+   Global Reset
+   ========================== */
+* {
+    /* Set margin and padding to 0 and box-sizing: border-box;
+    This clears everything to the edge of the page and you can 
+    individually set elements as needed */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================== 
+   Base Styles
+   ========================== */
+body {
+    font-family: "Lora", serif;
+    font-size: 1rem; /*16px default*/
+    line-height: 1.6; /*Comfortable reading size*/
+    font-weight: 400; /*Regular weight*/
+    background: var(--reseda-copy);
+    color: var(--dark-gray) /*Easy to read dark gray*/
+}
+h1 {
+    color: white;
+    /* background-color: var(--background-eggshell); */
+}
+
+p {
+    color: var(--headingsherotxt-rich-black);
+    /* background-color: var(--background-eggshell); */
+}
+h1 {
+    /* background-color: var(--buttonslinks-paynes-gray); */
+    color: var(--navtitlesborders-prussian-blue);
+}
