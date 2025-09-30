@@ -1,0 +1,49 @@
+/* 38rem x 16 = 608px....these rules begin at 608px */
+@media only screen and (min-width: 38rem) {
+/* ========================== 
+    Header
+   ========================== */
+     body {
+        display: block;
+        /* flex-direction: column; */
+        /* padding: 1rem;     */
+        text-align: center;
+        width: 100%;
+        /* max-width: 1200px; */
+        /* justify-items: center; */
+        
+    }
+   /* The teacher says this is kinda standard... 
+    setting the header, main, nav and footer to a max width 900px
+    and margin 0, auto*/
+    header, main, nav, footer {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        
+     }
+  
+    /* on the larger view, we Do NOT want the Hamburger to show */
+    .hamburger {
+        display: none;
+    }
+    .navigation {
+        display: block;
+        justify-self: end;
+    }
+    /* remove border under links in desktop view */
+    .navigation a {
+        border: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    /* on larger view, we want the navigation to display left to right
+    and we will set that on the parent element .navigation ul and display to 
+    flex because that defaults as left to right */
+    .navigation ul {
+        display: flex;
+        /* This is where we set the gap so there is more space between each list item in navigation */
+        gap: 1.5rem;
+    }
+
+}

@@ -1,6 +1,6 @@
 
-/* 64rem x 16 = 1024px....these rules begin at 1024px */
-@media only screen and (min-width: 64rem) {
+/* 38rem x 16 = 608px....these rules begin at 608px */
+@media only screen and (min-width: 38rem) {
 
     /* The teacher says this is kinda standard... 
     setting the header, main, nav and footer to a max width 900px
@@ -169,11 +169,31 @@
     }
 
     /* -------------------- DISCOVER PAGE - GRID AREAS -------------------------------- */
-    #allPlaces {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+
+    #allPlaces div {
+        /* THIS PART IS FOR GRID AREAS */
+        grid-template-areas:
+         /*set the names of the elements on the card in ""quotes and
+         type in the order you want displayed on the page
+         Then go to each element like #allPlaces div h2 and tell it to
+         sit at the top of the card with grid-area: name;  */
+        "photograph name"
+        "photograph description"
+        "photograph location";
+    }
+    #allPlaces div img {
+        /* Add this line if all the images are still not sitting even with each other */
+        width: 300px;
+    }
+    #allPlaces div:hover {
+        /* hover effect */
+        box-shadow: 0 0 50px #333;
     }
 
+
+    aside #sidebar-message {
+        max-width: 425px;
+    }
     /* --------------------------------------------------- */
   .footer-content {
     flex-direction: row;

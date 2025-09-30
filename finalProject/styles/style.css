@@ -10,9 +10,9 @@
     --ash-gray: #b7b7a4;
     --reseda: #6b705c;
     --reseda-copy: #c3c6ba;
-
+    --reseda-copy-light: #e8edd9;
     --dark-gray:  #222;
-/* } */
+
 /* secondary color pallete if I change my mind*/ 
 /* CSS Blues Color Vibe */
 
@@ -44,19 +44,206 @@ body {
     font-size: 1rem; /*16px default*/
     line-height: 1.6; /*Comfortable reading size*/
     font-weight: 400; /*Regular weight*/
-    background: var(--reseda-copy);
-    color: var(--dark-gray) /*Easy to read dark gray*/
+    background: var(--reseda-copy-light);
+    color: var(--dark-gray); /*Easy to read dark gray*/
 }
 h1 {
-    color: white;
-    /* background-color: var(--background-eggshell); */
+    color: var(--navtitlesborders-prussian-blue);
 }
 
 p {
     color: var(--headingsherotxt-rich-black);
     /* background-color: var(--background-eggshell); */
 }
-h1 {
-    /* background-color: var(--buttonslinks-paynes-gray); */
-    color: var(--navtitlesborders-prussian-blue);
+
+
+/* ========================== 
+   Header
+   ========================== */
+header {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 1rem;
+    padding: 8px;
+    background-color: white;
+
 }
+/* this is for the span tag for the site name */
+header span {
+    /* make the font size a little bigger */
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    transform: scaleY(1.5);
+    /* Change the text color if you want */
+    color: #5e6547;
+    /* some bottom padding is needed to align everything a bit better I think */
+    /* padding-bottom: 5px; */
+}
+/* ========================== 
+   Header -> Hamburger
+   ========================== */
+   .hamburger {
+    /* delete the gray background and black border by setting to "none" */
+    background: none;
+    border: none;
+    /* Change the hamburger lines color if you want */
+    /* color: var(--persuan-orange); */
+    color: #5e6547;
+
+    /* add a cursor so that when a person hovers over the icon the mouse 
+    will change to a pointer */
+    /* you can see if this works by toggling off device toolbar in your "inspect devtools page" */
+    cursor: pointer;
+    font-size: 2rem;
+
+   }
+   /* 👉 Developers often choose ::after for “decoration” (like icons) 
+    and ::before for “labels” or “markers,” but it’s mostly a convention — not a rule. */
+    .hamburger::after {
+        /* "\2630" will create a hamburger icon for the content value */
+        content: "\2630";
+    }
+    .hamburger.show::after {
+        /* "\00D7" will create an X icon for the content value */
+        content: "\00D7";
+        color: var(--persuan-orange);
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+
+    }
+
+/*  ========================== 
+    Header -> .logo (This is the image logo, span and hamburger button)
+    ========================== */
+    /* Remember the hamburger button needs to be a minimun 
+    of 44px or 48px */
+   .logo {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+        /* this will align items at the bottom */
+    align-items: end;
+    /* border-bottom: solid 1px #ddd; */
+    /* this gives breathing room between the logo and site name */
+    column-gap: 8px;
+   }
+   /* I used margin-bottom: 8px to scooch the logo up to be centered 
+   with the span name and hamburger button */
+   .logo img {
+    margin-bottom: 8px;
+   }
+
+/*  ========================== 
+    Header -> Navigation
+    ========================== */
+   /* turn off - when we don't want to display the navigation, display: none; */
+   .navigation {
+    display: none;
+   }
+   /* turn on the navigation links with .show and display: block; */
+    .navigation.show {
+        display: block;
+    }
+    .navigation a:hover {
+        background-color: var(--desert-sand);
+        color: var(--dark-gray);
+    }
+    .navigation ul {
+    /* Remove bullets with list-style-type: none; */
+    list-style-type: none;
+    /* Unordered lists come with margin and padding, so we need to 
+    fix that by setting those to 0 */
+    margin: 0;
+    padding: 0;
+    }
+    .navigation a {
+    /* change these anchors from inline to block */
+    display: block;
+    /* Next we need at least 44px tall of padding:
+    -the first number will be top and bottom
+    -you can start with .5rem and then INSPECT
+    and hover on the link line and see the measurements
+    at .5rem with this Josefin Sans font, the size is
+    454 x 34.4 (which means it needs to be bigger)
+    at .8rem the size is 
+    454 x 43.98 (which is good enough and meets minimun
+    standard of 44px tall)
+
+    Now we want the links to line up on the Left with the logo
+    So use the same LEFT & RIGHT padding as the logo image above
+    Go to the Header to see the left and right padding (its set to 10px) */
+    padding: .8rem 10px;
+
+    /* Change the color from the default blue to your color scheme */
+    color: var(--persuan-orange);
+    /* Remove the underline  */
+    text-decoration: none;
+    /* give a visual separation between the links with a light gray line
+    using the same standard used in the header */
+    border-bottom: solid 1px #ddd;
+}
+    /* WAYFINDING   
+    - HTML Remember to put the class="current" on the link specific to the 
+    current page...in this case Dedicated Temples 
+    
+    - CSS:  we want to make the current page highlighted with 
+    a light gray #eee color so the user knows which page they're on*/
+    .navigation li.current {
+        background-color: #eee;
+    }
+    /* We also want to change color when a user hovers over a link to 
+    see which link they can click on (use color in color scheme)*/
+    .navigation a:hover {
+        background-color: var(--reseda);
+        /* color: var(--persuan-orange); */
+    }
+/*  ========================== 
+    Footer -> 
+    ========================== */
+    footer {
+        background-color: var(--reseda-copy);
+    }
+
+/*  ========================== 
+    Footer -> .social (conection icons)
+    ========================== */
+  .social {
+        /* display all the child items - a hrefs - flex left to right */
+        display: flex;
+        /* Once you have centered .social a(centering the image inside its box,
+         THEN come back here and 
+        justify-content: center; all the children as a package on the page */
+        justify-content: center;
+        /* with the red dashes you can see the boxes touching...give them gap padding */
+        column-gap: 8px;
+        padding: 10px;
+    }
+    .social a {
+        /* start with this display block and then turn off */
+        /* display: block; */
+        /* now change it to display: flex;  so we can center images in the border box*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* icons need to be bigger - a minimun 44px for touchscreen(apple standard) */
+        width: 44px;
+        height: 44px;
+        /* Start with border red and dashed to help visualize where everything sits
+        THEN when everything is done for this section TURN OFF and change to light gray */
+        /* border: red dashed 1px; */
+        border: #ccc solid 1px;
+        /* you can leave boxes as is or give them some curve */
+        border-radius: 4px;
+    }
+    .social img {
+        /* Make the actual icon images in the boxes a little larger */
+        width: 22px;
+        height: 22px;
+    }
+    .social a:hover {
+        /* change the color on the links when user hovers mouse over */
+        background-color: var(--background-eggshell)
+    }

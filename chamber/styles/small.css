@@ -604,26 +604,123 @@ and ::before for “labels” or “markers,” but it’s mostly a convention �
     }
 
     /* MODAL ANIMATION */
-.membership-level-card {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeSlideIn 0.8s ease-out forwards;
-}
+    .membership-level-card {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeSlideIn 0.8s ease-out forwards;
+    }
 
-/* Stagger each card so they animate one after another */
-/* ***BECAUSE THE FIRST 2 CHILDREN IN .MEMBERSHIP-LEVEL-CARD ARE: 
-<H4> AND <DIALOG>, WE ARE STARTING WITH #3 FOR NTH-CHILD(3) */
-.membership-level-card:nth-child(3) { animation-delay: 0.1s; }
-.membership-level-card:nth-child(4) { animation-delay: 0.3s; }
-.membership-level-card:nth-child(5) { animation-delay: 0.5s; }
-.membership-level-card:nth-child(6) { animation-delay: 0.7s; }
+    /* Stagger each card so they animate one after another */
+    /* ***BECAUSE THE FIRST 2 CHILDREN IN .MEMBERSHIP-LEVEL-CARD ARE: 
+    <H4> AND <DIALOG>, WE ARE STARTING WITH #3 FOR NTH-CHILD(3) */
+    .membership-level-card:nth-child(3) { animation-delay: 0.1s; }
+    .membership-level-card:nth-child(4) { animation-delay: 0.3s; }
+    .membership-level-card:nth-child(5) { animation-delay: 0.5s; }
+    .membership-level-card:nth-child(6) { animation-delay: 0.7s; }
 
-@keyframes fadeSlideIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+    /* -------------------- DISCOVER PAGE - GRID AREAS -------------------------------- */
+    #allPlaces div {
+        margin: 1rem 8px;
+        border: solid 1px #999;
+        border-radius: 8px;
+        background-color: #eee;
+        overflow: hidden;
+        /* THIS PART IS FOR GRID AREAS */
+        display: grid;
+        grid-template-areas:
+         /*set the names of the elements on the card in ""quotes and
+         type in the order you want displayed on the page
+         Then go to each element like #allPlaces div h2 and tell it to
+         sit at the top of the card with grid-area: name;  */
+        "name"
+        "photograph"
+        "description"
+        "location";
+    }
+    #allPlaces div h2 {
+        /* setting a margin on the h2 scoots it inside the div box a bit */
+        margin: 1rem 10px;
+        grid-area: name;
+    }
+    #allPlaces div img {
+        /* set the image to fill the whole div box 100% */
+        width: 100%;
+        grid-area: photograph;
+    }
+    /* this one is for the description */
+    #allPlaces div p {
+        margin: 1rem 10px;
+        grid-area: description;
+    }
+    #allPlaces div address {
+        margin: 1rem 10px;
+        grid-area: location;
+    }
+    #allPlaces {
+        padding-bottom: 2rem;
+    }
+
+    /* --------------------ASIDE for date and visits------- */
+    aside #sidebar-message {
+        display: inline-block;
+        align-items: center;
+        border: solid 1px #ddd;
+        border-radius: 8px;
+        background-color:#3b543d;
+        color: white;
+        padding: 8px;
+        margin-top: 1rem;
+        width: 100%;
+        
+    }
+    aside #message-text {
+        font-size: 2rem;
+        padding: 10px;
+        
+    }
+    aside #close-btn {
+        /* color: #3b543d; */
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 700;
+        background: transparent;
+        background-color: #999;
+        padding: 8px;
+        cursor: pointer;
+        
+    }
+
+    .sidebar {
+        animation: slideIn 1s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+        }
+    }
+    .discover h1 {
+        margin: 10px 0;
+    }
+    .discover p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 1px;
+    }
+    .discover li {
+        font-size: 1.2rem;
+    }
 
 
 
