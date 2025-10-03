@@ -1,0 +1,420 @@
+/* ============ MOBILE VIEWS ================ */
+/* COLOR SCHEMA */
+:root {
+--rich-black: #0d1321ff;
+--dark-caviar: #303030;
+--prussian-blue: #1d2d44ff;
+--paynes-gray: #3e5c76ff;
+--very-light-blue: #e5e7eb;
+/* --eggshell: #f0ebd8ff;  */
+--white-cream: #fefffd;
+}
+
+/* MARGINS/PADDING/WIDTHS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* wrapper limits content width and centers it */
+.wrapper {
+    /* max-width: 90%; */
+    max-width: 95%;
+    margin: 0 auto; 
+    padding: 1rem;
+}
+
+header, 
+main,
+footer {
+   padding: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* dark-green #3d403b rgb(61,64,59), alabaster-cream #eeece0 rgb(238,236,224)
+lightBlue #c4c6ca rgb(196,198,202), x-lightBlue #e5e7eb rgb(229,231,235) */
+
+header, footer {
+    background-color: var(--paynes-gray);
+    /* background-color: var(--white-cream); */
+    /* background-color: var(--very-light-blue); */
+    /* background-color:  #c4c6ca;; */
+    color: var(--white-cream);
+    /* color: var(--prussian-blue); */
+    box-shadow: 0 0 30px gray;
+}
+body {
+    background-color: var(--white-cream);
+    color: var(--dark-caviar);
+}
+
+
+/* ---------------------------------------------------------------------------------- */
+
+/* Typography */
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Site Name - Chanda Frey */
+h1 {
+    font-family: "Lato", sans-serif;
+    /* font-family: "DM Sans", sans-serif; */
+    /* font-family: "DM Serif Display", serif; */
+    /* font-family: "Bodoni Moda", serif; */
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Lora", serif; */
+    font-size: 6rem;
+    font-weight:lighter;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: .75rem;
+    text-shadow:#303030 7px 7px 10px;
+}
+h2 {
+    /* font-family: "Lato", sans-serif; */
+    font-family: "Lora", serif;
+    font-weight: 100;
+    font-weight: lighter;
+    /* font-style: normal;  */
+    /* font-style: italic; */
+    letter-spacing: 2px;
+    /* color: black; */
+    color: var(--rich-black);
+}
+h3 {
+    /* font-family: "Lato", sans-serif; */
+    /* font-family: "DM Sans", sans-serif; */
+    /* font-family: "DM Serif Display", serif; */
+    /* font-family: "Merriweather", serif; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 2px;
+    color: #3d403b;
+}
+main {
+    /* font-family: "Lora", serif; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+/* ------------------------------------------------------------------------------- */
+
+  
+  /* @media (min-width: 600px) {
+    .wrapper {
+      max-width: 600px;
+    } */
+  
+    /* .navigation {
+      flex-direction: row; /* horizontal on tablet+ */
+      /* justify-content: space-around; */
+    /* }
+  }
+  
+  @media (min-width: 900px) {
+    .wrapper {
+      max-width: 1000px;
+    }
+  }*/
+/* -------------------------------------------------------------------------------------- */
+
+/* HEADER CONTAINER - MOBILE VIEW */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    position: relative;
+}
+
+/* .logo is the image used for the logo */
+.site-branding .logo {
+    height: 50px;
+    width: auto;
+}
+/* .site-title is the <span> element - the title */
+.site-title {
+    flex: 1; /* Allow the title to grow and take available space */
+    text-align: center;
+    font-size: clamp(1rem, 4vw, 2rem); /* Responsive font size */
+    transform: scaleY(2);
+
+    
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Lora", serif; */
+    /* font-size: 6rem; */
+    /* font-weight:lighter; */
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: .5rem;
+    color: var(--white-cream);
+    text-shadow:#303030 7px 7px 10px;
+    /* flex-shrink: 0; */
+    white-space: nowrap;
+}
+
+/* HAMBURGER MENU BUTTON - MOBILE ONLY */
+.hamburger {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: .5rem;    
+    background: none;
+    border: none;
+    color: var(--white-cream);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.hamburger::before {
+    content: "☰";
+}
+.hamburger.open::before {
+    content: "✕";
+    font-size: 24px;
+}
+
+/* Navigation */
+/* The navigation menu is hidden by default on mobile screens and shown when the button is clicked */
+.navigation {
+    /* turn off - when we don't want to display the navigation, display: none; */
+    display: none;
+    /* Take nav out of grid so it can span full width */
+    position: absolute;
+    /* Sit the nav right under the header */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* background-color: var(--very-light-blue); */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+/* If the navigation isn't opening properly, make sure 
+the js click event is the same word...They both have to say the same 
+Either "open*(in js) and .open(in css) or "show" and .show */
+.navigation.open {
+    display: block;
+    position: absolute;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation li {
+    margin: 0;
+}
+
+.navigation a { 
+    display: block; /* block makes the link take up the whole line */
+    text-decoration: none;
+    padding: 1rem; /* padding makes the link area larger and easier to click */
+    background-color: var(--very-light-blue);
+    /* background-color: var(--dark-caviar); */
+    color: var(--white-cream);
+    color: var(--rich-black);
+    width: 100%;
+    transition: .5s; /*USE THIS IF YOU HOVER over a link: Background color changes and Font Size increases
+    The transition: .5s; makes that happen gradually, giving a smooth, polished effect*/
+    font-size: clamp(1.2rem, 3vmin, 1.5rem); /*This is a responsive font size rule using clamp(). It's super handy and flexible.
+    clamp(min, preferred, max) means:
+    min: the smallest allowed size
+    preferred: the flexible size based on the screen (like viewport width)
+    max: the largest allowed size */
+}
+.navigation a:hover,
+.navigation a:active {
+    background-color: var(--white-cream);
+    color: var(--rich-black);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+/* Name/Purpose/Scenarios GRID CONTAINER */
+.name-purpose-scenarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+    padding-left: 2rem;
+    gap: 1rem;
+    justify-items: center;
+    /* background-color: #3d403b; */
+    background-color: var(--prussian-blue);
+    color: var(--white-cream);
+    box-shadow: 0 0 30px #333;
+}
+.name {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.name-purpose-scenarios h2 {
+    color: var(--white-cream);
+} 
+.name-purpose-scenarios .purpose, 
+.name-purpose-scenarios .scenarios {
+    padding-right: .5rem;
+}
+
+/* COLOR/FONT GRID CONTAINER */
+.color-fonts {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 1.5rem;
+   padding-left: 2.5rem;
+   gap: 1rem;
+   /* justify-self: center; */
+   /* background-color: #3d403b; */
+   /* color: #eeece0; */
+   box-shadow: 0 0 30px #333;
+}
+.color-fonts .color {
+    /* grid-column: 1/3; */
+    grid-row: 1/2;
+}
+.color-fonts .fonts {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.color-fonts .form-demo {
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+
+fieldset {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: block;/*Change ths later*/
+    /* background-color: #c4c6ca; */
+    background-color: var(--very-light-blue);
+    color: #3d403b;
+    border: 1px solid #3d403b;
+    box-shadow: 0 0 30px #333;
+    max-width: 200px;
+    padding: 5px;
+    margin: 0 auto;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Lora", serif;
+}
+
+/* WIREFRAME GRID CONTAINER */
+.wireframe {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    padding: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 1rem;
+    justify-items: center;
+    /* background-color: #3d403b; */
+    background-color: var(--prussian-blue);
+    color: var(--white-cream);
+    box-shadow: 0 0 30px #333;
+}
+.wireframe h2,
+.wireframe h3 {
+    justify-self: left;
+    padding-bottom: .25rem;
+    /* grid-column: 1/2;
+    grid-row: 1/3; */
+    /* color: #fefffd; */
+    color: var(--white-cream);
+}
+
+.wireframe .mobile {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  
+}
+
+/* .wireframe .desktop {
+    grid-column: 2/3;
+    grid-row: 2/3;
+} */
+.wireframe .mobile img,
+.wireframe .desktop img {
+    display: block;
+    /* width: 100%; */
+    width: 90%;
+    max-width: 1800px;
+    height: auto;
+    justify-self: center;
+}
+  /* --------------------- FOOTER ------------------- */
+
+footer {
+    text-align: center;
+    /* add padding top and bottom(1rem) 
+    and gutter padding left and right to match the header(10px) */
+    padding: 1rem 10px;
+    /* background-color: #eee; */
+    /* background-color: #f9f9f9; */
+    /* min-height: 200px; */
+}
+
+footer .social,
+footer .copywrite {
+    text-align: center;
+    background-color: var(--very-light-blue);
+    color: var(--rich-black);
+    padding: .5rem;
+}
+
+#lastModified {
+    font-size: 1rem;
+}
+
+
+    /* .copywrite a {
+        text-decoration: none;
+        color: inherit;
+    } */
+
+    .social {
+        /* display all the child items - a hrefs - flex left to right */
+        display: flex;
+        /* Once you have centered .social a(centering the image inside its box,
+         THEN come back here and 
+        justify-content: center; all the children as a package on the page */
+        justify-content: center;
+        /* with the red dashes you can see the boxes touching...give them gap padding */
+        column-gap: 8px;
+        padding: 10px;
+    }
+
+    .social a {
+        /* start with this display block and then turn off */
+        /* display: block; */
+        /* now change it to display: flex;  so we can center images in the border box*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* icons need to be bigger - a minimun 44px for touchscreen(apple standard) */
+        width: 44px;
+        height: 44px;
+        /* Start with border red and dashed to help visualize where everything sits
+        THEN when everything is done for this section TURN OFF and change to light gray */
+        /* border: red dashed 1px; */
+        border: #ccc solid 1px;
+        /* you can leave boxes as is or give them some curve */
+        border-radius: 4px;
+    }
+
+    .social img {
+        /* Make the actual icon images in the boxes a little larger */
+        width: 24px;
+        height: 24px;
+    }
+
+    .social a:hover {
+        /* change the color on the links when user hovers mouse over */
+        background-color: #ddd;
+        background-color: var(--white-cream);
+    }

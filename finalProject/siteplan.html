@@ -1,0 +1,188 @@
+<!-- WDD 131 Site Plan Project -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my Profile Porfolio page on my skills in Web Development">
+    <meta name="author" content="Chanda Frey">
+    <title>WDD 231 Final Project | Profile Portfolio | Chanda Frey</title>
+    
+    <!-- FACEBOOK META -->
+    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio | Chanda Frey">
+    <meta property="og:description" content="Home page for Chanda Frey.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="images/profile-picture-2025.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chanda Frey Home Page">
+    
+
+    <!-- Google Font Here -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,400;1,300;1,400&family=Merriweather:opsz,wght@18..144,700&display=swap" rel="stylesheet">
+    -->
+    <!-- Secondary Fonts here if I change my mind -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+     -->
+    <!-- Serif(Lora-Body Text) SanSerif(Montserrat - Headings/Navigation)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplan-large.css">
+
+    <!-- JS Links -->    
+    <!-- This one is for the date stamp in the footer -->
+    <script src="scripts/date.js" defer></script>
+   
+    <script src="scripts/navigation.js" defer></script>
+    
+    <!-- This file has a date stamp as well and a hamburger button-->
+    <!-- <script src="scripts/siteplan.js" defer></script> -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="site-header">
+            <!-- Adding a link to this image should make it so a person can
+            click on the image and return to the home page...Typically this 
+            would be href="index.html" -->
+            <a href="siteplan.html" class="site-branding">
+                <img src="images/head-side-thinking2-orange.svg" alt="a profile of a person with gears in the brain" class="logo">
+                <!-- <img src="images/chanda-profile400x400.jpg" alt="Profile Picture of Chanda Frey" class="logo"> this is the icon for the logo -->
+            </a>    
+            <span class="site-title">Chanda Frey</span>
+            
+
+            <!-- use "Menu" or "Open menu" for the label - 
+            this tells the screen reader user what will happen 
+            when they activate it -->
+            <!-- Add aria-expanded="false" and toggle it with JS when menu opens. -->
+            <!-- Add aria-controls="nav-bar" to connect the button to the controlled element. -->
+            <button type="button" 
+                    id="ham-btn" 
+                    class="hamburger" 
+                    aria-label="Menu" 
+                    aria-controls="nav-bar"
+                    aria-expanded="false">
+            </button>         
+          
+            <!-- add an "id" and "class" so we can connect this section to JavaScript -->
+            <nav id="nav-bar" class="navigation">
+                <ul> 
+                    <li><a href="siteplan.html" class="active">Home</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></lia>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main> 
+            <!-- Remember to use <div> for these groups and 
+                then <section> WITH h1-h6 for the inside sections -->
+            <div class ="name-purpose-scenarios">  
+                <section class="name">
+                    <h2>Site Name: Chanda Frey</h2>
+                    <p>This name reflects my purpose to create a portfolio website</p>
+                </section>
+
+                <section class ="purpose">
+                    <h2>Site Purpose:</h2>
+                    <p>The site provides a place for me to share who I am and skills I can offer.</p>
+                </section>
+
+                <section class="scenarios">
+                    <h2>Scenarios:</h2>
+                    <ul>
+                        <li>What projects have you most recently been working on?</li>
+                        <li>Demonstrate a visitor count with localStorage.</li>
+                        <li>Share an animation.</li>
+                        <li>Show an interactive element.</li>
+                        <li>Is there anything else you want to share?</li>
+                    </ul>
+                </section>
+            </div> <!-- end namePurposeScenarios -->
+            
+            <div class="color-fonts">
+                <section class="color">
+                    <h2>Color Schema: </h2>
+                    <ul>
+                        <!-- <li>Headings: background-color: #525a49, rgb(82,90,73) darkGreenRetreat; color: #fefffd, rgb(254,255,253), white-cream;</li>
+                        <li>Body:  background-color: #fefffd, rgb(254,255,253), white-cream; color: #303030, rgb(48,48,48), darkCaviar;</li>
+                        <li>Accents: </l> -->
+                        <li>Header and Footer: background-color: --paynes-gray: #3e5c76ff; color:  --eggshell: #f0ebd8ff;</li>
+                        <li>Headings: background-color: --prussian-blue: #1d2d44ff; color: --eggshell: #f0ebd8ff;</li>
+                        <li>Body:  background-color: --white-cream: fefffd;  color: --dark-caviar: #303030; --rich-black: #0d1321;</li>
+                        <li>Accents: --eggshell: #f0ebd8ff, --rich-black: #0d1321ff, --very-light-blue: #e5e7eb</li>
+                    </ul>
+                </section>
+
+                <section class="fonts">
+                    <h2>Typography:</h2>
+                    <ul>
+                        <li>Fonts: font-families: "Montserrat", sans-serif; "Lora", serif;</li>
+                        <li>Headings:  "Montserrat", sans-serif; "Lora", serif;</li>
+                        <li>Body: "Montserrat", sans-serif;</li>
+                        <li>Form: "Lora", serif;</li>
+                    </ul>
+                </section>
+
+                <div class="form-demo">
+                    <form method="get" action="thanks.html" class="wf1">
+                        <fieldset>
+                            <div>Form DEMO Color</div>
+                            <label><input type="radio" name="audience" value="beginner">Beginner</label>
+                            <label><input type="radio" name="audience" value="intermediate">Intermediate</label>
+                            <label><input type="radio" name="audience" value="advanced">Advanced</label>
+
+                            <div>Customer Relations</div>
+                            <!-- Purpose of CHECKBOX button: Choose Multiple options -->
+                            <!-- Don't forget to put these in ABC order unless there is an Intuitive order like sun, mon, tue -->
+                            <label><input type="checkbox" name="code" value="yes">Coding</label>
+                            <label><input type="checkbox" name="client" value="yes">FTP Client</label>
+                            <label><input type="checkbox" name="editing" value="yes">Photo Editing</label>
+                        </fieldset>
+                    </form>     
+                </div>
+            </div> <!-- end color section-->
+
+            <section class="wireframe">
+                <h2>Wireframe:</h2>
+                <div class="mobile">
+                    <h3>Home page Mobile:</h3>
+                    <img src="images/wireframe-mobile.webp" alt="image of wireframe for mobile view">
+                </div>
+                <div class="desktop">
+                    <h3>Home page Desktop:</h3>
+                    <img src="images/wireframe-desktop2.webp" alt="image of wireframe for desktop view">
+                </div>
+            </section>
+        </main>  
+
+        <footer>
+            <div class="social">
+                <!-- target="_blank" will open this link in a new TAB -->
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/chanda-frey/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+                <a href="https://github.com/chandafrey/" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+            </div>
+            <div class="copywrite">
+                <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+                <p><span id="lastModified"></span></p>
+            </div>
+        </footer>
+    </div> 
+</body>
+</html> 
