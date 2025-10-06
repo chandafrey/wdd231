@@ -1,9 +1,17 @@
+/* ============ MOBILE VIEWS ================ */
+
 /* ========================== 
    Root Variables - Colors
    ========================== */
-
-/* CSS Peach and Green Color Vibe */
 :root {
+    --rich-black: #0d1321ff;
+    --dark-caviar: #303030;
+    --prussian-blue: #1d2d44ff;
+    --paynes-gray: #3e5c76ff;
+    --very-light-blue: #e5e7eb;
+    --white-cream: #fefffd;
+
+/* OTHER COLORS MAYBE LATER? */
     --almond: #f1e3d3;
     --desert-sand: #ddbea9;
     --persuan-orange: #c58c6d;
@@ -13,15 +21,11 @@
     --reseda-copy-light: #e8edd9;
     --dark-gray:  #222;
 
-/* secondary color pallete if I change my mind*/ 
-/* CSS Blues Color Vibe */
-
-
---background-eggshell: #f0ebd8ff; 
---headingsherotxt-rich-black: #0d1321ff;
---navtitlesborders-prussian-blue: #1d2d44ff;
---buttonslinks-paynes-gray: #3e5c76ff;
---hoveraccents-silver-lake-blue: #748cabff;
+    --background-eggshell: #f0ebd8ff; 
+    --headingsherotxt-rich-black: #0d1321ff;
+    --navtitlesborders-prussian-blue: #1d2d44ff;
+    --buttonslinks-paynes-gray: #3e5c76ff;
+    --hoveraccents-silver-lake-blue: #748cabff;
 }
 
 /* ========================== 
@@ -39,128 +43,146 @@
 /* ========================== 
    Base Styles
    ========================== */
+/* wrapper limits content width and centers it */
+.wrapper {
+    max-width: 95%;
+    margin: 0 auto; 
+    padding: 1rem;
+    justify-self: center;
+}
+
+header, 
+footer {
+    background-color: var(--paynes-gray);
+    color: var(--white-cream);
+    box-shadow: 0 0 30px gray;
+    align-items: center;
+    justify-content: center;
+} 
 body {
-    font-family: "Lora", serif;
-    font-size: 1rem; /*16px default*/
-    line-height: 1.6; /*Comfortable reading size*/
-    font-weight: 400; /*Regular weight*/
-    background: var(--reseda-copy-light);
-    color: var(--dark-gray); /*Easy to read dark gray*/
+    background-color: var(--white-cream);
+    color: var(--dark-caviar);
+    /* font-family: "Lora", serif; */
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem; 
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-weight: 400; 
 }
-h1 {
-    color: var(--navtitlesborders-prussian-blue);
-}
-
-p {
-    color: var(--headingsherotxt-rich-black);
-    /* background-color: var(--background-eggshell); */
-}
-
 
 /* ========================== 
    Header
    ========================== */
-header {
+/* display the header as flex and place the .logo, h1 and .hamburger*/
+.site-header {
     display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    margin: 1rem;
-    padding: 8px;
-    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    position: relative;
+}
+/* -------------------------
+   Header -> logo (img)
+   ------------------------*/
+.logo {
+    height: 40px;
+    width: auto;
+}
 
+
+/* -------------------------
+   Header -> h1 (site title)
+   ------------------------*/
+h1 {
+    /* font-family: "Lora", sans-serif; */
+    font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive font size */
+    font-weight: 200;
+    /* font-weight: 700; */
+    font-style: italic;
+    /* scaleY will make the font text TALLER */
+    transform: scaleY(2.5);
+    letter-spacing: .55rem;
+    color: var(--white-cream);
+    text-shadow:#303030 7px 7px 10px;
+    flex: 1;
+    white-space: nowrap;
+    padding: 0 1rem;
 }
-/* this is for the span tag for the site name */
-header span {
-    /* make the font size a little bigger */
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: "Montserrat", sans-serif;
-    transform: scaleY(1.5);
-    /* Change the text color if you want */
-    color: #5e6547;
-    /* some bottom padding is needed to align everything a bit better I think */
-    /* padding-bottom: 5px; */
-}
-/* ========================== 
-   Header -> Hamburger
-   ========================== */
-   .hamburger {
-    /* delete the gray background and black border by setting to "none" */
+
+/* -------------------------
+   Header -> .hamburger (button)
+   ------------------------*/
+.hamburger {
     background: none;
     border: none;
-    /* Change the hamburger lines color if you want */
-    /* color: var(--persuan-orange); */
-    color: #5e6547;
-
+    /* set a width and height to 3rem
+    this ensures 48px square CLICKABLE AREA 
+    (you can set the font size of the icon in the ::before, and .open::before*/
+    width: 3rem;
+    height: 3rem;
+    /* use display flex along with the align-items and justify-content:  
+    to center the icon inside its box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* add a cursor so that when a person hovers over the icon the mouse 
     will change to a pointer */
-    /* you can see if this works by toggling off device toolbar in your "inspect devtools page" */
     cursor: pointer;
-    font-size: 2rem;
+}
+.hamburger::before {
+    content: "☰";
+    /* content: "\2630"; */
+    /* control icon size here */
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--white-cream);
+}
+.hamburger.open::before {
+    content: "✕";
+    /* content: "\00D7"; */
+    color: var(--persuan-orange);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
 
-   }
-   /* 👉 Developers often choose ::after for “decoration” (like icons) 
-    and ::before for “labels” or “markers,” but it’s mostly a convention — not a rule. */
-    .hamburger::after {
-        /* "\2630" will create a hamburger icon for the content value */
-        content: "\2630";
-    }
-    .hamburger.show::after {
-        /* "\00D7" will create an X icon for the content value */
-        content: "\00D7";
-        color: var(--persuan-orange);
-        font-size: 2.5rem;
-        font-weight: 700;
-        font-family: "Montserrat", sans-serif;
-
-    }
-
-/*  ========================== 
-    Header -> .logo (This is the image logo, span and hamburger button)
-    ========================== */
-    /* Remember the hamburger button needs to be a minimun 
-    of 44px or 48px */
-   .logo {
-    display: grid;
-    grid-template-columns: 24px auto 44px;
-    padding: 5px 0 5px 10px;
-        /* this will align items at the bottom */
-    align-items: end;
-    /* border-bottom: solid 1px #ddd; */
-    /* this gives breathing room between the logo and site name */
-    column-gap: 8px;
-   }
-   /* I used margin-bottom: 8px to scooch the logo up to be centered 
-   with the span name and hamburger button */
-   .logo img {
-    margin-bottom: 8px;
-   }
-
-/*  ========================== 
-    Header -> Navigation
-    ========================== */
+/* -------------------------
+   Header -> .navigation 
+   ------------------------*/
    /* turn off - when we don't want to display the navigation, display: none; */
-   .navigation {
+.navigation {
     display: none;
-   }
-   /* turn on the navigation links with .show and display: block; */
-    .navigation.show {
-        display: block;
-    }
-    .navigation a:hover {
-        background-color: var(--desert-sand);
-        color: var(--dark-gray);
-    }
-    .navigation ul {
+    /* Take nav out of grid so it can span full width
+    DON'T FORGET TO PUT THIS BACK IN THE HEADER ON LARGER SCREEN 
+    BY POSITION: STATIC */
+    position: absolute;
+    /* Sit the nav right under the header */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* background-color: var(--very-light-blue); */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+/* If the navigation isn't opening properly, make sure 
+the js click event is the same word...They both have to say the same 
+Either "open*(in js) and .open(in css) or "show" and .show */
+.navigation.open {
+    display: block;
+    position: absolute;
+}
+.navigation ul {
     /* Remove bullets with list-style-type: none; */
     list-style-type: none;
     /* Unordered lists come with margin and padding, so we need to 
     fix that by setting those to 0 */
     margin: 0;
     padding: 0;
-    }
-    .navigation a {
-    /* change these anchors from inline to block */
+}
+.navigation li {
+    margin: 0;
+}
+.navigation a {
+    /* change these anchors from inline to block 
+    block makes the link take up the whole line*/
     display: block;
     /* Next we need at least 44px tall of padding:
     -the first number will be top and bottom
@@ -176,40 +198,144 @@ header span {
     So use the same LEFT & RIGHT padding as the logo image above
     Go to the Header to see the left and right padding (its set to 10px) */
     padding: .8rem 10px;
+    /* padding: 1rem; */
+    background-color: var(--white-cream);
+    background-color: var(--very-light-blue);
 
-    /* Change the color from the default blue to your color scheme */
     color: var(--persuan-orange);
+    color: var(--rich-black);
+
+    font-size: clamp(1rem, 2vmin, 1.2rem);
+    font-family: "Lora", serif;
+    transition: .5s; /*USE THIS IF YOU HOVER over a link: Background color changes and Font Size increases
+    The transition: .5s; makes that happen gradually, giving a smooth, polished effect*/
     /* Remove the underline  */
     text-decoration: none;
     /* give a visual separation between the links with a light gray line
     using the same standard used in the header */
     border-bottom: solid 1px #ddd;
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
-    /* WAYFINDING   
-    - HTML Remember to put the class="current" on the link specific to the 
-    current page...in this case Dedicated Temples 
+/* WAYFINDING   
+- HTML Remember to put the class="current" on the link specific to the 
+current page...in this case Dedicated Temples 
     
-    - CSS:  we want to make the current page highlighted with 
-    a light gray #eee color so the user knows which page they're on*/
-    .navigation li.current {
-        background-color: #eee;
-    }
-    /* We also want to change color when a user hovers over a link to 
-    see which link they can click on (use color in color scheme)*/
-    .navigation a:hover {
-        background-color: var(--reseda);
-        /* color: var(--persuan-orange); */
-    }
+/* We also want to change color when a user hovers over a link to 
+see which link they can click on (use color in color scheme)*/
+.navigation a:hover,
+.navigation a:active {
+    /* background-color: var(--desert-sand); */
+    /* background-color: var(--reseda); */
+    /* background-color: var(--ash-gray); */
+    background-color: var(--white-cream);
+    /* color: var(--dark-gray); */
+    color: var(--rich-black);
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+/* - CSS:  we want to make the current page highlighted with 
+a light gray #eee color so the user knows which page they're on*/
+.navigation li.current {
+    /* background-color: var(--ash-gray); */
+    text-decoration: underline;
+    color: var(--rich-black); 
+}
+/*  END HEADER SECTION =============================== 
+======================================================*/
+.profile {
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+.profile h2 {
+    font-family: "Lora", sans-serif;
+    /* font-size: clamp(1rem, 4vw, 2rem); Responsive font size */
+    font-weight: 200;
+    font-style: italic;
+    /* scaleY will make the font text TALLER */
+    transform: scaleY(1.2);
+    letter-spacing: .55rem;
+    background-color: var(--prussian-blue);
+    color: var(--white-cream);
+    margin: 1rem 0;
+    white-space: nowrap;
+    
+
+}
+.profile img {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 60%;
+    border: 2px solid var(--dark-caviar);
+}
+.catch-phrase {
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transform: scaleY(2.5);
+    padding: 1rem;
+    flex: 1;
+    white-space: nowrap;
+}
+.profile p {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+.resume-contact {
+    padding: 1rem;
+}
+
+
+.resume-contact a {
+    color: var(--rich-black);
+    font-weight: 500;
+    font-style:normal; 
+    text-decoration: none;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: var(--dark-caviar);
+    background-color: var(--persuan-orange);
+    color: var(--white-cream);
+    color: var(--rich-black);
+    border: solid 1px var(--ash-gray);  
+}
+.resume-contact a:hover {
+    background-color: var(--persuan-orange);
+    background-color: var(--dark-caviar);
+    color: var(--white-cream);
+
+    padding: .5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+  
 /*  ========================== 
-    Footer -> 
+    Footer 
     ========================== */
     footer {
-        background-color: var(--reseda-copy);
+        text-align: center;
+        padding: 1rem 10px;
     }
-
-/*  ========================== 
-    Footer -> .social (conection icons)
-    ========================== */
+    footer .social,
+    footer .copywrite {
+        text-align: center;
+        background-color: var(--very-light-blue);
+        color: var(--rich-black);
+        padding: .5rem;
+    }
+ 
+/* -------------------------
+   Footer -> .social, .copywrite
+   ------------------------*/
   .social {
         /* display all the child items - a hrefs - flex left to right */
         display: flex;
@@ -240,10 +366,17 @@ header span {
     }
     .social img {
         /* Make the actual icon images in the boxes a little larger */
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
     }
     .social a:hover {
         /* change the color on the links when user hovers mouse over */
-        background-color: var(--background-eggshell)
+        background-color: var(--white-cream);
+    }
+
+    /* -------------------------
+       Footer -> #lastModified
+       ------------------------*/
+       #lastModified {
+        font-size: 1rem;
     }
