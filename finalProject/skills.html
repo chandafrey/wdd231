@@ -3,20 +3,20 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is my Profile Porfolio Contact page on my skills in Web Development">
+    <meta name="description" content="This is my Profile Porfolio page on my skills in Web Development">
     <meta name="author" content="Chanda Frey">
-    <title>WDD 231 Final Project | Profile Portfolio Contact Page</title>
+    <title>WDD 231 Final Project | Profile Portfolio</title>
     
   <!-- FACEBOOK META -->
-    <meta property="og:title" content="WDD 231 Final Project | Profile Portfoli0 Contact">
-    <meta property="og:description" content="This is my Profile Porfolio Contact page on my skills in Web Development.">
-    <meta property="og:url" content="https://chandafrey.github.io/wdd231/finalProject/contact.html">
+    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio">
+    <meta property="og:description" content="This is my Profile Porfolio page on my skills in Web Development.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/finalProject/index.html">
     <meta property="og:locale" content="en_US">
     <!-- These 2 lines need updated -->
     <meta property="og:image" content="https://chandafrey.github.io/wdd231/finalProject/images/chanda-profile400x400.jpg">
     <meta property="og:image:alt" content="Profile picture of Chanda Frey">    
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Profile Portfolio Contact | Chanda Frey">
+    <meta property="og:site_name" content="Profile Portfolio | Chanda Frey">
     <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
     
     <!-- Google Fonts Here -->
@@ -80,23 +80,32 @@
                     <!-- put the class="current" on the link specific to the 
                     current page...in this case Home -->
                     <li><a href="index.html">Home</a></li>
-                    <li class="current"><a href="about.html" aria-current="page">About</a></li>
-                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="skills.html" aria-current="page">Skills</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section class="contact">
-                <h2>Contact Me</h2>
+            <section class="profile">
+                <h2>Skills</h2>
                 <!-- <img src="images/chanda-profile400x400.jpg" alt="Profile Picture of Chanda Frey"> -->
                 <div>
-                    <!-- <p class="catch-phrase">Mind in motion, web in focus.</p> -->
-                    <p>Contact me through my Facebook, Instagram, or LinkedIn.
-                    Or you can reach me directly at 951-234-2623</p> 
-                </div>              
-            </section>  
+                    <p class="catch-phrase">Mind in motion, web in focus.</p>
+                    <p class="ability">I create visual layouts and user interfaces for websites, 
+                        translating design mockups into functional web pages 
+                        using HTML, CSS and basic JavaScript. 
+                    </p> 
+                </div>
+                <div class="resume-contact">
+                   <a href="resume.html" class="resume-link">Resume</a>
+                <!-- </div> -->
+                <!-- <div class="resume-contact"> -->
+                    <a href="contact.html" class="contact-link">Contact Me</a>
+                </div>
+            </section>
+            
         </main>
         
         <footer>

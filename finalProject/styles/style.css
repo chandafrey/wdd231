@@ -380,3 +380,18 @@ a light gray #eee color so the user knows which page they're on*/
        #lastModified {
         font-size: 1rem;
     }
+
+/*  END INDEX HOME PAGE SECTION =============================== 
+======================================================*/
+
+/*  BEGIN CONTACT ME PAGE SECTION =============================== 
+======================================================*/
+    .contact h2 {
+        font-family: "Lora", serif;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
+    .contact p {
+        font-size: 1.2rem;
+        margin: 2rem;
+    }
