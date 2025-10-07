@@ -1,0 +1,95 @@
+
+{
+    "jobs": [
+    {
+        "title": "Front-End Web Developer",
+        "salary_UT": "$66,000/yr",
+        "image_url": "https://www.svgrepo.com/show/1699/web-development.svg",
+        "description": "Builds and styles websites using HTML, CSS, and JavaScript. Focuses on responsive design and interactive user interfaces."
+    },
+    {
+        "title": "Junior Web Developer",
+        "salary_UT": "$60,000-70,000/yr",
+        "image_url": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/web-development-icon.png",
+        "description": "Assists in developing and maintaining websites or web apps. Works on front-end features, debugging, and small-scale projects under supervision."
+    },
+    {
+        "title": "Web Designer / UI Developer",
+        "salary_UT": "$70,000-80,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/6352/6352331.png",
+        "description": "Creates visually appealing and user-friendly website layouts. Translates design mockups into functioning web pages using HTML and CSS."
+    },
+    {
+        "title": "Email Developer",
+        "salary_UT": "$68,000-80,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/5595/5595272.png",
+        "description": "Codes responsive HTML emails and templates. Ensures compatibility across devices and email clients for marketing campaigns."
+    },
+    {
+        "title": "CMS Editor / Content Specialist",
+        "salary_UT": "$50,000-65,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/11096/11096817.png",
+        "description": "Manages and updates website content using a CMS. Formats pages, uploads media, and maintains site consistency using basic HTML and CSS."
+    },
+    {
+        "title": "Junior UX Engineer / Interaction Designer",
+        "salary_UT": "$70,000-85,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/1688/1688400.png",
+        "description": "Builds and tests interactive prototypes to improve user experience. Combines coding and design to make interfaces intuitive."
+    },
+    {
+        "title": "Marketing / Email / Landing Page Technologist",
+        "salary_UT": "$65,000-75,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/11096/11096817.png",
+        "description": "Develops and maintains marketing web pages, forms, and email templates. Uses HTML, CSS, and JS to support digital campaigns."
+    },
+    {
+        "title": "Website QA / Web QA Analyst",
+        "salary_UT": "$55,000-65,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/5595/5595272.png",
+        "description": "Tests websites for bugs, layout issues, and performance problems. Reports errors and verifies cross-browser compatibility."
+    },
+    {
+        "title": "Web Content Specialist",
+        "salary_UT": "$50,000-60,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/11096/11096817.png",
+        "description": "Edits, uploads, and manages web content. Ensures proper formatting, accessibility, and alignment with brand standards."
+    },
+    {
+        "title": "Junior Full-Stack Developer",
+        "salary_UT": "$70,000-85,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/6352/6352331.png",
+        "description": "Works on both front-end and back-end website features. Uses JavaScript, HTML, CSS, and basic server-side technologies like Node.js."
+    },
+    {
+        "title": "Junior Software Engineer (Front-End leaning)",
+        "salary_UT": "$75,000-90,000/yr",
+        "image_url": "https://www.svgrepo.com/show/1699/web-development.svg",
+        "description": "Develops front-end components and integrates them into larger applications. Focuses on clean, scalable JavaScript code."
+    },
+    {
+        "title": "Technical Support Engineer (Web Apps)",
+        "salary_UT": "$55,000-65,000/yr",
+        "image_url": "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/web-development-icon.png",
+        "description": "Troubleshoots and resolves technical issues in web-based applications. Supports users and identifies bugs in HTML, CSS, or JS code."
+    },
+    {
+        "title": "SEO Specialist / Web Optimization Assistant",
+        "salary_UT": "$60,000-75,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/1688/1688400.png",
+        "description": "Improves website visibility and performance. Uses HTML structure, metadata, and analytics to optimize for search engines."
+    },
+    {
+        "title": "Web Production Assistant",
+        "salary_UT": "$50,000-60,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/5595/5595272.png",
+        "description": "Publishes and updates website content and assets. Ensures accuracy, accessibility, and layout consistency across pages."
+    },
+    {
+        "title": "WordPress / Theme / Plugin Junior Developer",
+        "salary_UT": "$60,000-75,000/yr",
+        "image_url": "https://www.svgrepo.com/show/1699/web-development.svg",
+        "description": "Customizes and maintains WordPress themes and plugins. Uses PHP, HTML, CSS, and JS to enhance website functionality."
+    }
+]
+}

@@ -1,119 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join Membership Form">
+    <meta name="description" content="This is my Profile Porfolio Form page on my skills in Web Development">
     <meta name="author" content="Chanda Frey">
-
-    <link rel="stylesheet" href="styles/form.css">
+    <title>WDD 231 Final Project | Profile Portfolio Form Page</title>
     
-    <title>Form</title>
+  <!-- FACEBOOK META -->
+    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio Form Page">
+    <meta property="og:description" content="This is my Profile Porfolio page on my skills in Web Development.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/finalProject/form.html">
+    <meta property="og:locale" content="en_US">
+    <!-- These 2 lines need updated -->
+    <meta property="og:image" content="https://chandafrey.github.io/wdd231/finalProject/images/chanda-profile400x400.jpg">
+    <meta property="og:image:alt" content="Profile picture of Chanda Frey">    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Profile Portfolio Form Page| Chanda Frey">
+    <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
+    
+    <!-- Google Fonts Here -->
+    <!-- Serif(Lora-Body Text) SanSerif(Montserrat - Headings/Navigation)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles-large.css"> 
+    <link rel="stylesheet" href="styles/form.css">
+
+    <!-- JS Links -->
+    <!-- <script src="scripts/date.js" defer></script> -->
+    <script src="scripts/navigation.js" defer></script>
+    <!-- This one is for the date stamp in the footer -->
+    <script src="scripts/date.js" defer></script>  
+    <!-- This file has a date stamp as well and a hamburger button-->
+    <!-- <script src="scripts/siteplan.js" defer></script> -->
+
+
+    <!-- ***THIS MIGHT STILL NEED ATTENTION -->
+    <!-- Favicon link -->
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
 </head>
+    
 <body>
-    <main>
-        <section class="membership-form">
-            <h2>Membership Form</h2>
-            <p>We would love for you to join our Eagle Mountain Chamber of Commerce.</p>
-            <p>Please fill out the form below and submit.  </p>
-            <form action="thanks.html" method="get" class="designOne">
-                <h3>Contact Information</h3>
+    <div class="wrapper">
+        <header class="site-header">
+            <!-- Adding a link to this image should make it so a person can
+            click on the image and return to the home page...Typically this 
+            would be href="index.html" -->
+            <a href="index.html" class="logo">
+                <img src="images/head-side-thinking2-orange.svg" 
+                     alt="profile of a person with a gear for the brain"
+                     width="24" 
+                     height="24"
+                     class="logo">
+            </a>
+            <h1>Chanda Frey</h1>
 
-                <!-- applicant's first name, text type, required, name, title, and correct autocomplete value so this field autofills with the first name -->
-                <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-                
-                <!-- applicant's last name, text type, required, name, title, and correct autocomplete value so this field autofills with the last name -->
-                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                
-                <!-- applicant's organizational title within their organization, text type, name, title, autocomplete value of "organization-title", 
-                and pattern to only accept alpha characters, hyphens, and spaces with a minimum of seven (7) characters using a regular expression -->
+            <!-- use "Menu" or "Open menu" for the label - 
+            this tells the screen reader user what will happen 
+            when they activate it -->
+            <!-- Add aria-expanded="false" and toggle it with JS when menu opens. -->
+            <!-- Add aria-controls="nav-bar" to connect the button to the controlled element. -->
+            <button type="button"
+                    id="ham-btn"
+                    class="hamburger"
+                    aria-label="Menu"
+                    aria-controls="nav-bar"
+                    aria-expanded="false">
+            </button>
 
-                <!-----------PATTERN------------------------ 
-                [...] → Character Set
+            <!-- add an "id" for connecting to JavaScript and "class" for CSS -->
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <!-- put the class="current" on the link specific to the 
+                    current page...in this case Home -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="current"><a href="form.html" aria-current="page">Form</a></li>
+                </ul>
+            </nav>
+        </header>
 
-                    The square brackets mean:
-                    “Match one character that is inside this list.”
+        <main>
+            <section class="membership-form">
+                <h2>Enrollment Form</h2>
+                <p>Enroll in BYU Pathways and increase your education and skills so you can open the door for better employment opportunities.</p>
+                <p>Please fill out the form below and enroll today.</p>
+                <form action="form-verification.html" method="get" class="designOne">
+                    <h3>Contact Information</h3>
 
-                    Inside your brackets:
+                    <!-- applicant's first name, text type, required, name, title, and correct autocomplete value so this field autofills with the first name -->
+                    <label>First Name <span class="required">*</span><input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                    
+                    <!-- applicant's last name, text type, required, name, title, and correct autocomplete value so this field autofills with the last name -->
+                    <label>Last Name <span class="required">*</span><input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                    
+                    <!-- applicant's organizational title within their organization, text type, name, title, autocomplete value of "organization-title", 
+                    and pattern to only accept alpha characters, hyphens, and spaces with a minimum of seven (7) characters using a regular expression -->
 
-                    A-Za-z → matches uppercase A–Z and lowercase a–z
+                    <!-- PATTERN -->
+                    <!-- [...] → Character Set
+                        The square brackets mean:
+                        “Match one character that is inside this list.”
 
-                    \- → matches a literal hyphen (-)
-                    (the backslash \ escapes the hyphen so it’s not seen as a range)
+                        Inside your brackets:
+                        A-Za-z → matches uppercase A–Z and lowercase a–z
+                        \- → matches a literal hyphen (-)
+                        (the backslash \ escapes the hyphen so it’s not seen as a range)
+                        ' ' (space) → matches a literal space
 
-                    ' ' (space) → matches a literal space
+                        ✅ So [A-Za-z\- ] means:
+                        “Allow letters, hyphens, and spaces.”
+                        {7,} → Quantifier
+                        Curly braces mean “how many times should the previous thing repeat?”
+                        7, means “seven or more times.”
+                        ✅ So {7,} means:
+                        “There must be at least 7 characters total (but no maximum).”
 
-                    ✅ So [A-Za-z\- ] means:
+                        🧠 Putting It Together
+                        [A-Za-z\- ]{7,} means:
+                        “Accept only letters, spaces, or hyphens, and there must be at least 7 characters total.”
 
-                    “Allow letters, hyphens, and spaces.”
+                        ✅ Example Matches
+                        ✔️ "Manager" ✅ (7 letters, only letters allowed)
+                        ✔️ "Assistant Director" ✅ (letters + space, more than 7 characters)
+                        ✔️ "Co-Founder" ✅ (letters + hyphen, more than 7 characters)
 
-                    {7,} → Quantifier
+                        ❌ Example Non-Matches
+                        ❌ "CEO" ❌ (only 3 characters, fails minimum length)
+                        ❌ "VP-1" ❌ (contains a number, which is not allowed)
+                        ❌ "Boss!" ❌ (contains !, not allowed) -->
+                        <!-- End Pattern information -->
 
-                    Curly braces mean “how many times should the previous thing repeat?”
-
-                    7, means “seven or more times.”
-
-                    ✅ So {7,} means:
-
-                    “There must be at least 7 characters total (but no maximum).”
-
-                    🧠 Putting It Together
-
-                    [A-Za-z\- ]{7,} means:
-
-                    “Accept only letters, spaces, or hyphens, and there must be at least 7 characters total.”
-
-                    ✅ Example Matches
-
-                    ✔️ "Manager" ✅ (7 letters, only letters allowed)
-                    ✔️ "Assistant Director" ✅ (letters + space, more than 7 characters)
-                    ✔️ "Co-Founder" ✅ (letters + hyphen, more than 7 characters)
-
-                    ❌ Example Non-Matches
-
-                    ❌ "CEO" ❌ (only 3 characters, fails minimum length)
-                    ❌ "VP-1" ❌ (contains a number, which is not allowed)
-                    ❌ "Boss!" ❌ (contains !, not allowed) -->
-                    <!-- -------------------------------------------------------------- -->
-
-                <label>Your Title <input type="text" name="org-title" required autocomplete="organization-title" title="Enter your title within the organization (letters, spaces, hyphens only, minimum 7 characters)" pattern="[A-Za-z\- ]{7,}"></label>
-                
-                <!-- an email address, email type, required, name, title, correct autocomplete value, and placeholder which contains an example email input. -->
-                <label>Email <input type="email" name="email" required placeholder="business@gmail.com" title="Your Email"></label>
-                
-                <!-- a mobile phone number, telephone type, required, name, title, and correct autocomplete value -->
-                <label>Cell Phone <input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with Dashes" placeholder="801-555-1234"></label>
-                
-                <!-- the business/organization's name, text type, required, name, title, and correct autocomplete value of "organization". -->
-                <label>Business/Organization's Name <input type="text" name="business name" required autocomplete="organization" title="Enter your businesss or organization's name"></label>
-                
-                <!-- a membership level selection using an appropriate form field of your choosing to allow the user to select a membership level. There are four membership levels.
-                NP Membership is for non profit organizations and there is no fee.
-                Bronze Membership
-                Silver Membership
-                Gold Membership -->
-                <div class="membership-levels">
-                    <h3>Membership Levels</h3>
-                    <div class="non-profit-option">
-                        <label><input type="radio" name="membership-level" value="non-profit" checked>NP Membership</label>
-                        <p class="non-profit-note">NP Member is for non profit organizations and there is no fee</p>
+                    <label>Degree/Certificate Desired<span class="required">*</span><input type="text" name="degree-cert" required autocomplete="degree or certificate" title="Enter the degree or certificate you are wanting to complete (letters, spaces, hyphens only, minimum 7 characters)." pattern="[A-Za-z\- ]{7,}"></label>
+                    
+                    <!-- an email address, email type, required, name, title, correct autocomplete value, and placeholder which contains an example email input. -->
+                    <label>Email <span class="required">*</span><input type="email" name="email" required placeholder="business@gmail.com" title="Your Email"></label>
+                    
+                    <!-- a mobile phone number, telephone type, required, name, title, and correct autocomplete value -->
+                    <label>Cell Phone <span class="required">*</span><input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with Dashes" placeholder="801-555-1234"></label>
+                    
+                    <!-- the business/organization's name, text type, required, name, title, and correct autocomplete value of "organization".
+                    <label>Current level of Education Completed <span class="required">*</span><input type="text" name="business-name" required autocomplete="organization" title="Enter current level of education completed"></label>
+                     -->
+                    <!-- a membership level selection using an appropriate form field of your choosing to allow the user to select a membership level. There are four membership levels.
+                    NP Membership is for non profit organizations and there is no fee.
+                    Bronze Membership
+                    Silver Membership
+                    Gold Membership -->
+                    <div class="membership-levels">
+                        <h3>Current level of Completed Education</h3>
+                        <div class="non-profit-option">
+                            <label><input type="radio" name="membership-level" value="High School Diploma" checked>High School Diploma</label>
+                            <!-- <p class="non-profit-note">High School Diploma</p> -->
+                        </div>
+                        <label><input type="radio" name="membership-level" value="Some College">Some College</label>
+                        <label><input type="radio" name="membership-level" value="Associate's Degree">Associate's Degree</label>
+                        <label><input type="radio" name="membership-level" value="Bachelor's Degree">Bachelor's Degree</label>
                     </div>
-                    <label><input type="radio" name="membership-level" value="bronze">Bronze Membership</label>
-                    <label><input type="radio" name="membership-level" value="silver">Silver Membership</label>
-                    <label><input type="radio" name="membership-level" value="gold">Gold Membership</label>
-                </div>
-                
-                <!-- a business/organization's description, text area, title, and name -->
-                <div class="description">
-                    <label>Organization Description<textarea id="org-description" name="org-description" title="Briefly describe your business or organization" rows="4" maxlength="500"></textarea></label>
-                </div>
-                
-                <!-- the timestamp, hidden type, name, and id. This field contains the current date and time that the form was loaded by the user.  -->
-                <input type="hidden" id="timestamp" name="timestamp">
+                    
+                    <!-- a business/organization's description, text area, title, and name -->
+                    <div class="description">
+                        <label>Additional Comments<textarea id="org-description" name="org-description" title="Briefly describe your previous education or concerns you may have." rows="4" maxlength="500"></textarea></label>
+                    </div>
+                    
+                    <!-- the timestamp, hidden type, name, and id. This field contains the current date and time that the form was loaded by the user.  -->
+                    <input type="hidden" id="timestamp" name="timestamp">
 
-                <!-- A form submission button using input of type submit that is properly labeled in the text node of the button. -->
-                <input type="submit" value="Join Now"> 
-            </form>
-    </main>
+                    <!-- A form submission button using input of type submit that is properly labeled in the text node of the button. -->
+                    <input type="submit" value="Enroll Now"> 
+                </form>
+                <script>
+                    // Populate timestamp as soon as the form page loads
+                    // The timestamp needs to be set before the form is submitted, 
+                    // so that the hidden <input> has a value when it is sent to thanks.html.
+                    // If you put it only in thankyou.js, it won’t work because by the time 
+                    // you are on the thank-you page, the form data has already been sent — 
+                    // so timestamp would still be empty.                
+                    document.getElementById('timestamp').value = new Date().toISOString();
+                </script>
+            </section>
+
+            <!-- <section id="modals">
+                <h2>Membership Levels</h2> -->
+
+                <!-- id="mydialog" in this this div is where the details will go -->
+                <!-- <dialog id="mydialog"> -->
+                    <!-- These elements are listed here, but we will reference and fill them in JS -->
+                    <!-- Wrap the title and button in a div, so we can style them side by side in css grid-->
+                    <!-- <div class="dialog-header">
+                        <h4></h4>
+                        <button>❌</button>
+                    </div>
+
+                    <p id="advertising"></p>
+                    <p id="benefits"></p>
+                </dialog>
+            </section>   -->
+
+            <!-- section id="modals" -->
+                <!-- dialog id="mydialog" -->
+                    <!-- div class="dialog-header" -->
+                        <!-- h4 -->
+                        <!-- button (close) -->
+                    <!-- </div> -->
+                    <!--p id="advertising" -->
+                    <!-- p id="benefits" -->
+                <!-- </dialog> -->
+                <!-- div class="membership-level-card" -->
+                    <!-- h3 -->
+                    <!-- button class="learn-more" -->
+                <!-- </div> -->
+            <!-- </section -->
+        <!-- </div> -->
+
+    <!-- Make sure type="module" is added to the script -->
+    <!-- type="module" - Important so my import works for membershipLevels -->
+    <!-- <script src="scripts/modal-mem-levels.js" type="module"></script> -->
+
+        </main>
+        <footer>
+            <div class="social">
+                <!-- target="_blank" will open this link in a new TAB -->
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/chanda-frey/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+                <a href="https://github.com/chandafrey/" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+            </div>
+            <div class="copywrite">
+                <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+                <p><span id="lastModified"></span></p>
+            </div>
+        </footer>
+    </div> <!--End Wrapper-->
 </body>
 </html>

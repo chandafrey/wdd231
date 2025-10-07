@@ -3,20 +3,20 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is my Profile Porfolio page on my skills in Web Development">
+    <meta name="description" content="This is my Profile Porfolio Form Verification page on my skills in Web Development">
     <meta name="author" content="Chanda Frey">
-    <title>WDD 231 Final Project | Profile Portfolio</title>
+    <title>WDD 231 Final Project | Profile Portfolio Form Verification Page</title>
     
   <!-- FACEBOOK META -->
-    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio">
-    <meta property="og:description" content="This is my Profile Porfolio page on my skills in Web Development.">
-    <meta property="og:url" content="https://chandafrey.github.io/wdd231/finalProject/index.html">
+    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio Form Verification">
+    <meta property="og:description" content="This is my Profile Porfolio Form Verification page on my skills in Web Development.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/finalProject/form-verification.html">
     <meta property="og:locale" content="en_US">
     <!-- These 2 lines need updated -->
     <meta property="og:image" content="https://chandafrey.github.io/wdd231/finalProject/images/chanda-profile400x400.jpg">
     <meta property="og:image:alt" content="Profile picture of Chanda Frey">    
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Profile Portfolio | Chanda Frey">
+    <meta property="og:site_name" content="Profile Portfolio Form Verification Page| Chanda Frey">
     <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
     
     <!-- Google Fonts Here -->
@@ -24,21 +24,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+   
     <!-- Style Sheets Here -->
     <!-- put them in this order -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styles-large.css"> 
-   
+    <link rel="stylesheet" href="styles/form.css">
+ 
     <!-- JS Links -->
-    <!-- <script src="scripts/date.js" defer></script> -->
+    <script src="scripts/date.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
-    <!-- This one is for the date stamp in the footer -->
-    <script src="scripts/date.js" defer></script>  
-    <!-- This file has a date stamp as well and a hamburger button-->
-    <!-- <script src="scripts/siteplan.js" defer></script> -->
-    <script src="scripts/create-job-cards.js" defer></script>
+    <script src="scripts/form-verification.js" defer></script>
 
 
     <!-- ***THIS MIGHT STILL NEED ATTENTION -->
@@ -82,46 +79,20 @@
                     current page...in this case Home -->
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li class="current"><a href="skills.html" aria-current="page">Skills</a></li>
+                    <li><a href="skills.html">Skills</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="form.html">Form</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section class="profile">
-                <h2>Tech Jobs</h2>
-                <!-- <img src="images/chanda-profile400x400.jpg" alt="Profile Picture of Chanda Frey"> -->
-                <!-- <div>
-                    <p class="catch-phrase">Mind in motion, web in focus.</p>
-                    <p class="ability">I create visual layouts and user interfaces for websites, 
-                        translating design mockups into functional web pages 
-                        using HTML, CSS and basic JavaScript. 
-                    </p> 
-                </div> -->
-                <!-- GRID/LIST -->
-                <!-- This div is for my BUTTONS to toggle GRID/LIST -->
-                <div class="menu">
-                    <button id="grid">Grid</button>
-                    <button id="list">List</button>
-                </div>
-                <!-- This grouping is the entire directory to be toggled -->
-                <article id="directory" class="grid">
-                <!-- This div is the array of individual cards -->
-                    <div id="cards"></div>
+            <section class="congrats">
+                <h2>Congratulations!</h2>
+                <p>You're now a student at BYU Pathway.  Please check your email to register for classes.</p>
 
-                    <!-- This is what should be created from JavaScript -->
-                    <!-- repeat sections for each business card -->
-                    <!-- <section> 
-                            <img>card.appendChild(image);
-                            <h3>card.appendChild(name);
-                            <p>card.appendChild(phone);
-                            <a>card.appendChild(websiteLink);
-                            <p>card.appendChild(address);
-                        </section>-->
-                </article>             
+                <div id="results" class="verification"></div>
             </section>
-           
         </main>
         
         <footer>
@@ -140,3 +111,4 @@
     </div> <!--End Wrapper-->
 </body>
 </html>
+
