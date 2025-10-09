@@ -2,6 +2,7 @@
 // contains the URL string of the JSON resource
 // ***for this course we link to the github file url, not at the local file 
 const url = 'https://chandafrey.github.io/wdd231/finalProject/data/jobs.json';
+// const url = "../data/jobs.json"
 
 // Declare a const variable name "cards" 
 // that selects the HTML div element from the 
@@ -18,7 +19,7 @@ async function getJobData() {
         const response = await fetch(url)
 
     if (!response.ok) {
-        throw new Error(`HTTP error!  status: ${response.statuus}`);
+        throw new Error(`HTTP error!  status: ${response.status}`);
     }
     
     // Convert the response to a JSON object using the
@@ -60,20 +61,20 @@ async function getJobData() {
     // single parameter named "jobs" somewhere in your js file. 
     // Use an arrow expression to contain statements that will process 
     // the parameter value and build a card for each member.
-    function displayMembers(members) {
+    function displayJobs(jobs) {
     // ***OR YOU CAN WRITE THE SAME FUNCTION AS AN ARROW FUNCTION THIS WAY
     // const displayProphets = (prophets) => {
 
     // Inside the function, use a forEach loop with the 
     // array parameter to process each "job" record one at a time, 
     // creating a new card each time.
-    jobs.array.forEach(job => {
+    jobs.forEach(job => {
         // create a section element and store it in a variable named card using createElement(),
         let card = document.createElement('section');
         // create an h2 element and store it in a variable named "title"
         let title = document.createElement('h3');
         // create an img element and store it in a variable named "image_url"
-        let image_url = document.createElement('img');
+        // let image_url = document.createElement('img');
         // create a <p> element and store it in a variable named "salary_UT"
         let salary_UT = document.createElement('p');
         // create a <p> element and store it in a variable named "description"
@@ -83,25 +84,26 @@ async function getJobData() {
         title.textContent = job.title;
         // buile the image element by setting the src, alt, loading, width and height
         // using .setAttribute
-        image_url.setAttribute('src', job.image_url);
-        image_url.setAttribute('alt', `Image of ${job.title}`);
-        image_url.setAttribute('loading', 'lazy');
-        image_url.setAttribute('width', '340');
-        image_url.setAttribute('height', '440');
+        // image_url.setAttribute('src', job.image_url);
+        // image_url.setAttribute('alt', `Image of ${job.title}`);
+        // image_url.setAttribute('loading', 'lazy');
+        // image_url.setAttribute('width', '200');
+        // image_url.setAttribute('height', '300');
 
         // populate the salary_UT
-        salary_UT.textContent = `Salary: ${job.salary_UT}`;
+        salary_UT.innerHTML = `<strong>Salary: </strong>${job.salary_UT}`;
 
         // populate the description
-        description.textContent = `Description:  ${job.description}`;
+        description.innerHTML = `<strong>Description:  </strong>${job.description}`;
 
 
         
         // Using appendChild() on the section element named "card", 
         // add the heading, image, and <p> elements one at a time.
+        // card.appendChild(image_url);
         card.appendChild(title);
-        card.appendChild(image_url);
-        card.appendChild(salary_UT);
+
+       card.appendChild(salary_UT);
         card.appendChild(description);
 
         // Finally, add the section card to the "cards" div 
@@ -110,3 +112,6 @@ async function getJobData() {
         
     });
 }
+
+// don’t forget to CALL the function to actually run it:
+getJobData();

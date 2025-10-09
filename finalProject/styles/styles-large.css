@@ -1,18 +1,6 @@
 /* 38rem x 16 = 608px....these rules begin at 608px */
 @media only screen and (min-width: 38rem) {
-/* ========================== 
-    Header
-   ========================== */
-    /* body { */
-        /* display: block; */
-        /* flex-direction: column; */
-        /* padding: 1rem;     */
-        /* text-align: center; */
-        /* width: 100%; */
-        /* max-width: 1200px; */
-        /* justify-items: center; */
-        
-    /* } */
+
    /* The teacher says this is kinda standard... 
     setting the header, main, nav and footer to a max width 900px
     and margin 0, auto*/
@@ -22,9 +10,9 @@
         max-width: 1200px;
     }
 
-    /* ========================== 
-       Header
-       ========================== */
+    /* ======================================================
+       BEGIN HEADER SECTION =============================== */
+
     /* display the header as grid - logo column1,row1-2; h1 column2,row1; nav column2,row2*/
     .site-header {
         display: grid;
@@ -51,15 +39,13 @@
         display: block;
         grid-column: 1/2;
         grid-row: 1/3;
-        /* height: 50px; */
-        width: 100%;
         height: 60px;
         margin-left: 1rem;
-
     }
-/* -------------------------
-   Header -> h1 (site title)
-   ------------------------*/
+
+    /* -------------------------
+       Header -> h1 (site title)
+       ------------------------*/
     h1 {
         grid-column: 2/3;
         grid-row: 1/2;
@@ -78,7 +64,6 @@
         /* setting the margin to 0 will bring the h1 closer to the nav links */
         margin: 0;
     }
-
 
     /* -------------------------
        Header -> .navigation 
@@ -122,37 +107,126 @@
       
     }
     .navigation li.current {
-    /* background-color: var(--ash-gray); */
-    text-decoration: underline;
-    color: var(--white-cream); 
-}
+        /* background-color: var(--ash-gray); */
+        text-decoration: underline;
+        color: var(--white-cream); 
+    }
+/*  END HEADER SECTION =============================== 
+======================================================*/
+
+
+/* ======================================================
+   BEGIN HOME PAGE SECTION =============================== */
+
+/*     
+    .profile {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        padding: 1rem ;
+    } */
+    .hero {
+        display: flex;
+      
+    }
+    /* .catch-phrase {
+        display: inline-block;
+    } */
+    /* .hero img {
+        grid-column: 1/2;
+        grid-row: 1/3; */
+
+    /* } */
+    /* .hero h2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: 0;
+        padding: 0;
+    } */
+    /* .profile h2 {
+        /* grid-column: 1/3; */
+         /* grid-row: 1/2;  */
+        /* margin-bottom: 2rem; */
+    /* }  */
+    /* .profile img { */
+        /* grid-column: 1/2; */
+        /* grid-row: 2/4; */
+        /* width: 70%; */
+        /* margin-bottom: .5rem;     */
+    /* } */
+    /* .catch-phrase {
+        padding: 0;
+        margin-top: 0;
+        font-size: 1.5rem;
+        letter-spacing: .25rem;
+    } */
+    /* .profile .resume-contact {
+        grid-column: 2/3;
+        grid-row: 3/4;    
+    } */
+
+/* ---------------------GRID/LIST Menu buttons bar---------------- */
+    /* This .menu targets the style of the grid/list toggle button bar */
+    .menu {
+        display: block;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        background-color: #333;
+        text-align: center;
+    }
     
-.profile {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    padding: 1rem ;
-}
-.profile h2 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-    margin-bottom: 2rem;
-}
-.profile img {
-    grid-column: 1/2;
-    grid-row: 2/4;
-    width: 70%;
-    margin-bottom: .5rem;    
-}
-.catch-phrase {
-    padding: 0;
-    margin-top: 0;
-    font-size: 1.5rem;
-    letter-spacing: .25rem;
-}
-.profile .resume-contact {
-    grid-column: 2/3;
-    grid-row: 3/4;    
-}
+    .menu button {
+        padding: 0.5rem 1rem;
+        font-weight: 700;
+    }
+    /* --------------------------------------------*/
+    /* #cards is the container so this is where we put the grid column sizing*/
+    article.grid #cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+   
+
+    /* ------------------------------------------- */
+    /* LIST VIEW ON LARGER SCREENS */
+    /* to change the list view so that the image is NOT displayed
+    target the .list (because this option is for list view), 
+    target section (because we are targeting the section inside the cards
+    target img (because we are telling img to display: none */
+
+    article.list #cards section {
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-columns: 1fr 1fr 2fr;
+        align-items: center;
+        text-align: left;
+        /* gap: 1rem; */
+        padding: 1rem;
+        border: 1px solid #ccc;
+    }
+
+    article.list #cards section > * {
+    /*This means the same as the 3 lines below  */
+    /* article.list #cards section h3,
+    article.list #cards section p,
+    article.list #cards section a */
+    
+        justify-self: start; /* left-align each column's content */
+    }
+
+    /* Hides images inside section */
+    .list section img {
+        display: none;
+    }
+
+    .list section h3 {
+        font-size: 1rem;
+    } 
+
+    .list section:nth-child(even) {
+        background-color: #eee;
+    }
+
 
 
 }

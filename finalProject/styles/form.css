@@ -2,7 +2,7 @@
     color: #3b543d;
 }
 /* -------FORM---------- */
-.membership-form
+.tutor-form
 {
     margin: 3rem;
     /* margin-bottom: 0; */
@@ -62,7 +62,7 @@ form input[type=email]
     /* give radio buttons a little more breathing room for clicking on mobile */
     margin-bottom: .5rem;
 }
-.membership-form h3,
+.tutor-form h3,
 .description label
 {
     margin: 0 0 .5rem  0;

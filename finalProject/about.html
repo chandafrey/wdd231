@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/styles-large.css"> 
-   
+    <link rel="stylesheet" href="styles/form.css">
+
     <!-- JS Links -->
     <!-- <script src="scripts/date.js" defer></script> -->
     <script src="scripts/navigation.js" defer></script>
@@ -38,6 +39,8 @@
     <script src="scripts/date.js" defer></script>  
     <!-- This file has a date stamp as well and a hamburger button-->
     <!-- <script src="scripts/siteplan.js" defer></script> -->
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 
 
     <!-- ***THIS MIGHT STILL NEED ATTENTION -->
@@ -82,21 +85,124 @@
                     <li><a href="index.html">Home</a></li>
                     <li class="current"><a href="about.html" aria-current="page">About</a></li>
                     <li><a href="skills.html">Skills</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section class="contact">
-                <h2>Contact Me</h2>
+            <section class="hero">
+                <h2 class="catch-phrase">Mind in motion, web in focus.</h2>
                 <!-- <img src="images/chanda-profile400x400.jpg" alt="Profile Picture of Chanda Frey"> -->
-                <div>
-                    <!-- <p class="catch-phrase">Mind in motion, web in focus.</p> -->
-                    <p>Contact me through my Facebook, Instagram, or LinkedIn.
-                    Or you can reach me directly at 951-234-2623</p> 
-                </div>              
-            </section>  
+                <!-- <a href="skills.html" class="skills-link">See My Skills</a> -->
+            </section>
+
+            <div class="about-me">
+                <h3>About Me</h3>
+                <p>I am a fan of dark chocolate, a really good cinnamon roll, and I almost always pick vanilla ice cream.
+                   I like going for walks, snuggling my grandbabies, and spending time with my family.  I have taught piano
+                   lessons and currently help students learn to read.  My time is also spent being a student as I am working
+                   on my Software Development Bachelor's degree. I will have my 'Web and Computer Programming' certificate soon.
+                   I love creating from an empty page something purposeful and well designed. 
+                </p> 
+            </div>
+            <!-- WEATHER - CURRENT / FORECAST -->
+                <!-- Current Weather Card -->
+                <div class="current-weather">
+                    <h3>Current Weather Today</h3>
+                    <div class="image">
+                        <img id="graphic" src="images/forecast-icon.png" alt="weather picture representing todays weather" width="60">
+                        <!-- <img id="graphic" alt="clear sky" src="openwwathermap.org"> -->
+                    </div>
+                    <div class="details">
+                        <p id="description"></p>
+                        <p id="temperature"></p>
+                        <!-- <p id="temperature"><span class="temp-current> </p>-->
+                    </div>
+                    <div class="temp-range">
+                        <p id="temperatureMax"></p>
+                        <!-- <p id="temperatureMax">High:  <span class="temp-number></span></p> -->
+                        <p id="temperatureMin"></p>
+                        <!-- <p id="temperatureMax">Low:  <span class="temp-number></span></p> -->
+                    </div>
+                </div>
+            
+            <!-- Forcast Weather Card -->
+                <div class="forecast-weather">
+                    <h3>5-Day Forcast</h3>
+                    <div id="forecast" class="forecast-container">
+                        <!-- JS will inject forecast days here -->
+                    </div>
+                </div>
+            <!--END WEATHER BOXES -->
+
+            <!-- WEB AND COMPUTER PROGRAMMING COURSES -->
+            <section class="courses">
+                <h3>Web And Computer Programming Certificate Courses</h3>
+                <div class="course-filters">
+                    <ul class="course-filter-nav"> 
+                        <li><a href="#" id="all-courses">All Courses</a></li>
+                        <li><a href="#" id="cse-courses">CSE</a></li>
+                        <li><a href="#" id="wdd-courses">WDD</a></li>
+                    </ul>
+                </div>
+                <div class="coursesContainer">
+                <!-- This is what should be created from JavaScript -->
+                <!-- repeat sections for each course card -->
+                <!-- <section> 
+                        <h3>CSE</h3>
+                        <p>110</p>
+                    </section>-->
+                </div> 
+                <p id="total-credits"></p>
+            </section>
+
+            <section class="tutor-form">
+                <h2>Tutoring Form</h2>
+                <p>Sign up for tutoring in HTML, CSS, or JavaScript.  You will be contacted to schedule a session.</p>
+                <form action="form-verification.html" method="get" class="designOne">
+                    <h3>Contact Information</h3>
+
+                    <!-- applicant's first name, text type, required, name, title, and correct autocomplete value so this field autofills with the first name -->
+                    <label>First Name <span class="required">*</span><input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                    
+                    <!-- applicant's last name, text type, required, name, title, and correct autocomplete value so this field autofills with the last name -->
+                    <label>Last Name <span class="required">*</span><input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                    
+                    
+                    <!-- an email address, email type, required, name, title, correct autocomplete value, and placeholder which contains an example email input. -->
+                    <label>Email <span class="required">*</span><input type="email" name="email" required placeholder="me@gmail.com" title="Your Email"></label>
+                    
+                    <!-- a mobile phone number, telephone type, required, name, title, and correct autocomplete value -->
+                    <label>Cell Phone <span class="required">*</span><input type="tel" name="phone" required autocomplete="tel" title="A Phone Number with Dashes" placeholder="801-555-1234"></label>
+                    
+                    <div class="membership-levels">
+                        <h3>Web Language</h3>
+                        <label><input type="radio" name="membership-level" value="HTML">HTML</label>
+                        <label><input type="radio" name="membership-level" value="CSS">CSS</label>
+                        <label><input type="radio" name="membership-level" value="JavaScript">JavaScript</label>
+                    </div>
+                    
+                    <!-- a business/organization's description, text area, title, and name -->
+                    <div class="description">
+                        <label>Additional Comments<textarea id="org-description" name="org-description" title="Briefly describe your previous education or concerns you may have." rows="4" maxlength="500"></textarea></label>
+                    </div>
+                    
+                    <!-- the timestamp, hidden type, name, and id. This field contains the current date and time that the form was loaded by the user.  -->
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <!-- A form submission button using input of type submit that is properly labeled in the text node of the button. -->
+                    <input type="submit" value="Sign Up Now"> 
+                </form>
+                <script>
+                    // Populate timestamp as soon as the form page loads
+                    // The timestamp needs to be set before the form is submitted, 
+                    // so that the hidden <input> has a value when it is sent to thanks.html.
+                    // If you put it only in thankyou.js, it won’t work because by the time 
+                    // you are on the thank-you page, the form data has already been sent — 
+                    // so timestamp would still be empty.                
+                    document.getElementById('timestamp').value = new Date().toISOString();
+                </script>
+            </section>
         </main>
         
         <footer>
