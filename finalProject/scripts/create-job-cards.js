@@ -74,21 +74,21 @@ async function getJobData() {
         // create an h2 element and store it in a variable named "title"
         let title = document.createElement('h3');
         // create an img element and store it in a variable named "image_url"
-        // let image_url = document.createElement('img');
+        let image_url = document.createElement('img');
         // create a <p> element and store it in a variable named "salary_UT"
         let salary_UT = document.createElement('p');
         // create a <p> element and store it in a variable named "description"
         let description = document.createElement('p');
 
         // populate the heading element with the job title using .textContent
-        title.textContent = job.title;
+        title.innerHTML = job.title;
         // buile the image element by setting the src, alt, loading, width and height
         // using .setAttribute
-        // image_url.setAttribute('src', job.image_url);
-        // image_url.setAttribute('alt', `Image of ${job.title}`);
-        // image_url.setAttribute('loading', 'lazy');
-        // image_url.setAttribute('width', '200');
-        // image_url.setAttribute('height', '300');
+        image_url.setAttribute('src', job.image_url);
+        image_url.setAttribute('alt', `Image of ${job.title}`);
+        image_url.setAttribute('loading', 'lazy');
+        image_url.setAttribute('width', '200');
+        image_url.setAttribute('height', '300');
 
         // populate the salary_UT
         salary_UT.innerHTML = `<strong>Salary: </strong>${job.salary_UT}`;
@@ -100,10 +100,10 @@ async function getJobData() {
         
         // Using appendChild() on the section element named "card", 
         // add the heading, image, and <p> elements one at a time.
-        // card.appendChild(image_url);
+        card.appendChild(image_url);
         card.appendChild(title);
 
-       card.appendChild(salary_UT);
+        card.appendChild(salary_UT);
         card.appendChild(description);
 
         // Finally, add the section card to the "cards" div 
