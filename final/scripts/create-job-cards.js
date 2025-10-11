@@ -1,7 +1,7 @@
 // Declare a const variable named "url" that 
 // contains the URL string of the JSON resource
 // ***for this course we link to the github file url, not at the local file 
-const url = 'https://chandafrey.github.io/wdd231/finalProject/data/jobs.json';
+const url = 'https://chandafrey.github.io/wdd231/final/data/jobs.json';
 // const url = "../data/jobs.json"
 
 // Declare a const variable name "cards" 
