@@ -72,7 +72,7 @@ async function getJobData() {
         // create a section element and store it in a variable named card using createElement(),
         let card = document.createElement('section');
         // create an h2 element and store it in a variable named "title"
-        let title = document.createElement('h3');
+        let title = document.createElement('h4');
         // create an img element and store it in a variable named "image_url"
         let image_url = document.createElement('img');
         // create a <p> element and store it in a variable named "salary_UT"

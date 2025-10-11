@@ -21,10 +21,18 @@
     
     <!-- Google Fonts Here -->
     <!-- Serif(Lora-Body Text) SanSerif(Montserrat - Headings/Navigation)-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <!-- Optimize Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+    </noscript>
+
     <!-- Style Sheets Here -->
     <!-- put them in this order -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -94,8 +102,8 @@
         <main>
             <div class="skills">
                 <section class="skills-in-motion">
-                    <h2>Skills in Motion</h2>
-                    <p>HTML, CSS and JavaScript are skills put in motion on this website.</p>
+                    <h2 class="catch-phrase">Skills in Motion</h2>
+                    <p>See HTML, CSS and JavaScript skills in motion on this website.</p>
                 </section>
            
                 <section id="modals">
@@ -167,7 +175,7 @@
                     <!--END WEATHER BOXES -->        
         
                 <section class="tech-jobs">
-                    <h2>Tech Jobs</h2>
+                    <h3>Tech Jobs</h3>
                     <p class="tech-jobs-description">This section is a general list of types of jobs that utilize skills in HTML, CSS and JavaScript.</p>
                     <!-- <img src="images/chanda-profile400x400.jpg" alt="Profile Picture of Chanda Frey"> -->
                     <!-- <div>

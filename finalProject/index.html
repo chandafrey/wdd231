@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://chandafrey.github.io/wdd231/finalProject/index.html">
     <meta property="og:locale" content="en_US">
     <!-- These 2 lines need updated -->
-    <meta property="og:image" content="https://chandafrey.github.io/wdd231/finalProject/images/chanda-profile400x400.jpg">
+    <meta property="og:image" content="https://chandafrey.github.io/wdd231/finalProject/images/chanda-profile1200x822.jpg">
     <meta property="og:image:alt" content="Profile picture of Chanda Frey">    
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Profile Portfolio | Chanda Frey">
@@ -21,9 +21,17 @@
     
     <!-- Google Fonts Here -->
     <!-- Serif(Lora-Body Text) SanSerif(Montserrat - Headings/Navigation)-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+     <!-- Optimize Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </noscript>
 
     <!-- Style Sheets Here -->
     <!-- put them in this order -->
@@ -38,6 +46,7 @@
     <script src="scripts/date.js" defer></script>  
     <!-- This file has a date stamp as well and a hamburger button-->
     <!-- <script src="scripts/siteplan.js" defer></script> -->
+    <script src="scripts/last-visit.js" defer></script>
 
 
     <!-- ***THIS MIGHT STILL NEED ATTENTION -->
@@ -92,6 +101,13 @@
                     <h2 class="catch-phrase">Mind in motion, web in focus.</h2>
                     <img src="images/chanda-profile400x400.jpg" alt="Profile Picture of Chanda Frey">
                     <a href="skills.html" class="skills-link">See My Skills</a>
+                   
+                    <aside class="sidebar">
+                        <div id="sidebar-message" class="message-box">
+                            <span id="message-text"></span>
+                            <button id="close-btn">X</button>
+                        </div>
+                    </aside>
                 </section>
 
                 <div class="my-statement">

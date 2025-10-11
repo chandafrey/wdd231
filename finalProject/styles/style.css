@@ -54,7 +54,7 @@ body {
     background-color: var(--white-cream);
     color: var(--dark-caviar);
     /* font-family: "Lora", serif; */
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
     font-size: 1rem; 
     line-height: 1.6;
     letter-spacing: 1px;
@@ -147,8 +147,8 @@ h1 {
     BY POSITION: STATIC */
     position: absolute;
     /* Sit the nav right under the header */
-    top: 100%;
-    left: 0;
+    /* top: 100%; */
+    /* left: 0; */
     width: 100%;
     /* background-color: var(--very-light-blue); */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
@@ -195,7 +195,7 @@ Either "open*(in js) and .open(in css) or "show" and .show */
     color: var(--persuan-orange);
     color: var(--rich-black);
     font-size: clamp(1rem, 2vmin, 1.2rem);
-    font-family: "Lora", serif;
+    font-family: "Lora",Georgia, serif;
     transition: .5s; /*USE THIS IF YOU HOVER over a link: Background color changes and Font Size increases
     The transition: .5s; makes that happen gradually, giving a smooth, polished effect*/
     /* Remove the underline  */
@@ -305,36 +305,41 @@ footer .copywrite {
 .hero {
     background-color: var(--prussian-blue);
     color: var(--white-cream);
-    margin-top: 3rem;
-    padding-bottom: 1.5rem;
-    justify-items: center;
+    margin-top: 2rem;
+}
+.profile .hero {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 .catch-phrase {
-    font-family: "Lora", sans-serif;
-    font-size: clamp(1rem, 4vw, 2rem); /* Responsive font size */
-    font-weight: 200;
-    font-style: italic; 
-    /* scaleY will make the font text TALLER */
-    transform: scaleY(2.5); 
-    letter-spacing: .25rem;
+    font-family: "Lora", Georgia, serif;
+    /* Responsive font size */
+    font-size: clamp(1rem, 4vw, 1.5rem); 
+    font-weight: 200; 
+    font-style: italic;  
+    /* scaleY will make the font text TALLER */ 
+    transform: scaleY(2); 
+    letter-spacing: .15rem;
     text-align: center;
     background-color: var(--prussian-blue);
     color: var(--white-cream);
-    margin: 1rem 0;
-    padding: 0 1rem;
     flex: 1;
     white-space: nowrap; 
-}
+} 
 .hero img {
     display: block;
     margin: 0 auto;
     padding: 1rem;
-    width: 100%;
+    width: 300px;
+    height: auto;
 }
-
+/* This is my "See My Skills Button Link */
 .hero a {
     display: block;
+    max-width: max-content;
+    justify-self: center;
     font-weight: 600;
     text-decoration: none;
     padding: .5rem;
@@ -351,8 +356,56 @@ footer .copywrite {
     cursor: pointer;
 }
 
+/* -------------------------------
+/* --------------------ASIDE for date and visits------- */
 
+aside #sidebar-message {
+    display: inline-block;
+    align-items: center;
+    border: solid 1px #ddd;
+    border-radius: 8px;
+    background-color:#3b543d;
+    color: var(--white-cream);
+    padding: 8px;
+    margin-top: 1rem;
+    
+}
+aside #message-text {
+    font-size: 1rem;
+    padding: 10px; 
+}
+aside #close-btn {
+    /* color: #3b543d; */
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    justify-content: center;
+    /* background: transparent; */
+    background-color: #999;
+    padding: 8px;
+    /* margin-bottom: 8px; */
+    cursor: pointer;
+}
+aside #close-btn:hover {
+    background-color: var(--persuan-orange);
+}
 
+.sidebar {
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+from {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+to {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
+/* ---------------------------------------------- */
+/* This is my "Web Developer  section heading*/
 .my-statement h3 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -360,13 +413,12 @@ footer .copywrite {
 }
 .my-statement p {
     margin: 0 1rem;
+    margin-bottom: 3rem;
     justify-self: center;
     border-style: groove;
     padding: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-
 }
-
 
 /*  END HOME.HTML PAGE SECTION =============================== 
 ======================================================*/
@@ -375,10 +427,32 @@ footer .copywrite {
 
 /* ======================================================
    BEGIN ABOUT.HTML SECTION =============================== */
-
+ 
 /* -------------------------
+   .about-me 
+   ------------------------*/
+
+.background-purpose .hero {
+    margin-bottom: 2rem;
+}
+.about-me,
+.about-me-purpose {
+    background-color: var(--very-light-blue);
+    border: solid 2px #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.about-me h3, 
+.about-me-purpose h3 {
+    font-size: 1.5rem;
+}
+   /* -------------------------
    courses
    ------------------------*/
+.background-purpose .courses {
+    margin-bottom: 1rem;
+}
 .courses h3 {
     background-color: var(--prussian-blue);
     color: var(--white-cream);
@@ -410,6 +484,7 @@ footer .copywrite {
 }
 .course-filter-nav li {
     flex: 1;
+    margin-bottom: 8px;
 }
 .course-filter-nav a:hover {
     background-color: var(--persuan-orange);
@@ -420,7 +495,7 @@ footer .copywrite {
     justify-content: center;
     color: var(--white-cream);
     gap: 8px;
-    margin: 4px;
+    margin-bottom: 4px;
     padding: 8px;
 }
 .coursesContainer section.completed {
@@ -431,7 +506,8 @@ footer .copywrite {
 .coursesContainer section.not-completed {
     background-color: var(--persuan-orange);
     color: var(--rich-black);
-    border: solid 1 px #ccc;
+    font-weight: 600;
+    border: solid 1px #ccc;
 }
 
 
@@ -445,20 +521,36 @@ footer .copywrite {
 /* -------------------------
    This section is the Heading of my Skills page
    ------------------------*/
-.skills-in-motion, 
-#modals p {
-    margin-bottom: 1rem;
+.skills-in-motion {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
 }
-
-.skills-in-motion h2 {
+/* THIS header is declared on the index-home page and commented here for reference */
+/* .catch-phrase {
+    font-family: "Lora", Georgia, serif;
+    /* Responsive font size */
+    /* font-size: clamp(1rem, 4vw, 2rem); 
+    font-weight: 200; 
+    font-style: italic;   */
+    /* scaleY will make the font text TALLER  */ 
+    /* transform: scaleY(2); 
+    letter-spacing: .25rem;
+    text-align: center;
     background-color: var(--prussian-blue);
     color: var(--white-cream);
-    font-family: "Lora", serif;
-    font-style: italic;
-    font-size: 2rem;
-    margin-top: 1rem;
-    width: 100%;
+    flex: 1;
+    white-space: nowrap; 
+}  */
+.skills-in-motion p {
+    margin: 1rem;
+    /* font-size: 1.2rem; */
+    border: solid 1px #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
+    /* background-color: var(--persuan-orange); */
+    background-color: var(--white-cream);
+    font-weight: 400;   
+
 }
 
 
@@ -474,17 +566,28 @@ footer .copywrite {
 /* -------------------------
    #modals container Heading (JavaScript Functionality)
    ------------------------*/
-#modals h3, 
-.weather h3 
+#modals h3,
+.weather h3,
+.tech-jobs h3 
 {
     background-color: var(--very-light-blue);
+    background-color: var(--paynes-gray);
     color: var(--prussian-blue);
-    /* margin-bottom: 0; */
+    color: var(--white-cream);
+    margin-bottom: 0; 
     text-align: center;
     font-family: "Lora", serif;
     font-size: 1.5rem;
-}
+   font-size: clamp(1.5rem, 4vw, 2rem); 
+} 
 
+#modals p,
+.weather p,
+.tech-jobs p {
+    margin-bottom: .5rem;
+    padding: 0 1rem;
+    /* font-size: 1.2rem; */
+}
  /* -------------------------
    Individual #modals .instruction-card
    ------------------------*/
@@ -602,13 +705,18 @@ footer .copywrite {
 
 /* ======================================================
    BEGIN SKILLS.HTML WEATHER SECTION =============================== */
-.weather {
+
+
+
+   /* .weather { */
     /* margin-top: .5rem; */
+    /* margin-bottom: 1rem; */
+    /* to help prevent layout shifts add a min height for the page to reserve space when loading */
+    /* min-height: 300px; */
+/* } */
+/* .weather p {
     margin-bottom: 1rem;
-}
-.weather p {
-    margin-bottom: 1rem;
-}
+} */
    /* This is already code above....putting here in comments so I know 
 how I told .weather h3 to style.... */
 /* #modals h3, 
@@ -621,8 +729,6 @@ how I told .weather h3 to style.... */
     font-family: "Lora", serif;
     font-size: 1.5rem;
 } */
-/* This is declared at the top of this SKILLS PAGE section
-and commented out here so I know what I wanted my header p elements to do */
 
 
 
@@ -655,7 +761,9 @@ and commented out here so I know what I wanted my header p elements to do */
 .current-weather img {
     display: block;
     margin: 0 auto;
-    width: 100%;
+    /* width: 100%; */
+    width: 60px;
+    height: 60px;
 }
 /* make the weather description and temp range font bigger, 
 transform the description text to capitalize the first letter of each word */
@@ -669,7 +777,7 @@ transform the description text to capitalize the first letter of each word */
     font-weight: 600;
     margin: 0;
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
     color: #3b543d;
     color: var(--prussian-blue);
 }  
@@ -678,7 +786,6 @@ transform the description text to capitalize the first letter of each word */
     column-gap: 2rem;
     padding-bottom: 8px;
 }
-
 /* Forecast Weather Card */
 
 /* display flex in a column each of the children(.forecast-day) in this box  
@@ -709,17 +816,7 @@ they will span across the full width of the box */
 /* -------------------------
     Skills page Tech Job Cards Section 
     ------------------------*/
-.tech-jobs h2 {
-    background-color: var(--prussian-blue);
-    color: var(--white-cream);
 
-    text-align: center;
-    font-family: "Lora", serif;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    padding: 0;
-    margin: 0;
-}
 .tech-jobs-description {
     margin-bottom: 1rem;
 }
