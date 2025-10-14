@@ -1,19 +1,11 @@
-/* 38rem x 16 = 608px....these rules begin at 608px */
 @media only screen and (min-width: 38rem) {
 
-   /* The teacher says this is kinda standard... 
-    setting the header, main, nav and footer to a max width 900px
-    and margin 0, auto*/
     header, main, nav, footer {
         width: 100%;
         margin: 0 auto;
         max-width: 1200px;
     }
 
-    /* ======================================================
-       BEGIN HEADER SECTION =============================== */
-
-    /* display the header as grid - logo column1,row1-2; h1 column2,row1; nav column2,row2*/
     .site-header {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -24,17 +16,11 @@
         padding: 1rem;
     }     
      
-     /* -------------------------
-        Header -> .hamburger (button)
-        ------------------------*/
-      /* on the larger view, we Do NOT want the Hamburger to show */
+ 
     .hamburger {
         display: none;
     }
 
-    /* -------------------------
-    Header -> logo (img)
-    ------------------------*/
     .logo {
         display: block;
         grid-column: 1/2;
@@ -43,9 +29,7 @@
         margin-left: 1rem;
     }
 
-    /* -------------------------
-       Header -> h1 (site title)
-       ------------------------*/
+
     h1 {
         grid-column: 2/3;
         grid-row: 1/2;
@@ -53,32 +37,20 @@
         flex: 1;
         font-size: clamp(1.5rem, 5vw, 3rem); 
         font-weight: 200;
-        /* font-weight: 700; */
         font-style: italic;
-        /* scaleY will make the font text TALLER */
         transform: scaleY(1.5);
-        /* scaleX will make the font text stretch LONGER */
         transform: scaleX(1.2);
         letter-spacing: .75rem;
         color: var(--white-cream);
-        /* setting the margin to 0 will bring the h1 closer to the nav links */
         margin: 0;
     }
 
-    /* -------------------------
-       Header -> .navigation 
-       ------------------------*/
+  
     .navigation {
-        /* change display to flex so the navigation will show */
         display: flex;
-        /* position below the title in the 2nd column */
         grid-column: 2/3;
         grid-row: 2/3;
-          /* Change the position from absolute so it is brought BACK INTO the header
-        from the mobile view - Change to static
-        this will allow for the background color to include all the elements in the header */
         position: static;
-        /* set width to max-content so it will only box around the links */
         width: max-content;
         justify-self: center;
         align-items: center;
@@ -86,44 +58,31 @@
         margin: 0;
         box-shadow: none;
     }
-    /* remove border under links in desktop view */
     .navigation a {
         border: none;
-        /* font-size: 1.2rem; */
         padding: 0.3rem;
-        /* margin: 0; */
         background-color: transparent;
         color: var(--white-cream);
     }
 
-    /* on larger view, we want the navigation to display left to right
-    and we will set that on the parent element .navigation ul and display to 
-    flex because that defaults as left to right */
+
     .navigation ul {
-        /* position: static; */
         display: flex;
-        /* This is where we set the gap so there is more space between each list item in navigation */
         gap: 1.5rem;
       
     }
     .navigation li.current {
-        /* background-color: var(--ash-gray); */
         text-decoration: underline;
         color: var(--white-cream); 
     }
-/*  END HEADER SECTION =============================== 
-======================================================*/
 
 
-/* ======================================================
-   BEGIN HOME PAGE SECTION =============================== */
     .profile .hero {
         display: grid;
         grid-template-columns: 1fr 2fr;
     }
     .profile .catch-phrase {
         display: contents;
-        /* letter-spacing: .15rem; */
         margin-top: 0; 
         grid-column: 2/3;
         grid-row: 2/3;
@@ -131,8 +90,6 @@
     .profile .hero img {
         grid-column: 1/2;
         grid-row: 1/4;
-        /* width: 300px; */
-        /* height: 300px; */
     }
     .profile .hero a {
         grid-column: 2/3;
@@ -146,12 +103,10 @@
         grid-row: 1/2;
     }
 
-/* ======================================================
-   BEGIN ABOUT PAGE SECTION =============================== */
+
     .background-purpose {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* margin: 0; */
         gap: 2rem;
     }
     .background-purpose .hero {
@@ -178,9 +133,6 @@
     }
    
 
-/* ======================================================
-   BEGIN SKILLS.HTML MODAL SECTION =============================== */
-/* I think this page should have a grid and maybe put the weather on here too?*/
 
 .skills {
     display: grid;
@@ -207,15 +159,10 @@
 }
 
 
-/* ---------------------GRID/LIST Menu buttons bar---------------- */
-    /* This .menu targets the style of the grid/list toggle button bar */
     .menu {
         display: block;
-        /* margin: 1rem auto; */
         padding: 0.5rem;
         background-color: #333;
-        /* background-color: var(--white-cream); */
-
         text-align: center;
     }
     
@@ -229,17 +176,11 @@
     .menu button:hover {
         background-color: var(--persuan-orange);
     }
-    /* --------------------------------------------*/
-    /* #cards is the container so this is where we put the grid column sizing*/
+   
     article.grid #cards {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
-    /* ------------------------------------------- */
-    /* LIST VIEW ON LARGER SCREENS */
-    /* to change the list view so that the image is NOT displayed
-    target the .list (because this option is for list view), 
-    target section (because we are targeting the section inside the cards
-    target img (because we are telling img to display: none */
+
 
     article.list #cards {
         margin-bottom: 3rem;
@@ -248,7 +189,6 @@
     }
     article.list #cards section {
         display: grid;
-        /* flex-direction: row; */
         grid-template-columns: 1fr 1fr 2fr;
         align-items: center;
         text-align: left;
@@ -257,15 +197,9 @@
     }
 
     article.list #cards section > * {
-    /*This means the same as the 3 lines below  */
-    /* article.list #cards section h3,
-    article.list #cards section p,
-    article.list #cards section a */
-    
-        justify-self: start; /* left-align each column's content */
+        justify-self: start; 
     }
 
-    /* Hides images inside section */
     .list section img {
         display: none;
     }
@@ -277,9 +211,6 @@
     .list section:nth-child(even) {
         background-color: #eee;
     }
-
-/* ======================================================
-   BEGIN SKILLS PAGE SECTION =============================== */
 
 
 }

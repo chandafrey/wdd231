@@ -1,8 +1,4 @@
-/* ============ MOBILE VIEWS ================ */
 
-/* ========================== 
-   Root Variables - Colors
-   ========================== */
 :root {
     --rich-black: #0d1321ff;
     --dark-caviar: #303030;
@@ -11,7 +7,6 @@
     --very-light-blue: #e5e7eb;
     --white-cream: #fefffd;
 
-/* OTHER COLORS MAYBE LATER? */
     --persuan-orange: #c58c6d;
     --ash-gray: #b7b7a4;
     --reseda: #6b705c;
@@ -20,22 +15,14 @@
     --dark-gray:  #222;
 }
 
-/* ========================== 
-   Global Reset
-   ========================== */
+
 * {
-    /* Set margin and padding to 0 and box-sizing: border-box;
-    This clears everything to the edge of the page and you can 
-    individually set elements as needed */
+   
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========================== 
-   Base Styles
-   ========================== */
-/* wrapper limits content width and centers it */
 .wrapper {
     max-width: 95%;
     margin: 0 auto; 
@@ -53,7 +40,6 @@ footer {
 body {
     background-color: var(--white-cream);
     color: var(--dark-caviar);
-    /* font-family: "Lora", serif; */
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 1rem; 
     line-height: 1.6;
@@ -62,9 +48,6 @@ body {
 }
 
 
-/* BEGIN HEADER SECTION  */
- 
-/* display the header as flex and place the .logo, h1 and .hamburger*/
 .site-header {
     display: flex;
     align-items: center;
@@ -72,24 +55,17 @@ body {
     padding: .5rem 1rem;
     position: relative;
 }
-/* -------------------------
-   Header -> logo (img)
-   ------------------------*/
+
 .logo {
     height: 40px;
     width: auto;
 }
 
-/* -------------------------
-   Header -> h1 (site title)
-   ------------------------*/
+
 h1 {
-    /* font-family: "Lora", sans-serif; */
-    font-size: clamp(1rem, 4vw, 1.5rem); /* Responsive font size */
+    font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 200;
-    /* font-weight: 700; */
     font-style: italic;
-    /* scaleY will make the font text TALLER */
     transform: scaleY(2.5);
     letter-spacing: .55rem;
     color: var(--white-cream);
@@ -99,71 +75,40 @@ h1 {
     padding: 0 1rem;
 }
 
-/* -------------------------
-   Header -> .hamburger (button)
-   ------------------------*/
 .hamburger {
     background: none;
     border: none;
-    /* set a width and height to 3rem
-    this ensures 48px square CLICKABLE AREA 
-    (you can set the font size of the icon in the ::before, and .open::before*/
     width: 3rem;
-    height: 3rem;
-    /* use display flex along with the align-items and justify-content:  
-    to center the icon inside its box */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* add a cursor so that when a person hovers over the icon the mouse 
-    will change to a pointer */
     cursor: pointer;
 }
 .hamburger::before {
     content: "☰";
-    /* content: "\2630"; */
-    /* control icon size here */
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--white-cream);
 }
 .hamburger.open::before {
     content: "✕";
-    /* content: "\00D7"; */
     color: var(--persuan-orange);
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-/* -------------------------
-   Header -> .navigation 
-   ------------------------*/
-   /* turn off - when we don't want to display the navigation, display: none; */
 .navigation {
     display: none;
-    /* Take nav out of grid so it can span full width
-    DON'T FORGET TO PUT THIS BACK IN THE HEADER ON LARGER SCREEN 
-    BY POSITION: STATIC */
     position: absolute;
-    /* Sit the nav right under the header */
-    /* top: 100%; */
-    /* left: 0; */
     width: 100%;
-    /* background-color: var(--very-light-blue); */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
-/* If the navigation isn't opening properly, make sure 
-the js click event is the same word...They both have to say the same 
-Either "open*(in js) and .open(in css) or "show" and .show */
 .navigation.open {
     display: block;
     position: absolute;
 }
 .navigation ul {
-    /* Remove bullets with list-style-type: none; */
     list-style-type: none;
-    /* Unordered lists come with margin and padding, so we need to 
-    fix that by setting those to 0 */
     margin: 0;
     padding: 0;
 }
@@ -171,47 +116,22 @@ Either "open*(in js) and .open(in css) or "show" and .show */
     margin: 0;
 }
 .navigation a {
-    /* change these anchors from inline to block 
-    block makes the link take up the whole line*/
     display: block;
-    /* Next we need at least 44px tall of padding:
-    -the first number will be top and bottom
-    -you can start with .5rem and then INSPECT
-    and hover on the link line and see the measurements
-    at .5rem with this Josefin Sans font, the size is
-    454 x 34.4 (which means it needs to be bigger)
-    at .8rem the size is 
-    454 x 43.98 (which is good enough and meets minimun
-    standard of 44px tall)
-
-    Now we want the links to line up on the Left with the logo
-    So use the same LEFT & RIGHT padding as the logo image above
-    Go to the Header to see the left and right padding (its set to 10px) */
     padding: .8rem 10px;
-    /* padding: 1rem; */
     background-color: var(--white-cream);
     background-color: var(--very-light-blue);
     color: var(--persuan-orange);
     color: var(--rich-black);
     font-size: clamp(1rem, 2vmin, 1.2rem);
     font-family: "Lora",Georgia, serif;
-    transition: .5s; /*USE THIS IF YOU HOVER over a link: Background color changes and Font Size increases
-    The transition: .5s; makes that happen gradually, giving a smooth, polished effect*/
-    /* Remove the underline  */
+    transition: .5s; 
     text-decoration: none;
-    /* give a visual separation between the links with a light gray line
-    using the same standard used in the header */
     border-bottom: solid 1px #ddd;
     width: 100%;
     position: relative;
     z-index: 1;
 }
-/* WAYFINDING   
-- HTML Remember to put the class="current" on the link specific to the 
-current page...in this case Dedicated Temples 
-    
-/* We also want to change color when a user hovers over a link to 
-see which link they can click on (use color in color scheme)*/
+
 .navigation a:hover,
 .navigation a:active {
     background-color: var(--white-cream);
@@ -219,17 +139,12 @@ see which link they can click on (use color in color scheme)*/
     font-size: 1.5rem;
     font-weight: 600; 
 }
-/* - CSS:  we want to make the current page highlighted in some way 
-so the user knows which page they're on..in this case we are 
-underlining the current page*/
+
 .navigation li.current {
     text-decoration: underline;
     color: var(--rich-black); 
 }
 
-/* END HEADER SECTION */
-
-/* BEGIN FOOTER SECTION  */
 footer {
     text-align: center;
     padding: 1rem 10px;
@@ -242,58 +157,33 @@ footer .copywrite {
     padding: .5rem;
 }
  
-/* -------------------------
-   Footer -> .social, .copywrite
-   ------------------------*/
 .social {
-    /* display all the child items - a hrefs - flex left to right */
     display: flex;
-    /* Once you have centered .social a(centering the image inside its box,
-        THEN come back here and 
-    justify-content: center; all the children as a package on the page */
     justify-content: center;
-    /* with the red dashes you can see the boxes touching...give them gap padding */
     column-gap: 8px;
     padding: 10px;
 }
 .social a {
-    /* start with this display block and then turn off */
-    /* display: block; */
-    /* now change it to display: flex;  so we can center images in the border box*/
     display: flex;
     justify-content: center;
     align-items: center;
-    /* icons need to be bigger - a minimun 44px for touchscreen(apple standard) */
     width: 44px;
     height: 44px;
-    /* Start with border red and dashed to help visualize where everything sits
-    THEN when everything is done for this section TURN OFF and change to light gray */
-    /* border: red dashed 1px; */
     border: #ccc solid 1px;
-    /* you can leave boxes as is or give them some curve */
     border-radius: 4px;
 }
 .social img {
-    /* Make the actual icon images in the boxes a little larger */
     width: 24px;
     height: 24px;
 }
 .social a:hover {
-    /* change the color on the links when user hovers mouse over */
     background-color: var(--white-cream);
 }
 
-/* -------------------------
-    Footer -> #lastModified
-    ------------------------*/
+
 #lastModified {
     font-size: 1rem;
 }
-
-/* END FOOTER SECTION   */
-
-
-/* BEGIN HOME.HTML PAGE SECTION  */
 
 .hero {
     background-color: var(--prussian-blue);
@@ -308,11 +198,9 @@ footer .copywrite {
 
 .catch-phrase {
     font-family: "Lora", Georgia, serif;
-    /* Responsive font size */
     font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 200; 
     font-style: italic;  
-    /* scaleY will make the font text TALLER */ 
     transform: scaleY(2); 
     letter-spacing: .15rem;
     text-align: center;
@@ -328,7 +216,6 @@ footer .copywrite {
     width: 300px;
     height: auto;
 }
-/* This is my "See My Skills Button Link */
 .hero a {
     display: block;
     max-width: max-content;
@@ -349,8 +236,6 @@ footer .copywrite {
     cursor: pointer;
 }
 
-/* --------------------ASIDE for date and visits------- */
-
 aside #sidebar-message {
     display: inline-block;
     align-items: center;
@@ -359,23 +244,19 @@ aside #sidebar-message {
     background-color:#3b543d;
     color: var(--white-cream);
     padding: 8px;
-    margin-top: 1rem;
-    
+    margin-top: 1rem;   
 }
 aside #message-text {
     font-size: 1rem;
     padding: 10px; 
 }
 aside #close-btn {
-    /* color: #3b543d; */
     color: black;
     font-size: 1rem;
     font-weight: 700;
     justify-content: center;
-    /* background: transparent; */
     background-color: #999;
     padding: 8px;
-    /* margin-bottom: 8px; */
     cursor: pointer;
 }
 aside #close-btn:hover {
@@ -396,8 +277,7 @@ to {
     opacity: 1;
     }
 }
-/* ---------------------------------------------- */
-/* This is my "Web Developer  section heading*/
+
 .my-statement h3 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -411,14 +291,6 @@ to {
     padding: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
-
-/* END HOME.HTML PAGE SECTION  */
-
-/* BEGIN ABOUT.HTML SECTION  */
- 
-/* -------------------------
-   .about-me 
-   ------------------------*/
 
 .background-purpose .hero {
     margin-bottom: 2rem;
@@ -435,9 +307,6 @@ to {
 .about-me-purpose h3 {
     font-size: 1.5rem;
 }
-   /* -------------------------
-   courses
-   ------------------------*/
 .background-purpose .courses {
     margin-bottom: 1rem;
 }
@@ -449,23 +318,18 @@ to {
     display: flex;
     flex-wrap: wrap;
     font-weight: 600;
-    /* Remove bullets with list-style-type: none; */
     list-style-type: none;
-    /* Unordered lists come with margin and padding, so we need to 
-    fix that by setting those to 0 */
     margin: 0;
     padding: 0;
     column-gap: 8px;
 }
 .course-filter-nav a {
-    /* change these anchors from inline to block */
     display: block;
     text-align: center;
     background-color: var(--very-light-blue);
     color: var(--rich-black);
     text-decoration: none;
     border: solid 2px #ddd;
-    /* border-bottom: solid 1px #ddd; */
     border-radius: 6px;
     padding: .5rem 10px;
 
@@ -499,12 +363,7 @@ to {
 }
 
 
-/* END ABOUT.HTML PAGE SECTION  */
 
-/* BEGIN SKILLS.HTML MODAL section */
-/* -------------------------
-   This section is the Heading of my Skills page
-   ------------------------*/
 .skills-in-motion {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
@@ -512,29 +371,21 @@ to {
 
 .skills-in-motion p {
     margin: 1rem;
-    /* font-size: 1.2rem; */
     border: solid 1px #ccc;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
-    /* background-color: var(--persuan-orange); */
     background-color: var(--white-cream);
     font-weight: 400;   
 
 }
 
-
-/* -------------------------
-   This #modals section is the tile with the title and "learn more" labels
-   ------------------------*/
 #modals {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 3rem;
 }
-/* -------------------------
-   #modals container Heading (JavaScript Functionality)
-   ------------------------*/
+
 #modals h3,
 .weather h3,
 .tech-jobs h3 
@@ -555,11 +406,8 @@ to {
 .tech-jobs p {
     margin-bottom: .5rem;
     padding: 0 1rem;
-    /* font-size: 1.2rem; */
 }
- /* -------------------------
-   Individual #modals .instruction-card
-   ------------------------*/
+
 .instruction-card {
     display: flex;
     flex-direction: column;
@@ -568,20 +416,13 @@ to {
     border-radius: 8px;
     background-color: #eee;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* this line for some reason reduces the left/right padding on the learn more button */
-    align-items: center;
-    /* this line gives a gap between each card */
     margin-bottom: .75rem;
 }
- /* -------------------------
-   Individual #modals .instruction-card title for list tile
-   ------------------------*/
+
 .instruction-card h4 {
     font-size: 1.2rem;
 }
- /* -------------------------
-   Individual #modals .instruction-card "Learn More" button
-   ------------------------*/
+ 
 .instruction-card .learn-more {
     background-color: var(--white-cream);
     margin: 0 auto;
@@ -591,19 +432,13 @@ to {
     font-size: 1rem;
     cursor: pointer;
 }
- /* -------------------------
-   Individual #modals .instruction-card hover effect for button
-   ------------------------*/
+
 .instruction-card .learn-more:hover {
     background-color: var(--persuan-orange);
     color: var(--rich-black);
-    /* color: var(--white-cream); */
     font-weight: 500;
 }
 
- /* -------------------------
-   Individual #modals -> #mydialog - this is the POP-UP dialog card
-   ------------------------*/
 #mydialog {
     padding: 1rem;
     position: fixed;
@@ -612,24 +447,18 @@ to {
     transform: translate(-50%, -50%);
     width: 80%;
 }
-/* display flex so h3 and x button are on top row when modal pops up */
 .dialog-header {
     display: flex;
     justify-content: space-between;
-    /* this line helps the X box not be so tall */
     align-items: center;
-    /* this gives a light line to separate the heading from the information below */
     border-bottom: solid 1px #ccc;
 }
- /* -------------------------
-   Individual #modals -> #mydialog - header title
-   ------------------------*/
+
 .dialog-header h4 {
     font-size: 1.2rem;
     color: #3b543d;
     color: var(--persuan-orange);
 }
-/* modal dialog button */
 .dialog-header button {
     border: solid 1px #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
@@ -641,17 +470,12 @@ to {
 #components ul {
     margin-left: 1rem;    
 }
- /* -------------------------
-   Individual #modals -> fadeSlideIn ANIMATION for each .instruction-card
-   ------------------------*/
+
 .instruction-card {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeSlideIn .8s ease-out forwards;
 }
-    /* Stagger each card so they animate one after another */
-    /* ***BECAUSE THE FIRST 2 CHILDREN IN .MEMBERSHIP-LEVEL-CARD ARE: 
-    <H4> AND <DIALOG>, WE ARE STARTING WITH #3 FOR NTH-CHILD(3) */
     .instruction-card:nth-child(3) { animation-delay: 0.1s; }
     .instruction-card:nth-child(4) { animation-delay: 0.3s; }
     .instruction-card:nth-child(5) { animation-delay: 0.5s; }
@@ -667,11 +491,7 @@ to {
         transform: translateY(0);
         }
     }
-/* END SKILLS.HTML MODAL SECTION   */
 
-/* BEGIN SKILLS.HTML WEATHER SECTION */
-
-/* These are the title headings for the weather box cards */
 .current-weather h4, 
 .forecast-weather h4 
 {
@@ -700,12 +520,10 @@ to {
 .current-weather img {
     display: block;
     margin: 0 auto;
-    /* width: 100%; */
     width: 60px;
     height: 60px;
 }
-/* make the weather description and temp range font bigger, 
-transform the description text to capitalize the first letter of each word */
+
 #description,
 .temp-range {
     font-size: 1.2rem;
@@ -716,7 +534,6 @@ transform the description text to capitalize the first letter of each word */
     font-weight: 600;
     margin: 0;
     text-align: center;
-    /* width: 100%; */
     color: #3b543d;
     color: var(--prussian-blue);
 }  
@@ -725,11 +542,7 @@ transform the description text to capitalize the first letter of each word */
     column-gap: 2rem;
     padding-bottom: 8px;
 }
-/* Forecast Weather Card */
 
-/* display flex in a column each of the children(.forecast-day) in this box  
-also give them some gap space, padding and width: 100% so 
-they will span across the full width of the box */
 .forecast-container {
     display: flex;
     flex-direction: column;
@@ -737,11 +550,7 @@ they will span across the full width of the box */
     padding: 10px;
     width: 100%;
 }
-/* .forecast-day is a parent with children - date?, temp-main, description */
-.forecast-day
-    {
-    /* give equal width per day */
-    /* flex: 1; */
+.forecast-day {
     background-color: white;
     border-radius: 4px;
     display: grid;
@@ -752,16 +561,13 @@ they will span across the full width of the box */
 
 
 
-/* Skills page Tech Job Cards Section  */
 
 .tech-jobs-description {
     margin-bottom: 1rem;
 }
-/*menu GRID/LIST is display none for mobile view...but turned on in LARGER SCREEN  */
 .menu {
     display: none;
 }
-    /* GRID VIEW */
 article.grid #cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -782,7 +588,6 @@ article.grid #cards section {
     width: 100%;
     height: 100%;
 }
-/* Applies to all direct children of section inside .grid */
 article.grid #cards section > * {
     margin: .3rem 0;
 }
@@ -800,3 +605,105 @@ article.grid #cards section > * {
         line-height: 1.6rem;
         padding-top: .3rem;
     }
+
+    
+.tutor-form {
+    background-color: #eee;
+    border: solid 2px #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 1024px;
+    justify-self: center;
+}
+
+
+form label {
+    display: block;
+    font-weight: 600;
+}
+
+form input[type=text],
+form input[type=tel],
+form input[type=email]
+{
+    display: block;
+    margin: .1rem 0 .5rem 0;
+    padding-left: .5rem;
+    height: 3em;
+    border: solid 1px #999;
+    border-radius: 4px;
+    border-left-width: 5px;
+    font-size: 1rem;
+    color: #3b543d;
+    width: 100%;
+}
+
+
+.membership-levels {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+}
+.membership-levels label {
+    display: block;
+    margin-bottom: .5rem;
+}
+.tutor-form h3,
+.description label
+{
+    margin: 0 0 .5rem  0;
+    margin-bottom: .5rem;
+    font-size: 1.3rem;
+    color: #3b543d;
+}
+
+.membership-levels input[type=radio] {
+    margin-right: .5rem;
+}
+
+.description textarea {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+
+form input:focus {border-left-color: black; outline: none;}
+form input:required:valid{border-left-color: #3b543d;}
+
+form input[type=submit] {
+    border: none;
+    text-align: center;
+    background-color: #3b543d;
+    color: white;
+    border-radius: 4px;
+    padding: .75rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.congrats h2 {
+    color: #1d2d44ff;
+    font-family: "Lora", serif;
+    padding: 1rem 0;
+
+}
+.verification {
+    background-color: #eee;
+    margin: 1rem 0;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: solid 1px #c58c6d;
+    border-radius: 6px;
+}
+.verification p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .3rem;
+}
+
+.verification span {
+    
+    font-weight: 700;
+}
