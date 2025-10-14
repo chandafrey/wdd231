@@ -30,7 +30,7 @@
     }
 
 
-    span {
+    .site-header span {
         grid-column: 2/3;
         grid-row: 1/2;
         justify-self: center;
@@ -184,7 +184,7 @@
 
     article.list #cards {
         margin-bottom: 3rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        box-shadow: var(--shadow-medium);
 
     }
     article.list #cards section {

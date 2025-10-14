@@ -13,11 +13,19 @@
     --reseda-copy: #c3c6ba;
     --reseda-copy-light: #e8edd9;
     --dark-gray:  #222;
+    
+    /* Utility neutrals */
+    --border-light: var(--border-light);
+    --border-medium: var(--border-medium);
+    --background-light: var(--background-light);
+     /* Shadows */
+    --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.5);
+    --shadow-strong: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 
 * {
-   
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,7 +41,7 @@ header,
 footer {
     background-color: var(--paynes-gray);
     color: var(--white-cream);
-    box-shadow: 0 0 30px gray;
+    box-shadow: var(--shadow-strong);
     align-items: center;
     justify-content: center;
 } 
@@ -46,8 +54,23 @@ body {
     letter-spacing: 1px;
     font-weight: 400; 
 }
+h1, h2, h3, h4, h5, h6,
+.catch-phrase,
+.navigation a {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 600;
+}
+.navigation,
+.my-statement p,
+.about-me,
+.about-me-purpose,
+.skills-in-motion p,
+.tutor-form 
+{
+  box-shadow: var(--shadow-medium);
+}
 
-
+/* HEADER */
 .site-header {
     display: flex;
     align-items: center;
@@ -55,14 +78,12 @@ body {
     padding: .5rem 1rem;
     position: relative;
 }
-
 .logo {
     height: 40px;
     width: auto;
 }
-
-
-span {
+/* header title */
+.site-header span {
     font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 200;
     font-style: italic;
@@ -74,7 +95,7 @@ span {
     white-space: nowrap;
     padding: 0 1rem;
 }
-
+/* mobile view - hamburger navigation */
 .hamburger {
     background: none;
     border: none;
@@ -96,12 +117,11 @@ span {
     font-size: 1.6rem;
     font-weight: 700;
 }
-
+/* mobile view - nav links are display none */
 .navigation {
     display: none;
     position: absolute;
     width: 100%;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 .navigation.open {
     display: block;
@@ -118,29 +138,27 @@ span {
 .navigation a {
     display: block;
     padding: .8rem 10px;
-    background-color: var(--white-cream);
+    /* background-color: var(--white-cream); */
     background-color: var(--very-light-blue);
-    color: var(--persuan-orange);
+    /* color: var(--persuan-orange); */
     color: var(--rich-black);
     font-size: clamp(1rem, 2vmin, 1.2rem);
-    font-family: "Lora",Georgia, serif;
+    font-weight: 400;
     transition: .5s; 
     text-decoration: none;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px var(--border-light);
     width: 100%;
     position: relative;
     z-index: 1;
 }
 
 .navigation a:hover,
-.navigation a:active {
+.navigation a:active,
+.social a:hover
+ {
     background-color: var(--white-cream);
     color: var(--rich-black);
-    /* font-size: 1.5rem; */
-    font-weight: 600; 
-    /* transform: scale(1.05); */
 }
-
 .navigation li.current {
     text-decoration: underline;
     color: var(--rich-black); 
@@ -152,7 +170,6 @@ footer {
 }
 footer .social,
 footer .copywrite {
-    text-align: center;
     background-color: var(--very-light-blue);
     color: var(--rich-black);
     padding: .5rem;
@@ -166,26 +183,23 @@ footer .copywrite {
 }
 .social a {
     display: flex;
+    /* this line centers the icon in its box */
     justify-content: center;
     align-items: center;
     width: 44px;
     height: 44px;
-    border: #ccc solid 1px;
+    border: var(--border-medium) solid 1px;
     border-radius: 4px;
 }
 .social img {
     width: 24px;
     height: 24px;
 }
-.social a:hover {
-    background-color: var(--white-cream);
-}
-
-
 #lastModified {
     font-size: 1rem;
 }
 
+/* Hero section */
 .hero {
     background-color: var(--prussian-blue);
     color: var(--white-cream);
@@ -198,7 +212,6 @@ footer .copywrite {
 }
 
 .catch-phrase {
-    font-family: "Lora", Georgia, serif;
     font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 200; 
     font-style: italic;  
@@ -240,7 +253,7 @@ footer .copywrite {
 aside #sidebar-message {
     display: inline-block;
     align-items: center;
-    border: solid 1px #ddd;
+    border: solid 1px var(--border-light);
     border-radius: 8px;
     background-color:#3b543d;
     color: var(--white-cream);
@@ -290,7 +303,6 @@ to {
     justify-self: center;
     border-style: groove;
     padding: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .background-purpose .hero {
@@ -299,10 +311,9 @@ to {
 .about-me,
 .about-me-purpose {
     background-color: var(--very-light-blue);
-    border: solid 2px #ccc;
+    border: solid 2px var(--border-medium);
     padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 .about-me h2, 
 .about-me-purpose h2 {
@@ -330,7 +341,7 @@ to {
     background-color: var(--very-light-blue);
     color: var(--rich-black);
     text-decoration: none;
-    border: solid 2px #ddd;
+    border: solid 2px var(--border-light);
     border-radius: 6px;
     padding: .5rem 10px;
 
@@ -354,13 +365,13 @@ to {
 .coursesContainer section.completed {
     background-color: var(--prussian-blue);
     color: var(--white-cream);
-    border: solid 1px #ccc;
+    border: solid 1px var(--border-medium);
 }
 .coursesContainer section.not-completed {
     background-color: var(--persuan-orange);
     color: var(--rich-black);
     font-weight: 600;
-    border: solid 1px #ccc;
+    border: solid 1px var(--border-medium);
 }
 
 
@@ -372,8 +383,7 @@ to {
 
 .skills-in-motion p {
     margin: 1rem;
-    border: solid 1px #ccc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    border: solid 1px var(--border-medium);
     text-align: center;
     background-color: var(--white-cream);
     font-weight: 400;   
@@ -397,7 +407,7 @@ to {
     color: var(--white-cream);
     margin-bottom: 0; 
     text-align: center;
-    font-family: "Lora", serif;
+    /* font-family: "Lora", serif; */
     font-size: 1.5rem;
    font-size: clamp(1.5rem, 4vw, 2rem); 
 } 
@@ -409,14 +419,19 @@ to {
     padding: 0 1rem;
 }
 
+.instruction-card,
+.dialog-header button {
+    box-shadow: var(--shadow-light);
+}
+
+
 .instruction-card {
     display: flex;
     flex-direction: column;
     padding-bottom: .5rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-medium);
     border-radius: 8px;
-    background-color: #eee;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--background-light);
     margin-bottom: .75rem;
 }
 
@@ -452,7 +467,7 @@ to {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px var(--border-medium);
 }
 
 .dialog-header h3 {
@@ -461,8 +476,7 @@ to {
     color: var(--persuan-orange);
 }
 .dialog-header button {
-    border: solid 1px #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border: solid 1px var(--border-medium);
     font-size: 1.2rem;
     font-weight: 600;
     padding: 2px 6px;
@@ -502,7 +516,7 @@ to {
     color: var(--rich-black);
     background-color: var(--prussian-blue);
     color: var(--white-cream);
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px var(--border-medium);
     width: 100%;
     padding: 4px;
 }
@@ -513,7 +527,7 @@ to {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #eee;
+    background-color: var(--background-light);
     border: solid 1px #333;
     border-radius: 4px;
     margin-bottom: .75rem;
@@ -585,7 +599,7 @@ article.grid #cards section {
     text-align: center;
     padding: 1rem;
     border: solid 1px #333;
-    background-color: #eee;
+    background-color: var(--background-light);
     width: 100%;
     height: 100%;
 }
@@ -609,9 +623,8 @@ article.grid #cards section > * {
 
     
 .tutor-form {
-    background-color: #eee;
-    border: solid 2px #ccc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    background-color: var(--background-light);
+    border: solid 2px var(--border-medium);
     padding: 1rem;
     margin-bottom: 3rem;
     width: 100%;
@@ -691,7 +704,7 @@ form input[type=submit] {
 
 }
 .verification {
-    background-color: #eee;
+    background-color: var(--background-light);
     margin: 1rem 0;
     padding: 1rem;
     margin-bottom: 2rem;
