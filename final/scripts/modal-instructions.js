@@ -12,7 +12,7 @@ const container = document.querySelector("#modals");
 // we need querySelectors for displaying the dialog box
 const mydialog = document.querySelector("#mydialog");
 // we need querySelector for displaying the list item
-const item = document.querySelector("#mydialog h4");
+const item = document.querySelector("#mydialog h3");
 // we need querySelector for displaying the instructions (p)
 const components = document.querySelector("#components");
 
@@ -29,7 +29,7 @@ instructions.forEach(x => {
     card.classList.add("instruction-card");
 
     // create card heading
-    const heading = document.createElement("h4");
+    const heading = document.createElement("h3");
     // set the heading content to the instruction item
     heading.textContent = x.item;
     // add heading to the card

@@ -62,7 +62,7 @@ body {
 }
 
 
-h1 {
+span {
     font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 200;
     font-style: italic;
@@ -136,8 +136,9 @@ h1 {
 .navigation a:active {
     background-color: var(--white-cream);
     color: var(--rich-black);
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight: 600; 
+    /* transform: scale(1.05); */
 }
 
 .navigation li.current {
@@ -278,7 +279,7 @@ to {
     }
 }
 
-.my-statement h3 {
+.my-statement h2 {
     font-size: 1.5rem;
     font-weight: 400;
     padding-top: 1rem;
@@ -303,14 +304,14 @@ to {
     margin-bottom: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
-.about-me h3, 
-.about-me-purpose h3 {
+.about-me h2, 
+.about-me-purpose h2 {
     font-size: 1.5rem;
 }
 .background-purpose .courses {
     margin-bottom: 1rem;
 }
-.courses h3 {
+.courses h2 {
     background-color: var(--prussian-blue);
     color: var(--white-cream);
 }
@@ -386,9 +387,9 @@ to {
     margin-bottom: 3rem;
 }
 
-#modals h3,
-.weather h3,
-.tech-jobs h3 
+#modals h2,
+.weather h2,
+.tech-jobs h2 
 {
     background-color: var(--very-light-blue);
     background-color: var(--paynes-gray);
@@ -419,7 +420,7 @@ to {
     margin-bottom: .75rem;
 }
 
-.instruction-card h4 {
+.instruction-card h3 {
     font-size: 1.2rem;
 }
  
@@ -454,7 +455,7 @@ to {
     border-bottom: solid 1px #ccc;
 }
 
-.dialog-header h4 {
+.dialog-header h3 {
     font-size: 1.2rem;
     color: #3b543d;
     color: var(--persuan-orange);
@@ -492,8 +493,8 @@ to {
         }
     }
 
-.current-weather h4, 
-.forecast-weather h4 
+.current-weather h3, 
+.forecast-weather h3 
 {
     font-size: 1.2rem;
     font-weight: 700;   
