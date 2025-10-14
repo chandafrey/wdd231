@@ -123,7 +123,7 @@
     .background-purpose .courses {
         grid-column: 1/2;   
     }
-    .background-purpose .tutor-form {
+    .background-purpose #tutor-form {
         grid-column: 2/3;
         grid-row: 3/5;
     }
