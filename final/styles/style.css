@@ -62,8 +62,7 @@ body {
 }
 
 
-/* ======================================================
-   BEGIN HEADER SECTION =============================== */
+/* BEGIN HEADER SECTION  */
  
 /* display the header as flex and place the .logo, h1 and .hamburger*/
 .site-header {
@@ -228,13 +227,9 @@ underlining the current page*/
     color: var(--rich-black); 
 }
 
-/*  END HEADER SECTION =============================== 
-======================================================*/
+/* END HEADER SECTION */
 
-
-
-/* ======================================================
-   BEGIN FOOTER SECTION =============================== */
+/* BEGIN FOOTER SECTION  */
 footer {
     text-align: center;
     padding: 1rem 10px;
@@ -295,12 +290,10 @@ footer .copywrite {
     font-size: 1rem;
 }
 
-/*  END FOOTER SECTION =============================== 
-======================================================*/
+/* END FOOTER SECTION   */
 
 
-/* ======================================================
-   BEGIN HOME.HTML PAGE SECTION =============================== */
+/* BEGIN HOME.HTML PAGE SECTION  */
 
 .hero {
     background-color: var(--prussian-blue);
@@ -356,7 +349,6 @@ footer .copywrite {
     cursor: pointer;
 }
 
-/* -------------------------------
 /* --------------------ASIDE for date and visits------- */
 
 aside #sidebar-message {
@@ -420,13 +412,9 @@ to {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/*  END HOME.HTML PAGE SECTION =============================== 
-======================================================*/
+/* END HOME.HTML PAGE SECTION  */
 
-
-
-/* ======================================================
-   BEGIN ABOUT.HTML SECTION =============================== */
+/* BEGIN ABOUT.HTML SECTION  */
  
 /* -------------------------
    .about-me 
@@ -511,13 +499,9 @@ to {
 }
 
 
-/*  END ABOUT.HTML PAGE SECTION =============================== 
-======================================================*/
+/* END ABOUT.HTML PAGE SECTION  */
 
-
-
-/* ======================================================
-   BEGIN SKILLS.HTML MODAL SECTION =============================== */
+/* BEGIN SKILLS.HTML MODAL section */
 /* -------------------------
    This section is the Heading of my Skills page
    ------------------------*/
@@ -525,22 +509,7 @@ to {
     margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
-/* THIS header is declared on the index-home page and commented here for reference */
-/* .catch-phrase {
-    font-family: "Lora", Georgia, serif;
-    /* Responsive font size */
-    /* font-size: clamp(1rem, 4vw, 2rem); 
-    font-weight: 200; 
-    font-style: italic;   */
-    /* scaleY will make the font text TALLER  */ 
-    /* transform: scaleY(2); 
-    letter-spacing: .25rem;
-    text-align: center;
-    background-color: var(--prussian-blue);
-    color: var(--white-cream);
-    flex: 1;
-    white-space: nowrap; 
-}  */
+
 .skills-in-motion p {
     margin: 1rem;
     /* font-size: 1.2rem; */
@@ -698,39 +667,9 @@ to {
         transform: translateY(0);
         }
     }
-/*  END SKILLS.HTML MODAL SECTION =============================== 
-======================================================*/
+/* END SKILLS.HTML MODAL SECTION   */
 
-
-
-/* ======================================================
-   BEGIN SKILLS.HTML WEATHER SECTION =============================== */
-
-
-
-   /* .weather { */
-    /* margin-top: .5rem; */
-    /* margin-bottom: 1rem; */
-    /* to help prevent layout shifts add a min height for the page to reserve space when loading */
-    /* min-height: 300px; */
-/* } */
-/* .weather p {
-    margin-bottom: 1rem;
-} */
-   /* This is already code above....putting here in comments so I know 
-how I told .weather h3 to style.... */
-/* #modals h3, 
-.weather h3 
-{
-    background-color: var(--very-light-blue);
-    color: var(--prussian-blue);
-    margin-bottom: 0;
-    text-align: center;
-    font-family: "Lora", serif;
-    font-size: 1.5rem;
-} */
-
-
+/* BEGIN SKILLS.HTML WEATHER SECTION */
 
 /* These are the title headings for the weather box cards */
 .current-weather h4, 
@@ -813,9 +752,7 @@ they will span across the full width of the box */
 
 
 
-/* -------------------------
-    Skills page Tech Job Cards Section 
-    ------------------------*/
+/* Skills page Tech Job Cards Section  */
 
 .tech-jobs-description {
     margin-bottom: 1rem;
@@ -847,7 +784,6 @@ article.grid #cards section {
 }
 /* Applies to all direct children of section inside .grid */
 article.grid #cards section > * {
-    /* margin: 0.1rem; */
     margin: .3rem 0;
 }
    article.grid #cards section img {
@@ -857,8 +793,6 @@ article.grid #cards section > * {
         border: 1px solid #fff;
         box-shadow: 4px 4px 20px #303030;
         border-radius: 5px;
-        /* Added background color because the berlinhomes picture was transparent
-        and needed some dark background */
         background-color: var(--paynes-gray);
     }
     article.grid #cards section h3 {
