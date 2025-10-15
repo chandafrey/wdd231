@@ -10,7 +10,6 @@
     --persuan-orange: #c58c6d;
     --ash-gray: #b7b7a4;
     --reseda: #6b705c;
-    --reseda-copy: #c3c6ba;
     --dark-gray:  #222;
     
     --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -28,6 +27,7 @@
     max-width: 95%;
     margin: 0 auto; 
     padding: 1rem;
+    justify-self: center;
 }
 
 body {
@@ -78,9 +78,6 @@ header span {
     transform: scaleY(2.5);
     letter-spacing: .55rem;
     text-shadow:#303030 7px 7px 10px;
-    flex: 1;
-    white-space: nowrap;
-    padding: 0 1rem;
 }
 .hamburger {
     background: none;
@@ -90,12 +87,11 @@ header span {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-size: 1.6rem;
+    color: var(--white-cream);
 }
 .hamburger::before {
     content: "☰";
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--white-cream);
 }
 .hamburger.open::before {
     content: "✕";
@@ -109,7 +105,6 @@ nav {
 }
 nav.open {
     display: block;
-    position: absolute;
 }
 nav ul {
     list-style-type: none;
@@ -177,7 +172,7 @@ footer {
     text-align: center;
 
 }
-.profile .hero {
+#profile .hero {
     padding: 1.5rem;
 }
 
@@ -190,9 +185,9 @@ footer {
     flex: 1;
     white-space: nowrap; 
 } 
-.profile .hero,
-.background-purpose .hero h1, 
-.skills .hero h1 {
+#profile .hero,
+.hero h1
+{
     background-color: var(--prussian-blue);
 }
 .hero img {
@@ -202,24 +197,27 @@ footer {
     width: 300px;
     height: auto;
 }
+.hero a,
+#close-btn {
+    font-weight: 600;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
 .hero a {
     display: block;
     max-width: max-content;
     justify-self: center;
-    font-weight: 600;
     text-decoration: none;
-    padding: .5rem;
-    border-radius: 8px;
     background-color: var(--paynes-gray);
     color: var(--white-cream);
 }
-.hero a:hover {
+.hero a:hover,
+#close-btn:hover
+ {
     background-color: var(--persuan-orange);
     color: var(--white-cream);
-    padding: .5rem;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
 }
 
 #sidebar-message {
@@ -231,9 +229,8 @@ footer {
     border-radius: 8px;
     background-color:#3b543d;
     color: var(--white-cream);
-    padding: 8px;
-    margin-top: 1rem; 
-    margin-bottom: 1rem;
+    padding: 0 8px;
+    margin: 1rem 0; 
     max-width: fit-content;
     
     animation: slideIn 1s ease-out forwards;    
@@ -250,19 +247,11 @@ to {
 }
 #message-text {
     font-size: 1rem;
-    padding: 0; 
     text-align: center;
 }
 #close-btn {
     color: black;
-    font-weight: 700;
     background-color: #999;
-    border-radius: 4px;
-    padding: 8px;
-    cursor: pointer;
-}
-#close-btn:hover {
-    background-color: var(--persuan-orange);
 }
 
 .my-statement h2 {
