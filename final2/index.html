@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my Profile Porfolio page on my skills in Web Development">
+    <meta name="author" content="Chanda Frey">
+    <title>WDD 231 Final Project | Profile Portfolio</title>
+    
+  <!-- FACEBOOK META -->
+    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio">
+    <meta property="og:description" content="This is my Profile Porfolio page on my skills in Web Development.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/final/index.html">
+    <meta property="og:locale" content="en_US">
+    <!-- These 2 lines need updated -->
+    <meta property="og:image" content="https://chandafrey.github.io/wdd231/final/images/chanda-profile1200x822.jpg">
+    <meta property="og:image:alt" content="Profile picture of Chanda Frey">    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Profile Portfolio | Chanda Frey">
+    <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
+    
+    <!-- Google Fonts Here -->
+    <!-- Optimize Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles-large.css"> 
+   
+    <!-- JS Links -->
+    <!-- <script src="scripts/date.js" defer></script> -->
+    <script src="scripts/navigation.js" defer></script>
+    <!-- This one is for the date stamp in the footer -->
+    <script src="scripts/date.js" defer></script>  
+    <!-- This file has a date stamp as well and a hamburger button-->
+    <!-- <script src="scripts/siteplan.js" defer></script> -->
+    <script src="scripts/last-visit.js" defer></script>
+
+
+    <!-- ***THIS MIGHT STILL NEED ATTENTION -->
+    <!-- Favicon link -->
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <!-- Adding a link to this image should make it so a person can
+            click on the image and return to the home page...Typically this 
+            would be href="index.html" -->
+            <a href="index.html" class="logo">
+                <img src="images/logo-orange.svg" 
+                     alt="profile of a person with a gear for the brain"
+                     width="24" 
+                     height="24"
+                     class="logo">
+            </a>
+            <span>Chanda Frey</span>
+
+            <!-- use "Menu" or "Open menu" for the label - 
+            this tells the screen reader user what will happen 
+            when they activate it -->
+            <!-- Add aria-expanded="false" and toggle it with JS when menu opens. -->
+            <!-- Add aria-controls="nav-bar" to connect the button to the controlled element. -->
+            <button type="button"
+                    id="ham-btn"
+                    class="hamburger"
+                    aria-label="Menu"
+                    aria-controls="nav-bar"
+                    aria-expanded="false">
+            </button>
+
+            <!-- add an "id" for connecting to JavaScript and "class" for CSS -->
+            <nav id="nav-bar">
+                <ul>
+                    <!-- put the class="current" on the link specific to the 
+                    current page...in this case Home -->
+                    <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="profile">
+            <section class="hero">
+                <h1>Mind in motion, web in focus.</h1>
+                <img src="images/chanda-profile400x400.jpg" alt="Profile Picture of Chanda Frey" loading="lazy">
+                <a href="skills.html">See My Skills</a>
+                
+                <aside id="sidebar-message">
+                    <span id="message-text"></span>
+                    <button id="close-btn" aria-label="Close message">X</button>
+                </aside>
+            </section>
+
+            <div class="my-statement">
+                <h2>Web Developer</h2>
+                <p>I create visual layouts and user interfaces for websites, 
+                    translating design mockups into functional web pages 
+                    using HTML, CSS and basic JavaScript. 
+                </p> 
+            </div>            
+        </main>
+        
+        <footer>
+            <div class="social">
+                <!-- target="_blank" will open this link in a new TAB -->
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/chanda-frey/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+                <a href="https://github.com/chandafrey/" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+            </div>
+            <div class="copywrite">
+                <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+                <p><span id="lastModified"></span></p>
+            </div>
+            
+             <!-- This is my attributions page -->
+            <a href="attributions.html"></a>
+            <!-- This is my video -->
+            <a href="https://www.loom.com/share/5592035272264127ad9f1124e4cf2828?sid=ec025695-913e-4758-8cab-2687c33f09e8"></a>
+        </footer>
+    </div> <!--End Wrapper-->
+</body>
+</html>
