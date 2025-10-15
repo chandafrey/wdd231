@@ -362,13 +362,7 @@ label {
     margin-bottom: 1rem;
     font-weight: 600;
 }
-/* fieldset label {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 1rem; 
-  font-weight: 500;
-  cursor: pointer;
-} */
+
 label span.required {
     color: var(--persuan-orange);
     margin-left: .25rem;
@@ -376,9 +370,9 @@ label span.required {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"]
+input[type="tel"],
 textarea
-{
+{   
     font-family: inherit;
     font-size: 1rem;
     padding: .5rem;
