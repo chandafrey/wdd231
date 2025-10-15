@@ -23,14 +23,3 @@ function showList() {
 }
 
 
-// const gridbutton = document.querySelector("#grid");
-// const listbutton = document.querySelector("#list");
-// const display = document.querySelector("#directory");
-
-// function toggleView(view) {
-//   display.classList.remove("grid", "list"); // remove both first
-//   display.classList.add(view);              // then add the chosen one
-// }
-
-// gridbutton.addEventListener("click", () => toggleView("grid"));
-// listbutton.addEventListener("click", () => toggleView("list"));

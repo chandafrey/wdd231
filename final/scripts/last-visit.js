@@ -38,5 +38,3 @@ localStorage.setItem("lastVisit", now);
 closeBtn.addEventListener("click", () => {
     messageBox.style.display = "none";
 });
-
-// ============================

@@ -21,12 +21,15 @@
     
     <!-- Google Fonts Here -->
     <!-- Optimize Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </noscript>
+    </noscript> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
     <!-- Style Sheets Here -->
@@ -36,22 +39,15 @@
     <link rel="stylesheet" href="styles/styles-large.css"> 
    
     <!-- JS Links -->
-    <!-- <script src="scripts/date.js" defer></script> -->
     <script src="scripts/navigation.js" defer></script>
-    <!-- This one is for the date stamp in the footer -->
     <script src="scripts/date.js" defer></script>  
-    <!-- This one is for the TechJobCards -->
     <script src="scripts/create-job-cards.js" defer></script>
-    <!-- This one is to TOGGLE the TechJobCards from grid to list -->
     <script src="scripts/grid-list.js" defer></script>
-    <!-- This one is for the weather API Fetching -->
     <script src="scripts/weather.js" defer></script>
 
 
-    <!-- ***THIS MIGHT STILL NEED ATTENTION -->
     <!-- Favicon link -->
     <link rel="icon" href="favicon.ico">
-    <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
 </head>
 
 <body>
@@ -82,7 +78,6 @@
                     aria-expanded="false">
             </button>
 
-            <!-- add an "id" for connecting to JavaScript and "class" for CSS -->
             <nav id="nav-bar">
                 <ul>
                     <!-- put the class="current" on the link specific to the 
@@ -143,7 +138,6 @@
                     <h3>Current Weather Today</h3>
                     <div class="image">
                         <img id="graphic" src="images/forecast-icon.png" alt="weather picture representing todays weather" width="60" height="60">
-                        <!-- <img id="graphic" alt="clear sky" src="openwwathermap.org"> -->
                     </div>
                     <div class="details">
                         <p id="description"></p>
@@ -215,6 +209,6 @@
             <a href="https://www.loom.com/share/5592035272264127ad9f1124e4cf2828?sid=ec025695-913e-4758-8cab-2687c33f09e8"></a>
         
         </footer>
-    </div> <!-- End Wrapper-->
+    </div> 
 </body>
 </html>
