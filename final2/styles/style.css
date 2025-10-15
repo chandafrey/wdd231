@@ -54,7 +54,6 @@ nav,
   box-shadow: var(--shadow-medium);
 }
 
-
 header {
     display: flex;
     align-items: center;
@@ -65,7 +64,6 @@ header {
     box-shadow: var(--shadow-strong);
     color: var(--white-cream);
     padding: 1rem;
-
 }
 .logo {
     height: 40px;
@@ -166,12 +164,10 @@ footer {
     height: 24px;
 }
 
-
 .hero {
     color: var(--white-cream);
     margin-top: 2rem;
     text-align: center;
-
 }
 #profile .hero {
     padding: 1.5rem;
@@ -205,7 +201,6 @@ button[type="submit"],
     padding: .5rem;
     cursor: pointer;
     border-radius: 8px;
-
 }
 .hero a,
 button[type="submit"] {
@@ -302,7 +297,6 @@ to {
     border: solid 2px var(--border-light);
     border-radius: 6px;
     padding: .5rem 10px;
-
 }
 .course-filter-nav li {
     flex: 1;
@@ -453,7 +447,6 @@ input[type="radio"] {
 .dialog-header button {
     box-shadow: var(--shadow-light);
 }
-
 
 .instruction-card {
     display: flex;

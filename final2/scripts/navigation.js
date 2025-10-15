@@ -3,10 +3,6 @@
 // If you get an error because you need to reassign, switch it to let.
 // This keeps your code more predictable and prevents accidental reassignments.
 
-// ==========================
-// HAMBURGER MENU TOGGLE
-// ==========================
-
 // 1. Get references to the button (#ham-btn) and the navigation menu (#nav-bar)
 // We'll use these to open/close the navigation when the button is clicked.
 const hamBtn = document.querySelector("#ham-btn");

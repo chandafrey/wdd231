@@ -15,7 +15,6 @@
         gap: .5rem;
         padding: 1rem;
     }     
-     
  
     .hamburger {
         display: none;
@@ -28,8 +27,6 @@
         height: 60px;
         margin-left: 1rem;
     }
-
-
     header span {
         grid-column: 2/3;
         grid-row: 1/2;
@@ -43,9 +40,7 @@
         letter-spacing: .75rem;
         color: var(--white-cream);
         margin: 0;
-    }
-
-  
+    }  
     nav {
         display: flex;
         grid-column: 2/3;
@@ -64,18 +59,14 @@
         background-color: transparent;
         color: var(--white-cream);
     }
-
-
     nav ul {
         display: flex;
         gap: 1.5rem;
-      
     }
     nav li.current {
         text-decoration: underline;
         color: var(--white-cream); 
     }
-
 
     #profile .hero {
         display: grid;
@@ -83,7 +74,6 @@
     }
     #profile h1 {
         display: contents;
-        /* margin-top: 0;  */
         grid-column: 2/3;
         grid-row: 2/3;
     }
@@ -131,8 +121,6 @@
         margin-bottom: .5rem;
         padding: 1rem;
     }
-   
-
 
     #skills {
         display: grid;
@@ -158,7 +146,6 @@
         margin-top: 2rem;
     }
 
-
     .menu {
         display: block;
         padding: 0.5rem;
@@ -181,11 +168,9 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-
     article.list #cards {
         margin-bottom: 3rem;
         box-shadow: var(--shadow-medium);
-
     }
     article.list #cards section {
         display: grid;
