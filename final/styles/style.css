@@ -11,12 +11,8 @@
     --ash-gray: #b7b7a4;
     --reseda: #6b705c;
     --reseda-copy: #c3c6ba;
-    --reseda-copy-light: #e8edd9;
     --dark-gray:  #222;
     
-    --border-light: var(--border-light);
-    --border-medium: var(--border-medium);
-    --background-light: var(--background-light);
     --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
     --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.5);
     --shadow-strong: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -33,16 +29,8 @@
     max-width: 95%;
     margin: 0 auto; 
     padding: 1rem;
-    justify-self: center;
 }
-header, 
-footer {
-    background-color: var(--paynes-gray);
-    color: var(--white-cream);
-    box-shadow: var(--shadow-strong);
-    align-items: center;
-    justify-content: center;
-} 
+
 body {
     background-color: var(--white-cream);
     color: var(--dark-caviar);
@@ -68,20 +56,21 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-.site-header {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: .5rem 1rem;
     position: relative;
     background: linear-gradient(135deg, var(--paynes-gray), var(--prussian-blue));
+    box-shadow: var(--shadow-strong);
 
 }
 .logo {
     height: 40px;
     width: auto;
 }
-.site-header span {
+header span {
     font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 200;
     font-style: italic;
@@ -117,6 +106,7 @@ h1, h2, h3, h4, h5, h6,
 .navigation {
     display: none;
     position: absolute;
+    top: 100%;
     width: 100%;
 }
 .navigation.open {
@@ -159,26 +149,25 @@ h1, h2, h3, h4, h5, h6,
 }
 
 footer {
-    text-align: center;
-    padding: 1rem 10px;
-}
-footer .social,
-footer .copywrite {
-    background-color: var(--very-light-blue);
-    color: var(--rich-black);
-    padding: .5rem;
-}
- 
-.social {
     display: flex;
-    justify-content: center;
-    column-gap: 8px;
-    padding: 10px;
+    flex-direction: column;
+    background-color: var(--paynes-gray);
+    color: var(--white-cream);
+    box-shadow: var(--shadow-strong);
+    padding: 1rem;
 }
-.social a {
+.social, 
+.social a,
+.copywrite {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: var(--very-light-blue);
+    color: var(--rich-black);
+    padding: .5rem 0;
+}
+.social a {
     width: 44px;
     height: 44px;
     border: var(--border-medium) solid 1px;
@@ -188,9 +177,7 @@ footer .copywrite {
     width: 24px;
     height: 24px;
 }
-#lastModified {
-    font-size: 1rem;
-}
+
 
 .hero {
     color: var(--white-cream);

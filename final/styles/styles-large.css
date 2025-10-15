@@ -6,7 +6,7 @@
         max-width: 1200px;
     }
 
-    .site-header {
+    header {
         display: grid;
         grid-template-columns: auto 1fr;
         grid-template-rows: auto auto;
@@ -30,7 +30,7 @@
     }
 
 
-    .site-header span {
+    header span {
         grid-column: 2/3;
         grid-row: 1/2;
         justify-self: center;
