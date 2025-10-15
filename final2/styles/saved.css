@@ -1,0 +1,375 @@
+
+.about-me,
+.about-me-purpose,
+#tutor-form {
+    background-color: var(--very-light-blue);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.background-purpose .courses {
+    margin-bottom: 1rem;
+}
+.courses h2 {
+    background-color: var(--prussian-blue);
+    color: var(--white-cream);
+}
+.course-filter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 600;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    column-gap: 8px;
+}
+.course-filter-nav a {
+    display: block;
+    text-align: center;
+    background-color: var(--very-light-blue);
+    color: var(--rich-black);
+    text-decoration: none;
+    border: solid 2px var(--border-light);
+    border-radius: 6px;
+    padding: .5rem 10px;
+}
+.course-filter-nav li {
+    flex: 1;
+    margin-bottom: 8px;
+}
+.course-filter-nav a:hover {
+    background-color: var(--persuan-orange);
+}
+
+.coursesContainer section {
+    display: flex;
+    justify-content: center;
+    color: var(--white-cream);
+    gap: 8px;
+    margin-bottom: 4px;
+    padding: 8px;
+}
+.coursesContainer section.completed {
+    background-color: var(--prussian-blue);
+    color: var(--white-cream);
+    border: solid 1px var(--border-medium);
+}
+.coursesContainer section.not-completed {
+    background-color: var(--persuan-orange);
+    color: var(--rich-black);
+    font-weight: 600;
+    border: solid 1px var(--border-medium);
+}
+#tutor-form {
+    margin-bottom: 3rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--white-cream);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1024px;
+    justify-self: center; 
+}
+fieldset {
+    border: 1px solid var(--ash-gray);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: 600;
+    color: var(--prussian-blue);
+    padding: 0 .5rem;
+}
+label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+label span.required {
+    color: var(--persuan-orange);
+    margin-left: .25rem;
+}
+
+input,
+textarea
+{
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5rem;
+    border: solid 1px var(--ash-gray);
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="radio"] {
+    margin-right: .5rem;
+}
+
+ button[type="submit"] {
+    padding: 1rem;
+ }
+
+.congrats h2 {
+    color: #1d2d44ff;
+    font-family: "Lora", serif;
+    padding: 1rem 0;
+
+}
+.verification {
+    background-color: var(--background-light);
+    margin: 1rem 0;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: solid 1px #c58c6d;
+    border-radius: 6px;
+}
+.verification p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .3rem;
+}
+
+.verification span {  
+    font-weight: 700;
+}
+.hero p {
+    margin-top: 2rem;
+    padding: .25rem;
+    border: 1px solid var(--very-light-blue);
+    text-align: center;
+    background-color: var(--white-cream);
+    color: var(--prussian-blue);
+    font-weight: 400;   
+    box-shadow: var(--shadow-light);
+}
+#modals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#modals h2,
+.weather h2,
+.tech-jobs h2 
+{
+    background-color: var(--very-light-blue);
+    background-color: var(--paynes-gray);
+    color: var(--prussian-blue);
+    color: var(--white-cream);
+    margin-bottom: 0; 
+    text-align: center;
+    font-size: 1.5rem;
+   font-size: clamp(1.5rem, 4vw, 2rem); 
+} 
+
+#modals p,
+.weather p,
+.tech-jobs p {
+    margin-bottom: .5rem;
+    padding: 0 1rem;
+}
+
+.instruction-card,
+.dialog-header button {
+    box-shadow: var(--shadow-light);
+}
+
+.instruction-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .5rem;
+    border: 1px solid var(--border-medium);
+    border-radius: 8px;
+    background-color: var(--background-light);
+    margin-bottom: .75rem;
+}
+
+.instruction-card h3 {
+    font-size: 1.2rem;
+}
+ 
+.instruction-card .learn-more {
+    background-color: var(--white-cream);
+    margin: 0 auto;
+    padding: 4px;
+    border: solid 1px #333;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.instruction-card .learn-more:hover {
+    background-color: var(--persuan-orange);
+    color: var(--rich-black);
+    font-weight: 500;
+}
+
+#mydialog {
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px var(--border-medium);
+}
+
+.dialog-header h3 {
+    font-size: 1.2rem;
+    color: #3b543d;
+    color: var(--persuan-orange);
+}
+.dialog-header button {
+    border: solid 1px var(--border-medium);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    margin: 0px 0px .5rem;
+}
+#components ul {
+    margin-left: 1rem;    
+}
+
+.instruction-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideIn .8s ease-out forwards;
+}
+    .instruction-card:nth-child(3) { animation-delay: 0.1s; }
+    .instruction-card:nth-child(4) { animation-delay: 0.3s; }
+    .instruction-card:nth-child(5) { animation-delay: 0.5s; }
+    .instruction-card:nth-child(6) { animation-delay: 0.7s; }
+    .instruction-card:nth-child(7) { animation-delay: 0.9s; }
+    .instruction-card:nth-child(8) { animation-delay: 0.11s; }
+    .instruction-card:nth-child(9) { animation-delay: 0.13s; }
+    .instruction-card:nth-child(10) { animation-delay: 0.15s; }
+
+    @keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+
+.current-weather h3, 
+.forecast-weather h3 
+{
+    font-size: 1.2rem;
+    font-weight: 700;   
+    background-color: var(--persuan-orange);
+    color: var(--rich-black);
+    background-color: var(--prussian-blue);
+    color: var(--white-cream);
+    border-bottom: solid 1px var(--border-medium);
+    width: 100%;
+    padding: 4px;
+}
+.current-weather, 
+.forecast-weather
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-light);
+    border: solid 1px #333;
+    border-radius: 4px;
+    margin-bottom: .75rem;
+}
+.current-weather img {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+}
+
+#description,
+.temp-range {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+} 
+.temp-current {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    color: #3b543d;
+    color: var(--prussian-blue);
+}  
+.temp-range {
+    display: flex;
+    column-gap: 2rem;
+    padding-bottom: 8px;
+}
+
+.forecast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    width: 100%;
+}
+.forecast-day {
+    background-color: white;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    padding: .5rem;
+}
+
+.tech-jobs-description {
+    margin-bottom: 1rem;
+}
+.menu {
+    display: none;
+}
+article.grid #cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+    place-items: stretch;
+    padding-bottom: 3rem;
+}
+
+article.grid #cards section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+    border: solid 1px #333;
+    background-color: var(--background-light);
+    width: 100%;
+    height: 100%;
+}
+article.grid #cards section > * {
+    margin: .3rem 0;
+}
+   article.grid #cards section img {
+        max-width: 80%;
+        height: auto;
+        margin: 0 auto;
+        border: 1px solid #fff;
+        box-shadow: 4px 4px 20px #303030;
+        border-radius: 5px;
+        background-color: var(--paynes-gray);
+    }
+    article.grid #cards section h3 {
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        padding-top: .3rem;
+    }
