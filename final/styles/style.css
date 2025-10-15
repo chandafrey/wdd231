@@ -362,12 +362,21 @@ label {
     margin-bottom: 1rem;
     font-weight: 600;
 }
+/* fieldset label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem; 
+  font-weight: 500;
+  cursor: pointer;
+} */
 label span.required {
     color: var(--persuan-orange);
     margin-left: .25rem;
 }
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"]
 textarea
 {
     font-family: inherit;
@@ -380,6 +389,7 @@ textarea
 
 input[type="radio"] {
     margin-right: .5rem;
+    vertical-align: middle;
 }
 
  button[type="submit"] {
