@@ -117,7 +117,7 @@ nav a {
     padding: .8rem 10px;
     background-color: var(--very-light-blue);
     color: var(--rich-black);
-    font-size: clamp(1rem, 2vmin, 1.2rem);
+    font-size: clamp(1.2rem, 2vmin, 1.2rem);
     transition: .5s; 
     text-decoration: none;
     border-bottom: solid 1px var(--ash-gray);
@@ -130,6 +130,7 @@ nav a:hover,
 .social a:hover
  {
     background-color: var(--white-cream);
+    color: var(--rich-black);
 }
 nav li.current {
     text-decoration: underline;
@@ -198,6 +199,7 @@ footer {
     height: auto;
 }
 .hero a,
+button[type="submit"],
 #close-btn {
     font-weight: 600;
     padding: .5rem;
@@ -205,7 +207,8 @@ footer {
     border-radius: 8px;
 
 }
-.hero a {
+.hero a,
+button[type="submit"] {
     display: block;
     max-width: max-content;
     justify-self: center;
@@ -214,6 +217,7 @@ footer {
     color: var(--white-cream);
 }
 .hero a:hover,
+button[type="submit"]:hover,
 #close-btn:hover
  {
     background-color: var(--persuan-orange);
@@ -363,9 +367,7 @@ label span.required {
     margin-left: .25rem;
 }
 
-input[type=text],
-input[type=email],
-input[type=tel], 
+input,
 textarea
 {
     font-family: inherit;
@@ -380,19 +382,9 @@ input[type="radio"] {
     margin-right: .5rem;
 }
 
-button[type=submit] {
-    border: none;
-    text-align: center;
-    background-color: var(--reseda);
-    color: white;
-    border-radius: 4px;
-    padding: .75rem 1.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-button[type="submit"]:hover {
-    background-color: var(--prussian-blue);
-}
+ button[type="submit"] {
+    padding: 1rem;
+ }
 
 .congrats h2 {
     color: #1d2d44ff;
