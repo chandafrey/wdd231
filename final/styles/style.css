@@ -420,8 +420,7 @@ input[type="radio"] {
     border: 1px solid var(--very-light-blue);
     text-align: center;
     background-color: var(--white-cream);
-    color: var(--prussian-blue);
-    font-weight: 400;   
+    color: var(--prussian-blue);   
     box-shadow: var(--shadow-light);
 }
 
