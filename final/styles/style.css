@@ -200,7 +200,6 @@ footer .copywrite {
     font-size: 1rem;
 }
 
-/* Hero section */
 .hero {
     color: var(--white-cream);
     margin-top: 2rem;
@@ -270,7 +269,6 @@ footer .copywrite {
     
     animation: slideIn 1s ease-out forwards;    
 }
-/* Animation */
 @keyframes slideIn {
 from {
     transform: translateX(-100%);
@@ -301,11 +299,6 @@ to {
     background-color: var(--persuan-orange);
 }
 
-
-
-
-/* End Sidebar Message */
-/* Begin My Statement */
 .my-statement h2 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -319,8 +312,6 @@ to {
     padding: 8px;
 }
 
-/* End Home Page */
-/* Begin About Page */
 .about-me,
 .about-me-purpose,
 #tutor-form {
@@ -479,8 +470,7 @@ button[type="submit"]:hover {
     
     font-weight: 700;
 }
-/* End About Me Page */
-/* Start Skills Page */
+
 .hero p {
     margin-top: 2rem;
     padding: .25rem;
