@@ -55,7 +55,6 @@ body {
     font-weight: 400; 
 }
 h1, h2, h3, h4, h5, h6,
-.catch-phrase,
 .navigation a {
   font-family: "Lora", Georgia, serif;
   font-weight: 600;
@@ -77,6 +76,8 @@ h1, h2, h3, h4, h5, h6,
     justify-content: space-between;
     padding: .5rem 1rem;
     position: relative;
+    background: linear-gradient(135deg, var(--paynes-gray), var(--prussian-blue));
+
 }
 .logo {
     height: 40px;
@@ -201,28 +202,29 @@ footer .copywrite {
 
 /* Hero section */
 .hero {
-    background-color: var(--prussian-blue);
     color: var(--white-cream);
     margin-top: 2rem;
+    text-align: center;
+
 }
 .profile .hero {
-    margin-top: 1rem;
     padding: 1.5rem;
-    text-align: center;
 }
 
-.catch-phrase {
+.hero h1 {
     font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 200; 
     font-style: italic;  
     transform: scaleY(2); 
     letter-spacing: .15rem;
-    text-align: center;
-    background-color: var(--prussian-blue);
-    color: var(--white-cream);
     flex: 1;
     white-space: nowrap; 
 } 
+.profile .hero,
+.background-purpose .hero h1, 
+.skills .hero h1 {
+    background-color: var(--prussian-blue);
+}
 .hero img {
     display: block;
     margin: 0 auto;
@@ -250,37 +252,25 @@ footer .copywrite {
     cursor: pointer;
 }
 
-aside #sidebar-message {
-    display: inline-block;
+/* SIDEBAR MESSAGE */
+#sidebar-message {
+    /* inline-flex so it only takes up the space it needs */
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    gap: .5rem;
     border: solid 1px var(--border-light);
     border-radius: 8px;
     background-color:#3b543d;
     color: var(--white-cream);
     padding: 8px;
-    margin-top: 1rem;   
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+    max-width: fit-content;
+    
+    animation: slideIn 1s ease-out forwards;    
 }
-aside #message-text {
-    font-size: 1rem;
-    padding: 10px; 
-}
-aside #close-btn {
-    color: black;
-    font-size: 1rem;
-    font-weight: 700;
-    justify-content: center;
-    background-color: #999;
-    padding: 8px;
-    cursor: pointer;
-}
-aside #close-btn:hover {
-    background-color: var(--persuan-orange);
-}
-
-.sidebar {
-    animation: slideIn 1s ease-out forwards;
-}
-
+/* Animation */
 @keyframes slideIn {
 from {
     transform: translateX(-100%);
@@ -292,6 +282,30 @@ to {
     }
 }
 
+
+#message-text {
+    font-size: 1rem;
+    padding: 0; 
+    text-align: center;
+}
+#close-btn {
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #999;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+}
+#close-btn:hover {
+    background-color: var(--persuan-orange);
+}
+
+
+
+
+/* End Sidebar Message */
+/* Begin My Statement */
 .my-statement h2 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -307,10 +321,6 @@ to {
 
 /* End Home Page */
 /* Begin About Page */
-
-.background-purpose .hero {
-    margin-bottom: 1rem;
-}
 .about-me,
 .about-me-purpose,
 #tutor-form {
@@ -471,18 +481,16 @@ button[type="submit"]:hover {
 }
 /* End About Me Page */
 /* Start Skills Page */
-
-.skills-in-motion {
+.hero p {
     margin-top: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.skills-in-motion p {
-    margin: 1rem;
-    border: solid 1px var(--border-medium);
+    padding: .25rem;
+    border: 1px solid var(--very-light-blue);
     text-align: center;
     background-color: var(--white-cream);
+    color: var(--prussian-blue);
     font-weight: 400;   
+    box-shadow: var(--shadow-light);
+
 
 }
 

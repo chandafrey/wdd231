@@ -94,108 +94,106 @@
             </nav>
         </header>
 
-        <main>
-            <div class="skills">
-                <section class="skills-in-motion">
-                    <h1 class="catch-phrase">Skills in Motion</h1>
-                    <p>See HTML, CSS and JavaScript skills in motion on this website.</p>
-                </section>
-           
-                <section id="modals">
-                    <h2>JavaScript Functionality</h2>
-                    <p>This section is a list of topics I've learned in Web Design and Development classes and are all demonstrated in my website.</p>
-
-                    <!-- id="mydialog" in this this div is where the details will go -->
-                    <dialog id="mydialog">
-                        <!-- These elements are listed here, but we will reference and fill them in JS -->
-                        <!-- Wrap the title and button in a div, so we can style them side by side in css grid-->
-                        <div class="dialog-header">
-                            <h3></h3>
-                            <button>X</button>
-                        </div>
-                        <p id="components"></p>
-                    </dialog>
-                </section>
-                <!-- section id="modals" -->
-                <!-- dialog id="mydialog" -->
-                    <!-- div class="dialog-header" -->
-                        <!-- h3 -->
-                        <!-- button (close) -->
-                    <!-- </div> -->
-                    <!--p id="javascript-directions" -->
-                <!-- </dialog> -->
-                <!-- div class="javascript-functionality-card" -->
-                    <!-- h3 -->
-                    <!-- button class="learn-more" -->
-                <!-- </div> -->
-            <!-- </section -->
-                
-
-        <!-- Make sure type="module" is added to the script -->
-        <!-- type="module" - Important so my import works for "instructions" -->
-        <script src="scripts/modal-instructions.js" type="module"></script>
-
-        <!-- WEATHER - CURRENT / FORECAST -->
-                <!-- Current Weather Card -->
-                <section class="weather">
-                    <h2>Weather</h2>
-                    <p>I used a Fetch API to get the weather for my city - Eagle Mountian, Utah</p>
-                    <div class="current-weather">
-                        <h3>Current Weather Today</h3>
-                        <div class="image">
-                            <img id="graphic" src="images/forecast-icon.png" alt="weather picture representing todays weather" width="60" height="60">
-                            <!-- <img id="graphic" alt="clear sky" src="openwwathermap.org"> -->
-                        </div>
-                        <div class="details">
-                            <p id="description"></p>
-                            <p id="temperature"></p>
-                            <!-- <p id="temperature"><span class="temp-current> </p>-->
-                        </div>
-                        <div class="temp-range">
-                            <p id="temperatureMax"></p>
-                            <!-- <p id="temperatureMax">High:  <span class="temp-number></span></p> -->
-                            <p id="temperatureMin"></p>
-                            <!-- <p id="temperatureMax">Low:  <span class="temp-number></span></p> -->
-                        </div>
-                    </div>
-                
-                <!-- Forcast Weather Card -->
-                    <div class="forecast-weather">
-                        <h3>5-Day Forcast</h3>
-                        <div id="forecast" class="forecast-container">
-                            <!-- JS will inject forecast days here -->
-                        </div>
-                    </div>
-                </section>
-                    <!--END WEATHER BOXES -->        
+        <main class="skills">
+            <section class="hero">
+                <h1>Skills in Motion</h1>
+                <p>See HTML, CSS and JavaScript skills in motion on this website.</p>
+            </section>
         
-                <section class="tech-jobs">
-                    <h2>Tech Jobs</h2>
-                    <p class="tech-jobs-description">This section is a general list of types of jobs that utilize skills in HTML, CSS and JavaScript.</p>
-                  
-                    <!-- GRID/LIST -->
-                    <!-- This div is for my BUTTONS to toggle GRID/LIST -->
-                    <div class="menu">
-                        <button id="grid">Grid</button>
-                        <button id="list">List</button>
-                    </div>
-                    <!-- This grouping is the entire directory to be toggled -->
-                    <article id="directory" class="grid">
-                    <!-- This div is the array of individual cards -->
-                        <div id="cards"></div>
+            <section id="modals">
+                <h2>JavaScript Functionality</h2>
+                <p>This section is a list of topics I've learned in Web Design and Development classes and are all demonstrated in my website.</p>
 
-                        <!-- This is what should be created from JavaScript -->
-                        <!-- repeat sections for each business card -->
-                        <!-- <section> 
-                                <img>card.appendChild(image);
-                                <h3>card.appendChild(name);
-                                <p>card.appendChild(phone);
-                                <a>card.appendChild(websiteLink);
-                                <p>card.appendChild(address);
-                            </section>-->
-                    </article>             
-                </section>
-            </div>
+                <!-- id="mydialog" in this this div is where the details will go -->
+                <dialog id="mydialog">
+                    <!-- These elements are listed here, but we will reference and fill them in JS -->
+                    <!-- Wrap the title and button in a div, so we can style them side by side in css grid-->
+                    <div class="dialog-header">
+                        <h3></h3>
+                        <button>X</button>
+                    </div>
+                    <p id="components"></p>
+                </dialog>
+            </section>
+            <!-- section id="modals" -->
+            <!-- dialog id="mydialog" -->
+                <!-- div class="dialog-header" -->
+                    <!-- h3 -->
+                    <!-- button (close) -->
+                <!-- </div> -->
+                <!--p id="javascript-directions" -->
+            <!-- </dialog> -->
+            <!-- div class="javascript-functionality-card" -->
+                <!-- h3 -->
+                <!-- button class="learn-more" -->
+            <!-- </div> -->
+        <!-- </section -->
+            
+
+    <!-- Make sure type="module" is added to the script -->
+    <!-- type="module" - Important so my import works for "instructions" -->
+    <script src="scripts/modal-instructions.js" type="module"></script>
+
+    <!-- WEATHER - CURRENT / FORECAST -->
+            <!-- Current Weather Card -->
+            <section class="weather">
+                <h2>Weather</h2>
+                <p>I used a Fetch API to get the weather for my city - Eagle Mountian, Utah</p>
+                <div class="current-weather">
+                    <h3>Current Weather Today</h3>
+                    <div class="image">
+                        <img id="graphic" src="images/forecast-icon.png" alt="weather picture representing todays weather" width="60" height="60">
+                        <!-- <img id="graphic" alt="clear sky" src="openwwathermap.org"> -->
+                    </div>
+                    <div class="details">
+                        <p id="description"></p>
+                        <p id="temperature"></p>
+                        <!-- <p id="temperature"><span class="temp-current> </p>-->
+                    </div>
+                    <div class="temp-range">
+                        <p id="temperatureMax"></p>
+                        <!-- <p id="temperatureMax">High:  <span class="temp-number></span></p> -->
+                        <p id="temperatureMin"></p>
+                        <!-- <p id="temperatureMax">Low:  <span class="temp-number></span></p> -->
+                    </div>
+                </div>
+            
+            <!-- Forcast Weather Card -->
+                <div class="forecast-weather">
+                    <h3>5-Day Forcast</h3>
+                    <div id="forecast" class="forecast-container">
+                        <!-- JS will inject forecast days here -->
+                    </div>
+                </div>
+            </section>
+                <!--END WEATHER BOXES -->        
+    
+            <section class="tech-jobs">
+                <h2>Tech Jobs</h2>
+                <p class="tech-jobs-description">This section is a general list of types of jobs that utilize skills in HTML, CSS and JavaScript.</p>
+                
+                <!-- GRID/LIST -->
+                <!-- This div is for my BUTTONS to toggle GRID/LIST -->
+                <div class="menu">
+                    <button id="grid">Grid</button>
+                    <button id="list">List</button>
+                </div>
+                <!-- This grouping is the entire directory to be toggled -->
+                <article id="directory" class="grid">
+                <!-- This div is the array of individual cards -->
+                    <div id="cards"></div>
+
+                    <!-- This is what should be created from JavaScript -->
+                    <!-- repeat sections for each business card -->
+                    <!-- <section> 
+                            <img>card.appendChild(image);
+                            <h3>card.appendChild(name);
+                            <p>card.appendChild(phone);
+                            <a>card.appendChild(websiteLink);
+                            <p>card.appendChild(address);
+                        </section>-->
+                </article>             
+            </section>
         </main>
         
         <footer>
